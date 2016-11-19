@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>卖蛋糕</title>
+    <link href="css/basic.min.css" rel="stylesheet" />
+    <link href="css/stylecake.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+   
+
+</head>
+
+<body>
+    <div class="head-area">
+        <div class="head-inner">
+            <div class="nav-area fl-l clearfix">
+                <a href="/" class="global-logo fl-l"><img src="http://www.21cake.com/themes/21cake/images/img/c_logo.png"></a>
+                <ul class="head-nav fl-l clearfix">
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/index.html">首页</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/gallery-index---0---1.html">蛋糕</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/gallery-index---0---3.html">新品</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/product-6377.html">代金卡</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/article--i-18.html">品牌故事</a>
+                    </li>
+                    <li class="nav-item  last">
+                        <a href="http://www.21cake.com/article-distribution-40.html" target="_blank">订购帮助</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login-mes fl-r" style="position: relative;">
+                <a id="qqbrown" style="display:none;" href="http://q.url.cn/s/6igyY" target="_blank"></a>
+                <ul class="head-nav fl-l clearfix">
+                    <li id="j_header_login">
+                        <a href="/passport-login.html" id="IDheaderlogin">登录</a>
+                    </li>
+                    <li id="j_header_signup">
+                        <a href="/passport-signup.html" id="IDheadersignup">注册</a>
+                    </li>
+                    <li class="hide" id="j_header_logout">
+                        <a href="/member.html" style="padding:0;">&nbsp;&nbsp;您好，<span id="j_header_uname"></span></a><a href="/passport-logout.html">[退出]</a>
+                    </li>
+                    <li id="j_header_order">
+                        <a id="j_header_order_link" href="/member-orders_v2_static.html">订单</a>
+                    </li>
+                    <li class="last">
+                        <a href="/cart.html" class="shop-car" id="j_header_cart_number">0</a>
+                    </li>
+                    <!--<li class="free-order">
+                <a href="javascript:void(0)" class="free_tip" title="满100元,可免费享受21cake专业配送"></a>
+            </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="page-container clearfix">
+    <link href="css/member-center.css" rel="stylesheet" />
+    <link href="css/WdatePicker.css" rel="stylesheet" />
+
+        <div class="inner-wrap">
+            <div class="bread-crumbs">
+                <span>
+                <a href="/" alt="" title="">首页</a>
+            </span>
+                <span>&nbsp;&gt;&nbsp;</span>
+                <span>
+                <a href="http://www.21cake.com/member.html" alt="" title="">我的廿一客</a>
+            </span>
+                <span>&nbsp;&gt;&nbsp;</span>
+                <span class="now">个人信息</span>
+                <input type="hidden" id="isCakeList" value="个人信息">
+            </div>
+            <div class="member-area">
+                <!-- 会员中心主内容区 -->
+                <div class="page-article">
+                    <!-- 个人信息 -->
+                    <div id="member_information" class="member-information">
+                        <div class="member-title">
+                            <h2>个人信息</h2>
+                            <p> | 立即完善个人信息。</p>
+                        </div>
+                        <div class="member-mod" style="position: relative">
+                            <form action="/member-save_setting.html" method="post" class="signupin-content" id="J_signupin-content">
+                                <input type="hidden" name="t" value="b98e5288af03100bc1372f7fac5838a4">
+                                <ul>
+                                    <li class="form-item">
+                                        <label for="" class="form-label"><em class="warn">*</em> 姓名：</label>
+                                        <span class="form-act">
+                            <input class="x-input" type="text" name="contact[name]" vtype="required" id="dom_el_a42bfb0" placeholder="">                        </span>
+                                    </li>
+                                    <li class="form-item-normal">
+                                        <label for="" class="form-label"><em class="warn">*</em> 性别：</label>
+                                        <span class="form-act">
+                            <div style="visibility: hidden"><input value="male" type="radio" id="input_gender-m" name="profile[gender]" vtype="required"> <label for="input_gender-m">男</label>&nbsp;<input value="female" type="radio" id="input_gender-fm" name="profile[gender]" vtype="required"> <label for="input_gender-fm">女</label></div>
+                            <div class="ac_gender">
+                                    <div class="ac_sex" name="profile[gender]" data-value="male" data-msg="请选择性别"></div>男
+                                    <div class="ac_sex add-margin" name="profile[gender]" data-value="female" data-msg="请选择性别"></div>女
+                            </div>
+                        </span>
+                                    </li>
+                                    <li class="form-item-normal">
+                                        <label for="" class="form-label"><em class="warn">*</em> 手机：</label>
+                                        <span class="form-act">
+                            <div class="ac_phone">
+                            <input class="x-input" type="text" name="contact[phone][mobile]" id="sendtomobile" data-origin="15504628304" value="15504628304" vtype="required&amp;&amp;mobile">&nbsp;&nbsp;
+                            <!--<input class="x-input verify-input input-center" type="text" name="mobile[check]" maxlength="10" class="verify-input input-center" style="width: 75px;" placeholder="短信验证码" autocomplete="off" id="dom_el_a42bfb1" />                            <span>
+                                <button id="doSendMobile" onclick="sendMobileCode();" type="button" style="background-color: #fff;color: #70a4c1;position: absolute;z-index: 10;top: 6px;border: none;padding-left: 10px;">
+                                    <span><span id="sendButtonValue">获取短信验证码</span></span>
+                                        </button>
+                                        </span>-->
+                                        <em class="changenum">修改号码</em>
+                        </div>
+                        </span>
+                        </li>
+                        <li class="form-item-normal minusmargin">
+                            <label for="" class="form-label">E-mail：</label>
+                            <span class="form-act">
+                            <input class="x-input" type="text" name="contact[email]" id="dom_el_a42bfb2">                        </span>
+                        </li>
+                        <li class="form-item-normal">
+                            <label for="" class="form-label">所在地：</label>
+                            <span class="form-act">
+                            <span class="region" vtype="" id="dom_el_a42bfb3">
+<input name="contact[area]" package="mainland" type="hidden" value="">
+<select data-level-index="0" class="x-select"><option value="_NULL_">请选择</option><option value="1" data-level-index="0">北京</option><option value="21" data-level-index="1">上海</option><option value="423" data-level-index="2">广东</option><option value="1643" data-level-index="3">江苏</option><option value="3133" data-level-index="4">浙江</option><option value="42" data-level-index="5">天津</option><option value="62" data-level-index="6">重庆</option><option value="104" data-level-index="7">安徽</option><option value="227" data-level-index="8">福建</option><option value="322" data-level-index="9">甘肃</option><option value="566" data-level-index="10">广西</option><option value="690" data-level-index="11">贵州</option><option value="788" data-level-index="12">海南</option><option value="814" data-level-index="13">河北</option><option value="998" data-level-index="14">河南</option><option value="1176" data-level-index="15">黑龙江</option><option value="1320" data-level-index="16">湖北</option><option value="1436" data-level-index="17">湖南</option><option value="1573" data-level-index="18">吉林</option><option value="1763" data-level-index="19">江西</option><option value="1874" data-level-index="20">辽宁</option><option value="1989" data-level-index="21">内蒙古</option><option value="2103" data-level-index="22">宁夏</option><option value="2130" data-level-index="23">青海</option><option value="2182" data-level-index="24">山东</option><option value="2340" data-level-index="25">山西</option><option value="2471" data-level-index="26">陕西</option><option value="2589" data-level-index="27">四川</option><option value="2792" data-level-index="28">西藏</option><option value="2873" data-level-index="29">新疆</option><option value="2987" data-level-index="30">云南</option><option value="3235" data-level-index="31">香港</option><option value="3239" data-level-index="32">澳门</option><option value="3242" data-level-index="33">台湾</option></select>
+<select data-level-index="1" class="x-select" style="display:none;"></select>
+<select data-level-index="2" class="x-select" style="display:none;"></select>
+<select data-level-index="3" class="x-select" style="display:none;"></select>
+</span>
+                            </span>
+                        </li>
+                        <li class="form-item-normal">
+                            <label for="" class="form-label"><em class="warn">*</em> 出生日期：</label>
+                            <span class="form-act">
+                                                        <div class="ac_common" style="display: inline">
+                                    <input type="hidden" name="ignore_birthday" value="0">
+                                    <input class="Wdate whyGreendata ipt" type="text" onclick="WdatePicker()" onfocus="WdatePicker({startDate:'1986-01-01',readOnly:true,skin:'twoer',isShowToday:false,isShowOK:false,qsEnabled:false,})" name="profile[birthday]">
+
+                            </div>
+                                                         <em style="margin-left:8px;display: inline-block;*display:inline;*zoom:1;color: #d6c9bd;font-size:13px">出生日期保存后不能修改</em>
+                        </span>
+                        </li>
+                        <li class="form-item-normal">
+                            <label for="" class="form-label">亲友生日：</label>
+                            <span class="form-act">
+                            <div class="ac_common">
+                                <select name="profile[family_type]" style="height: 32px;padding: 0px 0px 0px 5px">
+                                                                        <option value="" selected="">关系</option>
+                                                                        <option value="1">丈夫</option>
+                                                                        <option value="2">妻子</option>
+                                                                        <option value="3">父亲</option>
+                                                                        <option value="4">母亲</option>
+                                                                        <option value="5">子女</option>
+                                                                        <option value="6">友人</option>
+                                                                    </select>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    <input class="Wdate other_bir ipt" type="text" onclick="WdatePicker()" onfocus="WdatePicker({readOnly:true,skin:'twoer',isShowToday:false,isShowOK:false,qsEnabled:true,autoShowQS:false})" name="profile[family_birthday]">
+                                                             </div>
+                        </span>
+                        </li>
+                        <li class="form-item-normal">
+                            <label for="" class="form-label"> 您最爱的产品：</label>
+                            <span class="form-act" style="display: inline-block;margin-left: -38px;*display:inline;*zoom:1">
+                            <div class="ac_interest">
+                                <select name="interest" id="interest">
+                                    <option value="0">请选择</option>
+                                                                            <option value="26">
+                                            平安夜                                        </option>
+                                                                            <option value="297">
+                                            21生日奶油蛋糕                                        </option>
+                                                                            <option value="295">
+                                            汉砖                                        </option>
+                                                                            <option value="294">
+                                            风乍起                                        </option>
+                                                                            <option value="282">
+                                            新卡                                        </option>
+                                                                            <option value="29">
+                                            桂圆冰淇淋蛋糕                                        </option>
+                                                                            <option value="8">
+                                            黑森林                                        </option>
+                                                                            <option value="13">
+                                            卡百利                                        </option>
+                                                                            <option value="16">
+                                            巧克力絲語                                        </option>
+                                                                            <option value="28">
+                                            清境                                        </option>
+                                                                            <option value="27">
+                                            爱尔兰咖啡                                        </option>
+                                                                            <option value="4">
+                                            杏仁克鲁兹                                        </option>
+                                                                            <option value="10">
+                                            卡布其诺                                        </option>
+                                                                            <option value="31">
+                                            冻慕斯与焗芝士                                        </option>
+                                                                            <option value="20">
+                                            杰瑞                                        </option>
+                                                                            <option value="18">
+                                            黑方                                        </option>
+                                                                            <option value="2">
+                                            布萊克                                        </option>
+                                                                            <option value="3">
+                                            核桃斯诺                                        </option>
+                                                                            <option value="7">
+                                            栗蓉暗香                                        </option>
+                                                                            <option value="6">
+                                            松仁淡奶                                        </option>
+                                                                            <option value="11">
+                                            心语心愿                                        </option>
+                                                                            <option value="55">
+                                            东方栗融                                        </option>
+                                                                            <option value="24">
+                                            新马斯卡彭-咖啡软芝士蛋糕                                        </option>
+                                                                            <option value="14">
+                                            花格                                        </option>
+                                                                            <option value="21">
+                                            芒果慕斯                                        </option>
+                                                                            <option value="19">
+                                            黑越橘                                        </option>
+                                                                            <option value="9">
+                                            榴莲飘飘                                        </option>
+                                                                            <option value="1">
+                                            朗姆芝士                                        </option>
+                                                                            <option value="30">
+                                            中秋坚果芝士慕斯                                        </option>
+                                                                            <option value="96">
+                                            百香果酸乳酪慕斯蛋糕                                        </option>
+                                                                            <option value="5">
+                                            布朗尼                                        </option>
+                                                                            <option value="17">
+                                            黑白巧克力慕斯                                        </option>
+                                                                            <option value="12">
+                                            '百利甜情人                                        </option>
+                                                                            <option value="132">
+                                            抹茶和栗                                        </option>
+                                                                    </select>
+                            <div>
+                        
+                    </div></div></span></li>
+                        <li class="form-item-normal">
+                            <span class="form-act">
+                            <button style="height:30px;margin-left: 268px" class="btn btn-caution J_commit" rel="_request">
+                                <span><span>保存</span></span>
+                            </button>
+                            </span>
+                        </li>
+                        </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-dialog-mask" style="display: none"></div>
+            <div class="alert-container changetel-container" style="position: fixed;top:50%;left: 50%;margin-left: -141px;margin-top:-141px;z-index: 100001;display: none">
+                <div class="pop-attention-main changetel-main" id="changetel-dialog">
+                    <form id="recharge-dialog-form" method="post">
+                        <div class="figure changetel-figure">
+                            <dfn class="confirm">!</dfn>
+                            <div class="cncancel_btn">
+                                <i class="cncancel_ico"></i>
+                            </div>
+                            <span class="clmain_cg">修改号码</span>
+                            <ul class="changetel_content">
+                                <li class="item r_margin">
+                                    <input type="text" class="tel" name="tel_number" vtype="required" placeholder="请输入新手机号码" size="22" data-msg="请输入新手机号码">
+                                </li>
+                                <li class="item2">
+                                    <input type="text" class="code" name="tel_code" vtype="required" id="card_password" placeholder="短信验证码" style="vertical-align:middle" size="22" data-msg="请输入短信验证码">
+                                    <button type="button" class="getcode" id="doSendMobile">点击获取</button>
+                                </li>
+                                <li class="r_error" style="">您输入的卡号或密码错误,请重试！</li>
+                            </ul>
+                        </div>
+                        <div class="confirmchange">确认修改</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer-area">
+        <div class="footer-inner">
+            <div class="fl-l foo-mes">
+                <p>订购专线：<b>400 650 2121</b>（服务时间 08:00–22:00）
+                    <br> 客服电话：021-23099721（全国）&nbsp;|&nbsp;
+                    <a href="mailto:kefu@21cake.com">kefu@21cake.com（邮箱）</a>
+                    <a href="http://weibo.com/21cake?topnav=1&amp;wvr=5&amp;topsug=1" class="weibo"><img src="http://www.21cake.com/themes/21cake/images/img/weibo.png"></a>
+                    <a target="_blank" class="weixin"><img src="http://www.21cake.com/themes/21cake/images/img/weixin.png">
+                        <span class="third-enter-dia">
+            <span class="third-enter-dia-inner">
+              <img src="/themes/21cake/images/2wm_wx_2.jpg">
+              <span>扫描21cake方形<br>微信二维码</span>
+                        </span>
+                        </span>
+                    </a>
+                    <span>
+        <span id="cnzz_stat_icon_1255778095"><a href="http://www.cnzz.com/stat/website.php?web_id=1255778095" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a></span>
+                    </span>
+                    <br>
+                    <b>北京/杭州/广州：提前5小时预订；上海：提前6-8小时预订；天津/苏州/无锡/深圳：提前8小时预订</b>（当日22点以后订单，于次日8点开始审核）
+                    <br>
+                    <b>当日蛋糕配送截止下单时间：北京：16:50；上海：16:30；杭州/广州：13:50；天津/苏州/无锡/深圳：11:00</b>
+                </p>
+                <p class="copyright">
+                    Copyright© 21Cake蛋糕官网商城 2007-2015, 版权所有 京ICP备14006254号-1 公司: 上海廿一客食品有限公司 地址: 上海市松江区新桥镇新效支路518号
+                </p>
+            </div>
+            <div class="fl-r foo-link clearfix">
+                <!--<a target="_blank" href="/tryeat.html">企业试吃</a><span class="foo-line">&nbsp;|&nbsp;</span>-->
+                <a target="_blank" href="/article-about-55.html">联系我们</a><span class="foo-line">&nbsp;|&nbsp;</span>
+                <a target="_blank" href="/article-distribution-40.html">订购帮助</a><span class="foo-line">&nbsp;|&nbsp;</span>
+                <a target="_blank" href="/article-about-56.html">企业合作</a>
+            </div>
+            <div style="visibility: hidden">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

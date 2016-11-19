@@ -1,0 +1,29 @@
+.Wdate{
+	border:#999 1px solid;
+	height:20px;
+	background:#fff url("/themes/21cake/images/js_Spec_06.png") no-repeat right;
+            color: #8d6a54;
+    cursor: pointer;
+}
+.Wdate::-ms-clear{display:none;}
+
+/*.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}*/
+
+.whyGreendata{
+
+    border: none;
+    width: 293px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 0 5px;
+}
+.other_bir{
+    width: 206px;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 0 5px;
+}

@@ -1,0 +1,59 @@
+*{padding: 0; margin: 0;}
+body,input{font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+a,label, :focus {outline: 0 none;}
+a,img {border: 0 none;}
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+em,i{font-style: normal;}
+ul,li,ol,dl{list-style: none;}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button,input,select,textarea{margin:0;font-size:100%;vertical-align:middle; font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+button,input.btn{*overflow:visible;line-height:normal;}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;}
+input[type="search"]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield;}
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none;}
+.clearfix:after{display:block;content:"\20";height:0;clear:both;overflow:hidden;visibility:hidden;}
+.clearfix{*zoom:1;}
+html,body{ font-size: 12px; color: #604136;}
+
+html{height: 100%;}/* 针对ie6弹框背景出来了高度不够加的 */
+body{height: 100%;}/* 针对ie6弹框背景出来了高度不够加的 */
+body{*position:relative;} /* 针对ie6body里面有position的bug。*/
+
+
+.tl-c{text-align: center;}
+.tl-r{text-align: right;}
+.tl-l{text-align: left;}
+.pos-r{position: relative;}
+.td-u{text-decoration: underline; color:#8e6a55;}/* 针对有下划线的链接 */
+.td-u:hover{color:#432818;}
+.error-tip{color: #ff7e00;}
+
+
+.space10{margin-left: 10px;}
+.space20{margin-left: 20px;}
+
+.hide{display: none!important;}
+.fl-l{float: left;}
+.fl-r{float: right;}
+.vl-m{vertical-align: middle;}
+
+.pointer{cursor: pointer;}
+a.normal-a{color:#8e6a55;} /*默认a链接样式*/
+a.normal-a:hover{color:#432818; text-decoration:none; }
+
+
+
+/*情人节活动定制语*/
+.valentext{width: 70%}
+.valen-button{ background:url("/themes/21cake/images/icon/valen_edit.png") no-repeat 0 0;border: medium none;color: #fff;height: 25px;width: 50px;position: absolute;bottom: 0;left: 145px;text-align: center;line-height: 25px;cursor: pointer;text-indent: -99999px}
+.valen-select {text-align: left;width: 140px;}
+.valen-select .select-inner {color: #8e6a55;width: 126px;}
+.valen-select .input-item {border: 1px solid #eee;}
+.valen-select .valen_display_box{border: 1px solid #eee;position: absolute;width: 100px;height: 100px;z-index: 10000}
+.valen-select .select-textarea-area{position: absolute;top:-16px;left: -3px;}
+.valen-select .select-textarea-area textarea{color:#8e6a55;width: 140px}

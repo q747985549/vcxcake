@@ -1,0 +1,26 @@
+  #upgrade_dialog_outer{position:absolute;width:100%;height:100%;top:0;left:0;z-index:100006}
+  .gray-bg {position: absolute;left: 0;top: 0;background-color: #333;opacity: .7;filter: alpha(opacity=70);width: 100%;height: 100%;}
+  .gray-bg {background: #fff;}
+  .dialog{width: 400px; padding: 6px; min-height: 200px; _height:200px; position: fixed; top:40%!important; margin-top: -140px; left: 50%; margin-left: -275px; background: url(img/touming.png) repeat; _background:#fff; z-index: 100010; _border:1px solid #ccc;}
+  .dialog-head{position: relative; padding: 14px; height: 26px; background: #fff;}
+  .dia-title{font-size: 16px; line-height: 1.5; *font-weight: bold;}
+  .dialog .close-ico{position: absolute; top:20px; right: 20px; color: #ff7e00; font-weight: bold; cursor: pointer;
+    height: 16px; width: 16px; background: url(img/dialog-close-btn.png) 0 0 no-repeat; text-indent: -100px; overflow: hidden;}
+  .dialog-con{padding: 10px 14px 20px 14px; background: #fff;}
+  .dia-st-tip{font-size: 14px; line-height: 1.5; text-align: center; margin-bottom: 10px; padding: 20px 0;}
+  .dialog-foo{height: auto; padding: 10px 0 20px 0; background: #fff; text-align: center;}
+  .tip16 {font-size: 16px;color: #9c7f6b;}
+  .dialog .btn{border: 0 none;background: #f7f7f7;border:1px solid #bda99c;padding: 0 10px;height: 28px; line-height: 28px;color: #604136;text-decoration: none;display: inline-block; *display: inline; *zoom:1;vertical-align: middle;*overflow: visible;font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+  .dialog .btn{line-height: normal\0; *line-height:normal; _line-height: 28px;}
+  .dialog a.btn{height: 26px; line-height: 26px; *line-height:26px; _height:31px; _line-height: 31px; }
+  .dialog a.btn:hover{text-decoration: none;}
+  .dialog .big-btn{height: 42px; line-height: 42px; padding: 0 40px; font-size: 16px;}
+  .dialog .mid-btn{height: 34px; line-height: 34px; padding: 0 20px; font-size: 14px;}
+  .dialog .big-btn{line-height: normal\0; *line-height: normal; _line-height: 42px; }
+  .dialog .mid-btn{line-height: normal\0; *line-height: normal; _line-height:34px;}
+  .dialog a.big-btn{height: 40px; line-height: 40px; _height: 45px; _line-height: 45px;}
+  .dialog a.mid-btn{height: 32px; line-height: 32px; _height: 37px; _line-height: 37px;}
+  .dialog .btn-import{background: #432818; border:1px solid #432818; color: #fff;}
+  .dialog .space20{margin-right:20px;}
+  .dialog input.disabled,
+  .dialog a.disabled{cursor: default; color: #999;}

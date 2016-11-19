@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>卖蛋糕</title>
+    <link href="css/basic.min.css" rel="stylesheet" />
+    <link href="css/stylecake.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="head-area">
+        <div class="head-inner">
+            <div class="nav-area fl-l clearfix">
+                <a href="/" class="global-logo fl-l"><img src="http://www.21cake.com/themes/21cake/images/img/c_logo.png"></a>
+                <ul class="head-nav fl-l clearfix">
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/index.html">首页</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/gallery-index---0---1.html">蛋糕</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/gallery-index---0---3.html">新品</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/product-6377.html">代金卡</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="http://www.21cake.com/article--i-18.html">品牌故事</a>
+                    </li>
+                    <li class="nav-item  last">
+                        <a href="http://www.21cake.com/article-distribution-40.html" target="_blank">订购帮助</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login-mes fl-r" style="position: relative;">
+                <a id="qqbrown" style="display:none;" href="http://q.url.cn/s/6igyY" target="_blank"></a>
+                <ul class="head-nav fl-l clearfix">
+                    <li id="j_header_login">
+                        <a href="/passport-login.html" id="IDheaderlogin">登录</a>
+                    </li>
+                    <li id="j_header_signup">
+                        <a href="/passport-signup.html" id="IDheadersignup">注册</a>
+                    </li>
+                    <li class="hide" id="j_header_logout">
+                        <a href="/member.html" style="padding:0;">&nbsp;&nbsp;您好，<span id="j_header_uname"></span></a><a href="/passport-logout.html">[退出]</a>
+                    </li>
+                    <li id="j_header_order">
+                        <a id="j_header_order_link" href="/member-orders_v2_static.html">订单</a>
+                    </li>
+                    <li class="last">
+                        <a href="/cart.html" class="shop-car" id="j_header_cart_number">0</a>
+                    </li>
+                    <!--<li class="free-order">
+                <a href="javascript:void(0)" class="free_tip" title="满100元,可免费享受21cake专业配送"></a>
+            </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="page-container clearfix">
+    <link href="css/member-center.css" rel="stylesheet" />
+    
+        <div class="inner-wrap">
+            <div class="bread-crumbs">
+                <span>
+                <a href="/" alt="" title="">首页</a>
+            </span>
+                <span>&nbsp;&gt;&nbsp;</span>
+                <span>
+                <a href="#" alt="" title="">修改密码</a>
+            </span>
+                <span>&nbsp;&gt;&nbsp;</span>
+                <span class="now">我的廿一客</span>
+                <input type="hidden" id="isCakeList" value="我的廿一客">
+            </div>
+            <div class="member-area">
+                <!-- 会员中心主内容区 -->
+                <div class="page-article">
+                    <!-- 修改密码 -->
+                    <div class="member-title">
+                        <h2>修改密码</h2>
+                    </div>
+                    <div id="member_changepass" class="member-changepass member-mod">
+                        <form action="http://www.21cake.com/member-save_security.html" method="post" class="mod-content signupin-content">
+                            <ul>
+                                <li class="form-item">
+                                    <label for="" class="form-label">旧密码：</label>
+                                    <span class="form-act">
+                            <input type="password" name="old_passwd" id="" class="x-input" maxlength="20" autofocus="autofocus" vtype="required" data-caution="请填写旧密码">
+                        </span>
+                                </li>
+                                <li class="form-item">
+                                    <label for="" class="form-label">新密码：</label>
+                                    <span class="form-act">
+                        <input type="password" name="passwd" class="x-input auto-password-check-handle" maxlength="20" placeholder="6-20个字符" vtype="required&amp;&amp;minLength:6&amp;&amp;maxLength:20" data-equal="pam_account[psw_confirm]" data-caution="请填写新密码，6-20个字符&amp;&amp;输入不正确，最少6个字符&amp;&amp;输入不正确，最多20个字符">
+                        <span class="password-check" style="visibility: visible;">
+                            <q>密码强度：</q>
+                            <em class="poor">差</em><em class="weak">弱</em><em class="good">中</em><em class="strong">强</em>
+                            <span class="progress">
+                                <span class="percent"></span></span>
+                                    </span>
+                                    <span class="validation-messagebox"></span>
+                                    </span>
+                                </li>
+                                <li class="form-item">
+                                    <label for="" class="form-label">确认新密码：</label>
+                                    <span class="form-act">
+                        <input type="password" name="passwd_re" id="" class="x-input" maxlength="20" vtype="equal:passwd" data-caution="两次密码输入不相符，请重新输入">
+                        <span class="validation-messagebox"></span>
+                                    </span>
+                                </li>
+                                <li class="form-item-normal">
+                                    <label for="" class="form-label"></label>
+                                    <span class="form-act">
+                        <button type="submit" class="btn btn-caution action-confirm" rel="_request">
+                        <span>
+                            <span>确定</span>
+                                    </span>
+                                    </button>
+                                    </span>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-area">
+        <div class="footer-inner">
+            <div class="fl-l foo-mes">
+                <p>订购专线：<b>400 650 2121</b>（服务时间 08:00–22:00）
+                    <br> 客服电话：021-23099721（全国）&nbsp;|&nbsp;
+                    <a href="mailto:kefu@21cake.com">kefu@21cake.com（邮箱）</a>
+                    <a href="http://weibo.com/21cake?topnav=1&amp;wvr=5&amp;topsug=1" class="weibo"><img src="http://www.21cake.com/themes/21cake/images/img/weibo.png"></a>
+                    <a target="_blank" class="weixin"><img src="http://www.21cake.com/themes/21cake/images/img/weixin.png">
+                        <span class="third-enter-dia">
+            <span class="third-enter-dia-inner">
+              <img src="/themes/21cake/images/2wm_wx_2.jpg">
+              <span>扫描21cake方形<br>微信二维码</span>
+                        </span>
+                        </span>
+                    </a>
+                    <span>
+        <span id="cnzz_stat_icon_1255778095"><a href="http://www.cnzz.com/stat/website.php?web_id=1255778095" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a></span>
+                    </span>
+                    <br>
+                    <b>北京/杭州/广州：提前5小时预订；上海：提前6-8小时预订；天津/苏州/无锡/深圳：提前8小时预订</b>（当日22点以后订单，于次日8点开始审核）
+                    <br>
+                    <b>当日蛋糕配送截止下单时间：北京：16:50；上海：16:30；杭州/广州：13:50；天津/苏州/无锡/深圳：11:00</b>
+                </p>
+                <p class="copyright">
+                    Copyright© 21Cake蛋糕官网商城 2007-2015, 版权所有 京ICP备14006254号-1 公司: 上海廿一客食品有限公司 地址: 上海市松江区新桥镇新效支路518号
+                </p>
+            </div>
+            <div class="fl-r foo-link clearfix">
+                <!--<a target="_blank" href="/tryeat.html">企业试吃</a><span class="foo-line">&nbsp;|&nbsp;</span>-->
+                <a target="_blank" href="/article-about-55.html">联系我们</a><span class="foo-line">&nbsp;|&nbsp;</span>
+                <a target="_blank" href="/article-distribution-40.html">订购帮助</a><span class="foo-line">&nbsp;|&nbsp;</span>
+                <a target="_blank" href="/article-about-56.html">企业合作</a>
+            </div>
+            <div style="visibility: hidden">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
