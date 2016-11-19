@@ -17,7 +17,9 @@ Route::get('/', function () {
 
 /*Cake*/
 Route::get('/list/{pid}/{cate_id?}',"CakeController@lists");
-Route::get('/addcart/{id}',"CakeController@addcart")->middleware('addcart');
+Route::get('/ajax_get_info/{id}',"CakeController@ajax_get_info");
+Route::post('/addcart',"CakeController@addcart")->middleware('addcart');
+
 /*Public*/
 Route::any('/register',"PublicController@register");
 Route::any('/login',"PublicController@login");
