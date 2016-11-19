@@ -16,7 +16,7 @@ class PayController extends Controller
     		$this->validate($request->all(),$rules);
     		$info = Cake::find($request->input('input'));
     		if($info){
-
+    			a
     		}
     	}
     }
