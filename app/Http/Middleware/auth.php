@@ -18,6 +18,7 @@ class auth
         if(!Auth::check()){
             redirect('/login');
         }
+
         return $next($request);
     }
 }

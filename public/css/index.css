@@ -283,6 +283,3 @@ ul.slide-list li a img{height:500px;}
 .red_ico{background: url("/themes/21cake/images/icon/red_ico.png") right bottom no-repeat;background-size: 8px;position: absolute;top:0px;display: block;width:8px;height: 8px;right: 42px}
 
 /*Ìí¼ÓqqÈë¿Ú*/
-.login-mes a#qqbrown{background: url("/wap_themes/21cake/images/qqbrown.png") no-repeat;width: 80px;height: 24px;background-position: 0 0;position: absolute;top:16px;right:0;padding: 0}
-.login-mes a#qqbrown:hover{background: url("/wap_themes/21cake/images/qqbrown.png") no-repeat;width: 80px;height: 24px;background-position: 0 -24px;position: absolute;top:16px;right:0;padding: 0}
-.login-mes a#qqbrown:active{background: url("/wap_themes/21cake/images/qqbrown.png") no-repeat;width: 80px;height: 24px;background-position: 0 -24px;position: absolute;top:16px;right:0;padding: 0}

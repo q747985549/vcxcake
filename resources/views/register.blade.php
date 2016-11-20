@@ -1,5 +1,5 @@
 @extends('base')
-@section('title','登陆')
+@section('title','注册')
 @section('content')
     <div id="container" class="page-container clearfix">
   <div class="inner-wrap">

@@ -1,4 +1,6 @@
-@extends('base') @section('title','列表') @section('content')
+@extends('base')
+@section('title',$pid) 
+@section('content')
 <style>
 .pagination {
     display: inline-block;
@@ -37,7 +39,7 @@
 </style>
 <script>
 $(function() {
-    $(".popup-container:first").show();
+    // $(".popup-container:first").show();
 })
 </script>
 <div id="container" class="page-container clearfix">
@@ -86,7 +88,7 @@ $(function() {
                             @foreach($list as $v)
                             <li class="goods-item clearfix">
                                 <div class="goods-pic">
-                                    <a target="_blank" href="{{url('/detail/'.$v['id'])}}"><img class="action-goods-img" title="{{$v['title']}}" alt="{{$v['title']}}" src="{{url('/getimg/'.$v['img'])}}"></a>
+                                    <a target="_blank" href="{{url('/detail/'.$v['id'])}}"><img class="action-goods-img" title="{{$v['title']}}" alt="{{$v['title']}}" src="{{url('/files/getimg/'.$v['img'])}}"></a>
                                 </div>
                                 <div class="goods-action">
                                     <div class="goods-buy">
@@ -108,9 +110,9 @@ $(function() {
                                 </div>
                                 <div class="goods-info">
                                     <h3 class="goods-name">
-                                                             <a href="/product-6122.html" target="_blank">{{$v['title']}}</a>
+                                                             <a href="{{url('/detail/'.$v['id'])}}" target="_blank">{{$v['title']}}</a>
                                          </h3>
-                                    <div class="goods-desc">{{$v['description']}}
+                                    <div class="goods-desc">{!!$v['description']!!}
                                     </div>
                                     <div class="goods-comment">
                                     </div>
@@ -154,12 +156,16 @@ $(function() {
             $.post("{{url('addcart')}}",{
                 id:$('[name=goods_id]').val(),
                 weight:$("[name=weight]").val(),
-                num:$("[name=num]").val()
+                num:$("[name=num]").val(),
+                _token:"{{csrf_token()}}"
             },function(a){
                 if(a == 1){
                     layer.msg('添加成功！');
+                    $(".layui-layer").css('z-index',9999999999999);
+                    bigCartDialog.destroy();
                 }else{
                     layer.msg(a);
+                    $(".layui-layer").css('z-index',9999999999999);
                 }
             });
         });
@@ -239,8 +245,8 @@ $(function() {
             <form method="post" action="/cart-add-goods.html">
 
                 <input type="hidden" name="goods_id" id="goods_id" value="">
-                <input type="hidden" name="weight" value="">
-                <input type="hidden" name="num" value="">
+                <input type="hidden" name="weight" id="weight" value="">
+                <input type="hidden" name="num" value="1">
 
                 <div class="popup-body">
                     <div class="popup-header clearfix">
@@ -342,7 +348,7 @@ $(function() {
                                         </li>
                                         <!--购买按钮-->
                                         <li class="product-buy-action">
-                                            <button type="submit" onclick="" class="btn btn-major btn-huge action-addtocart" rel="_request" id="IDproductaddtocart">
+                                            <button type="button" onclick="" class="btn btn-major btn-huge" rel="_request" id="IDproductaddtocart">
                                                 <span class="big_dialog_addcart">加入购物车</span>
                                             </button>
                                             <button type="submit" class="btn btn-import btn-huge action-buynow" rel="_request" id="IDproductbuynow">

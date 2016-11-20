@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Auth;
 class addcart
 {
     /**
@@ -16,7 +16,7 @@ class addcart
     public function handle($request, Closure $next)
     {
         if(!Auth::check()){
-            return "请先登陆";
+            die("请先登陆");
         }
         return $next($request);
     }

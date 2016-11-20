@@ -11,14 +11,26 @@
 |
 */
 use Mews\Captcha\Captcha;
+
+Route::group(['prefix' => 'admin','namespace'=>'Admin',"middleware"=>'auth.admin'], function() {
+    Route::get('',"PublicController@index");
+    Route::any('setting',"PublicController@setting");
+});
+
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/us',"HomeController@us");
+Route::get('help/{id?}',"HelpController@index");
+/*Upload*/
+Route::any('/files/upload',"FileController@upload");
+Route::get('/files/getimg/{id}',"FileController@getImg");
 
 /*Cake*/
 Route::get('/list/{pid}/{cate_id?}',"CakeController@lists");
+Route::get('/detail/{id}',"CakeController@detail")/*->middleware('auth')*/;
 Route::get('/ajax_get_info/{id}',"CakeController@ajax_get_info");
-Route::post('/addcart',"CakeController@addcart")->middleware('addcart');
+Route::post('/addcart',"PayController@addcart")->middleware('addcart');
 
 /*Public*/
 Route::any('/register',"PublicController@register");
