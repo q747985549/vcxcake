@@ -15,16 +15,32 @@ use Mews\Captcha\Captcha;
 Route::group(['prefix' => 'admin','namespace'=>'Admin',"middleware"=>'auth.admin'], function() {
     Route::get('',"PublicController@index");
     Route::any('setting',"PublicController@setting");
+
+    /*会员管理*/
+	Route::group(['prefix'=>'user'],function(){
+		Route::any('list/{order?}',"UserManagerController@lists");
+		Route::get('lahei/{id}',"UserManagerController@lahei");
+		Route::get('huifu/{id}',"UserManagerController@huifu");
+	});
+
+	/*商品管理*/
+	Route::group(['prefix'=>'goods'],function(){
+		Route::any('list/{order?}',"GoodsController@lists");
+		Route::get('order/{id}/{order_id}',"GoodsController@order");
+		Route::get('set/{id}/{status}',"GoodsController@set")->where(['status'=>"(0|1|-1)"]);
+		Route::any('add',"GoodsController@add");
+		Route::any('edit/{id}',"GoodsController@edit");
+	});
+	
 });
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', "HomeController@index");
+
 Route::get('/us',"HomeController@us");
 Route::get('help/{id?}',"HelpController@index");
 /*Upload*/
 Route::any('/files/upload',"FileController@upload");
-Route::get('/files/getimg/{id}',"FileController@getImg");
+Route::get('/files/getimg/{id}',"FileController@getImg"); 
 
 /*Cake*/
 Route::get('/list/{pid}/{cate_id?}',"CakeController@lists");

@@ -1,8 +1,8 @@
-@extends('shangjia/base')
+@extends('admin/base')
 @section('content')
 <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <div class="tuan_content">
-	<form method="get" action="{{ url('/shangjia/user/list') }}">
+	<form method="get" action="{{ url('/admin/goods/list') }}">
 		<div class="radius5 tuan_top">
 			<div class="tuan_top_t">
 				<div class="left tuan_topser_l">
@@ -15,14 +15,11 @@
 	</form>
 	<div class="tuanfabu_tab">
 		<ul>
-			<li class="tuanfabu_tabli @if(($order == 'id')) on @endif">
-				<a href="{{url('/shangjia/goods/list')}}">默认</a>
+			<li class="tuanfabu_tabli @if(($pid == 1)) on @endif">
+				<a href="{{url('/admin/goods/list/1')}}">蛋糕</a>
 			</li>
-			<li class="tuanfabu_tabli @if(($order == 'saled')) on @endif">
-				<a href="{{url('/shangjia/goods/list',['saled'])}}">按销量排行</a>
-			</li>
-			<li class="tuanfabu_tabli @if(($order == 'order_id')) on @endif">
-				<a href="{{url('/shangjia/goods/list',['order_id'])}}">按序号排行</a>
+			<li class="tuanfabu_tabli @if(($pid == 2)) on @endif">
+				<a href="{{url('/admin/goods/list/2')}}">新品</a>
 			</li>
 		</ul>
 	</div>
@@ -32,11 +29,11 @@
 				<td><input type="checkbox" id="select_all"></td>
 				<td>编号</td>
 				<td>缩略图</td>
+				<td>分类</td>
 				<td>标题</td>
-				<td>价格</td>
 				<td>排序</td>
-				<td>销量</td>
-				<td>订餐类型</td>
+				<td>已售</td>
+				<td>单价</td>
 				<td>状态</td>
 				<td>创建时间</td>
 				<td>操作</td>
@@ -46,17 +43,11 @@
 				<td><input type="checkbox" name="idarr" value="{{$v['id']}}"></td>
 				<td>{{$v['id']}}</td>
 				<td style="padding:0 0"><img width="66px" src="{{url('/files/getimg/'.$v['img'])}}"></td>
+				<td>{{$v['cate_name']}}</td>
 				<td>{{$v['title']}}</td>
-				<td>{{$v['price']}}</td>
 				<td><input class="tuanfabu_int" style="width:38px" onchange="change_order_id({{$v['id']}},this)" value="{{$v['order_id']}}" /></td>
-				<td>{{$v['saled']}}</td>
-				<td>@if($v['delivery'] == 1)
-				外卖
-				@elseif($v['delivery'] == 2)
-				到店用
-				@else
-				外卖 + 到店用
-				@endif
+				<td>{{$v['selled']}}</td>
+				<td>{{$v['price']}}
 				</td>
 				<td>@if($v['status'] == 0)
 				下架
@@ -66,16 +57,14 @@
 				</td>
 				<td>{{$v['created_at']}}</td>
 				<td>
-					<a href="{{url('/shangjia/goods/edit',[$v['id']])}}">编辑</a>
-					<a href="{{url('/shangjia/goods/set',[$v['id'],-1])}}">删除</a>
+					<a href="{{url('/admin/goods/edit',[$v['id']])}}">编辑</a>
+					<a href="{{url('/admin/goods/set',[$v['id'],-1])}}">删除</a>
 
 					@if($v['status'] == 0)
-					<a href="{{url('/shangjia/goods/set',[$v['id'],1])}}" >上架</a>
+					<a href="{{url('/admin/goods/set',[$v['id'],1])}}" >上架</a>
 					@elseif($v['status'] == 1)
-					<a href="{{url('/shangjia/goods/set',[$v['id'],0])}}" >下架</a>
+					<a href="{{url('/admin/goods/set',[$v['id'],0])}}" >下架</a>
 					@endif
-
-
 				</td>
 			</tr>
 			@endforeach
@@ -93,11 +82,11 @@
 			});
 			function del($id){
 				if(confirm('确定删除？')){
-					location.href = "{{url('/shangjia/goods/del')}}/" + $id;
+					location.href = "{{url('/admin/goods/del')}}/" + $id;
 				}
 			}
 			function change_order_id($id,e){
-				var url = "{{ url('/shangjia/goods/order/') }}/" + $id + "/" +e.value;
+				var url = "{{ url('/admin/goods/order/') }}/" + $id + "/" +e.value;
 				$.get(url,function(){});
 			}
 			</script>
@@ -119,7 +108,7 @@
 	        		idarr.push(v.value);
 	        	});
 	        	idstr = idarr.join(',');
-	        	location.href = "{{url('/shangjia/goods/set')}}/" + idstr + '/' + $status;
+	        	location.href = "{{url('/admin/goods/set')}}/" + idstr + '/' + $status;
 	        }
         }
         </script>

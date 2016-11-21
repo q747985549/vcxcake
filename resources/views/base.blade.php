@@ -24,7 +24,7 @@
                         <a href="{{url('/')}}">首页</a>
                     </li>
                     <li class="nav-item ">
-                        <a href="{{url('/list/1')}}">蛋糕1</a>
+                        <a href="{{url('/list/1')}}">蛋糕</a>
                     </li>
                     <li class="nav-item ">
                         <a href="{{url('/list/2')}}">新品</a>
@@ -33,6 +33,7 @@
                     <li class="nav-item ">
                         <a href="{{url('/us')}}">品牌故事</a>
                     </li>
+                    
                     <li class="nav-item  last">
                         <a href="{{url('/help/4')}}" target="_blank">订购帮助</a>
                     </li>
