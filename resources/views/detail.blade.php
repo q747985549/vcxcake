@@ -208,20 +208,34 @@
                     <div id="product_detail" class="product-section product-detail">
                         <div class="product-attributes">
                             <ul class="clearfix">
-                                <li>品牌： {{$info['brand']}}
+                                <li>@if(!empty($info['brand']))
+                                品牌： {{$info['brand']}}
+                                    @endif
+
                                     <!--<a href="/brand-1.html">21Cake</a>-->
+                                    @if(!empty($info['renqun']))
                                     <p>适合人群：{{$info['renqun']}}</p>
+                                    @endif
+                                    @if(!empty($info['baoxian']))
                                     <p>保鲜条件：{{$info['baoxian']}}</p>
+                                    @endif
+                                    
+
                                 </li>
                                 <li>
                                     所属分类：{{$cate_name}}
+                                    @if(!empty($info['jieri']))
                                     <p>适合节日：{{$info['jieri']}}</p>
+                                    @endif
+
                                 </li>
                                 <li>
                                     <p>蛋糕分类：{{$info['dangaocate']}}</p>
+                                    @if(!empty($info['tiandu']))
                                     <p>甜度：@for($i=0;$i<$info['tiandu'];$i++)★@endfor
                                     @for($i=0;$i< 5-$info['tiandu'];$i++)☆@endfor
                                      </p>
+                                    @endif
                                 </li>
                             </ul>
                         </div>
@@ -247,11 +261,11 @@
                         <li class="goods-item clearfix">
                             <span class="num-1"></span>
                             <div class="goods-pic">
-                                <a href="{{url('detail/'.$h['id'])}}"><img alt="Bailey's Love Triangle  百利甜情人" data-img-zoom="true" src="{{url('files/getimg/'.$h['img'])}}"></a>
+                                <a href="{{url('detail/'.$h['id'])}}"><img src="{{url('files/getimg/'.$h['img'])}}"></a>
                             </div>
                             <div class="goods-info">
-                                <h3 class="goods-name"><a href="/product-365.html">{{$info['title']}}</a></h3>
-                                <div class="goods-price"><i>￥{{$info['price']}}</i></div>
+                                <h3 class="goods-name"><a href="{{url('detail/'.$h['id'])}}">{{$h['title']}}</a></h3>
+                                <div class="goods-price"><i>￥{{$h['price']}}</i></div>
                             </div>
                         </li>
                     @endforeach

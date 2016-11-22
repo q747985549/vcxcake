@@ -1,0 +1,94 @@
+/* 表格容器 */
+.goods-table{width: 100%; *position:relative;color: #8e6a55;}
+.gt-head{height: 28px; border:1px solid #e6e6e6; line-height: 28px; background: #f7f7f7; color: #8e6a55;}
+.gt-head th{font-weight: normal; *border-bottom:1px solid #e2ddd6; *border-top:1px solid #e2ddd6;}
+.gt-item{height: 68px; vertical-align: middle; border-bottom: 1px solid #eee; text-align: center;}
+.gt-cake-item{display: block; color: #8e6a55; height: 60px;}
+.gt-cake-item:hover{color: #491903; text-decoration: none;}
+.gt-cake-item:visited{ color:#8e6a55; }
+.gt-img-container{display: inline-block; *display: inline; *zoom:1; width: 60px; height: 60px; line-height:60px; vertical-align: middle;}
+.gt-img-container img{display: inline-block; *display: inline; *zoom:1; width: 60px; height: 60px; line-height: 1.2; overflow: hidden;}
+.gt-item-cake{text-align: left;}
+
+.gt-cake-item{display: inline-block; *display:inline; zoom:1; vertical-align: middle; max-width: 100%; padding-left: 110px; *padding-left: 90px;}
+.cake-intro{display:block; height: 100%; display: table;}
+.cake-intro-inner{display: table-cell; vertical-align: middle;}
+.gt-img-container{margin-left: -90px; *margin-left: -70px;}
+.cake-intro{*width: 100%; *padding-top: 14px; *height: 46px; *margin-top: 4px; zoom:1;}
+
+
+
+.little-close-ico{display: block; cursor: pointer; margin: 0 auto; width: 20px; height: 20px; 
+	background: url(../img/delete-ico.jpg) 0 0 no-repeat;}
+/*.goods-table tr:hover .little-close-ico{display: block;}*/
+
+.or-num{cursor:default; display: block;
+ -webkit-user-select:none;
+ -moz-user-select:-moz-none;
+ -khtml-user-select:none;
+ -ms-user-select:none;
+ -o-user-select:none; 
+ user-select: none;}
+
+.or-plus,
+.or-minus{background: #f7f7f7; border:solid 1px #d5c2b9; color: #bda99c;
+width: 24px; height: 24px; line-height:24px; text-align:center; font-size:0; overflow: hidden; vertical-align: middle; cursor: pointer; display: inline-block; *display: inline; *zoom:1; 
+ overflow: hidden;
+}
+.or-plus{background: url(../img/btn-add-ico.jpg) 0 0 no-repeat; margin-left: 6px;}
+.or-minus{background: url(../img/btn-minus-ico.jpg) 0 0 no-repeat; margin-right: 6px;}
+.or-plus:hover,
+.or-minus:hover{color: #8c6a52; border:1px solid #d5c2b9;}
+.or-plus:hover{background: url(../img/btn-add-hover.jpg) 0 0 no-repeat;}
+.or-minus:hover{background: url(../img/btn-minus-hover.jpg) 0 0 no-repeat;}
+.or-num-num{display: inline-block; *display: inline; *zoom:1; width: 28px; font-size:12px; height: 24px; line-height: 24px; vertical-align: middle; text-align: center}
+
+.goods-price{position: absolute; top:10px; right: 14px; z-index: 2; color: #8e6a55}
+.goods-price b{font-size: 14px; color: #491903;}
+
+/* 各种价格详细归总 */
+.total-money{width: 230px; line-height: 1.5; color: #8e6a55;}
+.total-money b{font-weight: normal; width: 100px; text-align:right; display: inline-block; *display: inline; zoom:1;}
+.total-money em{display: inline-block; *display: inline; zoom:1; width: 120px; text-align: right;}
+.total-p{margin-top: 10px;}
+.total-p b{font-weight: bold; font-size: 16px;}
+
+/* 提交区域 */
+.sub-form{margin: 20px 0 40px 0;}
+
+/* 标配的红字 */
+.special-mark{background:#8c6a52; color:#fff; padding:0 4px; margin-right:5px;}
+
+/* 错误提示与后续文字排版 */
+.error-tip{vertical-align: middle; _margin-top: 4px; display: inline-block; *display: inline; *zoom:1; height: 28px; line-height: 28px; margin-left: 10px;}
+
+/* 手机交互后的提示 */
+.ea-action-tip{vertical-align: middle; _margin-top: 4px; display: inline-block; *display: inline; *zoom:1; height: 28px; line-height: 28px; margin-left: 10px; color: #bbb4aa;}
+.ea-action-tip label{margin-left: 20px; color: #78735f; display: inline-block; *display: inline; *zoom:1; vertical-align: middle;}
+.ea-action-tip input.vl-m{margin-right: 6px; _margin-right:0; _vertical-align:1px;}
+.ea-action-tip .btn{margin-bottom: 2px;}
+
+/* 开发票选择框 */
+.invoice-checkbox{margin-top:6px; _margin-top:0;}
+.ie6-for-invoice{_margin-top: -14px;}
+
+.j_staff_total{color: #461802;}
+
+/* 磅数 */
+.bang-font{color: #cab3a7;}
+.bang-num{color: #8c6a52;}
+
+/*赠品多选一*/
+.goods-table tr.gift-new{}
+.goods-table tr.gift-new em.little-ico{display: block; cursor: pointer; margin: 0 auto; width: 20px; height: 20px; 
+    background: url(../img/gift_sele_off.png) 0 0 no-repeat;}
+.goods-table tr.gift-sele{background:#fbfbfb;}
+.goods-table tr.gift-sele em.little-ico{display: block; cursor: pointer; margin: 0 auto; width: 20px; height: 20px; 
+    background: url(../img/gift_sele_on.png) 0 0 no-repeat;}
+.goods-table .gift-new-title{border-bottom:1px solid #eeeeee; color:#604136; font-size:18px; font-weight:bold;}
+.goods-table .gift-new-title em{margin-top:10px; display:block; padding:15px 0 8px 0;   }
+/*提示修改*/
+.post-explain{color:#cab3a7;font-size: 12px;margin-top: 10px;text-align: right}
+.post-explain i{color: #491903;}
+
+

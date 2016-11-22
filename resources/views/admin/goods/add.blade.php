@@ -30,7 +30,7 @@
     		{{  csrf_field() }}
 
     		<input type="hidden" name="id" value="{{$info['id'] or 0}}" />
-    		<?php var_dump($info);exit;?>
+    		
     		<input type="hidden" name="pid" value="{{$info['pid'] or $pid}}" />
 
 	    	<table class="tuanfabu_table" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -239,7 +239,7 @@
 	                <td width="120"><p class="tuanfabu_t">详细内容：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<script id="content" type="text/plain" name="content" style="width:1024px;height:500px;"></script>
+		                	<script id="content" type="text/plain" name="content" style="width:1024px;height:500px;">{!! $info['content'] or '' !!}</script>
 		                </div>
 	                </td>
 	            </tr>
@@ -258,7 +258,7 @@
 	                <td width="120"><p class="tuanfabu_t">尺寸：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="size" value="{{$info['size'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="size" value="{{$info['size'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">*例：13x13cm</span>
 		                </div>
 	                </td>
@@ -268,7 +268,7 @@
 	                <td width="120"><p class="tuanfabu_t">可供几人食用：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="person" value="{{$info['person'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="person" value="{{$info['person'] or ''}}"  class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">*例：3-5人</span>
 
 		                </div>
@@ -279,7 +279,7 @@
 	                <td width="120"><p class="tuanfabu_t">赠品：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="present" value="{{$info['present'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="present" value="{{$info['present'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">*例：含5套餐具</span>
 		                </div>
 	                </td>
@@ -289,7 +289,7 @@
 	                <td width="120"><p class="tuanfabu_t">提前预定的时间：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="wait_time" value="{{$info['wait_time'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="number" name="wait_time" value="{{$info['wait_time'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
 		                	<span class="message">*单位：小时，会提示用户，要提前多少小时预定</span>
 		                </div>
 	                </td>
@@ -299,7 +299,7 @@
 	                <td width="120"><p class="tuanfabu_t">品牌：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="brand" value="{{$info['brand'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="brand" value="{{$info['brand'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -309,7 +309,7 @@
 	                <td width="120"><p class="tuanfabu_t">口味：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="kouwei" value="{{$info['kouwei'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="kouwei" value="{{$info['kouwei'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -319,7 +319,7 @@
 	                <td width="120"><p class="tuanfabu_t">蛋糕种类：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="dangaocate" value="{{$info['dangaocate'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="dangaocate" value="{{$info['dangaocate'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -329,7 +329,7 @@
 	                <td width="120"><p class="tuanfabu_t">适合人群：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="renqun" value="{{$info['renqun'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="renqun" value="{{$info['renqun'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -339,7 +339,7 @@
 	                <td width="120"><p class="tuanfabu_t">适合节日：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="jieri" value="{{$info['jieri'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="jieri" value="{{$info['jieri'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -348,7 +348,7 @@
 	                <td width="120"><p class="tuanfabu_t">甜度：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="tiandu" value="{{$info['tiandu'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="number" name="tiandu" value="{{$info['tiandu'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
 		                	<span class="message">请填写数字1-5，1代表一颗星</span>
 		                </div>
 	                </td>
@@ -357,7 +357,7 @@
 	                <td width="120"><p class="tuanfabu_t">保鲜方法：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="baoxian" value="{{$info['baoxian'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="baoxian" value="{{$info['baoxian'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -367,7 +367,7 @@
 	                <td width="120"><p class="tuanfabu_t">使用材料：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                	<input type="text" name="cailiao" value="{{$info['cailiao'] or ''}}" class="tuanfabu_int tuanfabu_intw2" />
+		                	<input type="text" name="cailiao" value="{{$info['cailiao'] or ''}}" class="tuanfabu_int tuanfabu_int100" />
 		                	<span class="message">可不填</span>
 		                </div>
 	                </td>
@@ -378,13 +378,13 @@
 	                <td width="120"><p class="tuanfabu_t">重量分组：</p></td>
 	                <td>
 		                <div class="tuanfabu_nr">
-		                0.5磅<input type="checkbox" name="weight_arr[]" value="0.5" @if(isset($info) && strpos($info['weight_arr'],'0.5') === false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
-		                1.0磅<input type="checkbox" name="weight_arr[]" value="1.0" @if(isset($info) && strpos($info['weight_arr'],'0.5'))checked @endif class="tuanfabu_int tuanfabu_intw2" />
-		                1.5磅<input type="checkbox" name="weight_arr[]" value="1.5" @if(isset($info) && strpos($info['weight_arr'],'0.5'))checked @endif class="tuanfabu_int tuanfabu_intw2" />
-		                2.0磅<input type="checkbox" name="weight_arr[]" value="2.0" @if(isset($info) && strpos($info['weight_arr'],'0.5'))checked @endif class="tuanfabu_int tuanfabu_intw2" />
-		                2.5磅<input type="checkbox" name="weight_arr[]" value="2.5" @if(isset($info) && strpos($info['weight_arr'],'0.5'))checked @endif class="tuanfabu_int tuanfabu_intw2" />
-		                3.0磅<input type="checkbox" name="weight_arr[]" value="3.0" @if(isset($info) && strpos($info['weight_arr'],'0.5'))checked @endif class="tuanfabu_int tuanfabu_intw2" />
-		                3.5磅<input type="checkbox" name="weight_arr[]" value="3.5" @if(isset($info) && strpos($info['weight_arr'],'0.5'))checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                0.5磅<input type="checkbox" name="weight_arr[]" value="0.5" @if(isset($info) && strpos($info['weight_arr'],'0.5') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                1.0磅<input type="checkbox" name="weight_arr[]" value="1.0" @if(isset($info) && strpos($info['weight_arr'],'1.0') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                1.5磅<input type="checkbox" name="weight_arr[]" value="1.5" @if(isset($info) && strpos($info['weight_arr'],'1.5') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                2.0磅<input type="checkbox" name="weight_arr[]" value="2.0" @if(isset($info) && strpos($info['weight_arr'],'2.0') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                2.5磅<input type="checkbox" name="weight_arr[]" value="2.5" @if(isset($info) && strpos($info['weight_arr'],'2.5') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                3.0磅<input type="checkbox" name="weight_arr[]" value="3.0" @if(isset($info) && strpos($info['weight_arr'],'3.0') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
+		                3.5磅<input type="checkbox" name="weight_arr[]" value="3.5" @if(isset($info) && strpos($info['weight_arr'],'3.5') !== false)checked @endif class="tuanfabu_int tuanfabu_intw2" />
 		                <span class="message">*请选择商品在大小上多少种的分类</span>
 		                </div>
 	                </td>

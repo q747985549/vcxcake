@@ -74,5 +74,9 @@ class GoodsController extends Controller
     	}
     }
 
+    public function cate_list($pid){
+        $list = Cate::where('pid','=',$pid)->get();
+        return view('admin.goods.cate',['list'=>$list]);
+    }
 
 }

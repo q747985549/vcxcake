@@ -42,11 +42,19 @@
                     <ul>
                         <li><a target="main_frm" href="{{url('/admin/goods/add/1')}}"><em>&nbsp;</em>发布蛋糕</a></li>
                         <li><a target="main_frm" href="{{url('/admin/goods/add/2')}}"><em>&nbsp;</em>发布新品</a></li>
-                        <li><a target="main_frm" href="{{url('/admin/cates/list')}}"><em>&nbsp;</em>分类</a></li>
-                        <li><a target="main_frm" href="{{url('/admin/recycled/list')}}"><em>&nbsp;</em>回收站</a></li>
+                        <li><a target="main_frm" href="{{url('/admin/cates/list/1')}}"><em>&nbsp;</em>分类</a></li>
                     </ul>
                 </div>
             </li>
+
+            <li class="leftMenu_li"><a class="leftMenu_a leftMenu_a3" target="main_frm" href="{{url('/admin/article/list/1')}}"><em>&nbsp;</em>文章管理</a>
+                <div class="leftNav2">
+                    <ul>
+                        <li><a target="main_frm" href="{{url('/admin/article/add')}}"><em>&nbsp;</em>发布文章</a></li>
+                    </ul>
+                </div>
+            </li>
+
              <li class="leftMenu_li"><a class="leftMenu_a leftMenu_a2"  target="main_frm" href="{{url('/admin/wifi')}}"><em>&nbsp;</em>wifi管理</a>
             </li>
             <li class="leftMenu_li"><a class="leftMenu_a leftMenu_a2"  target="main_frm" href="{{url('/admin/setting')}}"><em>&nbsp;</em>本店管理</a>

@@ -50,7 +50,13 @@
                         <a id="j_header_order_link" href="/member-orders_v2_static.html">订单</a>
                     </li>
                     <li class="last">
-                        <a href="/cart.html" class="shop-car" id="j_header_cart_number">0</a>
+                        <a href="{{url('/user/cart')}}" class="shop-car" id="j_header_cart_number"><?php 
+                        if(Auth::check()){
+                            echo \App\Models\Cart::where("uid",'=',Auth::user()->id)->count();
+                        }else{
+                            echo 0;
+                        }
+                        ?></a>
                     </li>
                 @else
                     <li id="j_header_login">

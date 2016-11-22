@@ -84,7 +84,18 @@
                     </div>
                   </td>
               </tr>
-	           
+
+	             <tr>
+                  <td width="120"><p class="tuanfabu_t">配送费</p></td>
+                  <td>
+                    <div class="tuanfabu_nr">
+              
+                      <input type="text" name="send_fee" value="{{$s['send_fee'] or ''}}" class="tuanfabu_int tuanfabu_intw2 " />
+                      <span color="gray">*单位：元</span>
+                    </div>
+                  </td>
+              </tr>
+
 	            <script>
               
             

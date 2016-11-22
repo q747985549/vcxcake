@@ -73,7 +73,7 @@ $(function() {
                                 <dd class="filter-entries-values">
                                     <!--列表页多语言-->
                                     <span class="filter-item @if(is_null($cate_id)) active @endif"><a href="{{url('list/1')}}" class="handle action-select-unlimit">不限</a></span> @foreach($cate as $v)
-                                    <span class="filter-item @if($cate_id == $v->id) active @endif" data-fid="p_5-39"><a href="{{url('list/1/'.$v->id)}}" class="handle action-select-filter" id="IDgalleryname39">{{$v->name}}</a></span> @endforeach
+                                    <span class="filter-item @if($cate_id == $v->id) active @endif" data-fid="p_5-39"><a href="{{url('list/'.$realpid.'/'.$v->id)}}" class="handle action-select-filter" id="IDgalleryname39">{{$v->name}}</a></span> @endforeach
                                 </dd>
                             </dl>
                         </div>
