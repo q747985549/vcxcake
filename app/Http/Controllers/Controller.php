@@ -13,7 +13,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function __construct(){
-    	app('view')->share('s',Setting::pluck('value','name'));
+    	$this->s = Setting::pluck('value','name');
+    	app('view')->share('s',$this->s);
     	if(Auth::check()){
     		app('view')->share('cart_count',Cart::where('uid','=',Auth::user()->id)->count());
     	}

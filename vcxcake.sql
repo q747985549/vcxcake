@@ -10,10 +10,29 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-22 22:55:29
+Date: 2016-11-24 00:21:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for address
+-- ----------------------------
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE `address` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `uid` int(10) unsigned NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `name` char(20) DEFAULT NULL,
+  `mobile` char(13) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of address
+-- ----------------------------
+INSERT INTO `address` VALUES ('1', '3', '送货地址', '张宁', '15504628304');
+INSERT INTO `address` VALUES ('2', '3', '123123', '张宁', '15545996059');
 
 -- ----------------------------
 -- Table structure for article
@@ -39,6 +58,25 @@ INSERT INTO `article` VALUES ('5', '1', '测试内容1', '<p>这里可以填写�
 INSERT INTO `article` VALUES ('6', '1', '品牌故事', null, null, null);
 INSERT INTO `article` VALUES ('7', '1', '这里是标题11', '<p>123123</p>', null, null);
 INSERT INTO `article` VALUES ('8', '1', '这里是标题113', null, '2016-11-22 08:26:58', '2016-11-22 08:26:58');
+
+-- ----------------------------
+-- Table structure for banners
+-- ----------------------------
+DROP TABLE IF EXISTS `banners`;
+CREATE TABLE `banners` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `img` int(10) NOT NULL,
+  `href` varchar(255) NOT NULL,
+  `view` int(10) NOT NULL DEFAULT '0',
+  `order_id` int(10) NOT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of banners
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for cake
@@ -646,7 +684,7 @@ CREATE TABLE `files` (
   `file_name` char(60) NOT NULL,
   `path` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=198 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of files
@@ -848,6 +886,7 @@ INSERT INTO `files` VALUES ('194', 'Koala.jpg', 'upload/2b04df3ecc1d94afddff082d
 INSERT INTO `files` VALUES ('195', 'Lighthouse.jpg', 'upload/8969288f4245120e7c3870287cce0ff3.jpeg');
 INSERT INTO `files` VALUES ('196', 'Penguins.jpg', 'upload/9d377b10ce778c4938b3c7e2c63a229a.jpeg');
 INSERT INTO `files` VALUES ('197', 'Tulips.jpg', 'upload/fafa5efeaf3cbe3b23b2748d13e629a1.jpeg');
+INSERT INTO `files` VALUES ('198', 'Chrysanthemum.jpg', 'upload/076e3caed758a1c18c91a0e9cae3368f.jpeg');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -917,11 +956,15 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `realname` char(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `is_admin` tinyint(4) DEFAULT NULL,
+  `is_admin` tinyint(4) NOT NULL DEFAULT '0',
+  `buy_num` int(10) NOT NULL DEFAULT '0',
+  `buy_total` int(10) NOT NULL DEFAULT '0',
+  `status` tinyint(4) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('3', '15504628304', '$2y$10$.4gJLZhZjvLTJTPqlQ7QYO0F0LaAU9PpFlJbR0c9QkBgpqKo76qJq', 'SGs1wwXQ0lbCaMAviBwpLQ1U8bo3HAqO2OKj88hQFIhlhMfW0Nxjyn6eZkDC', '2016-11-17 12:45:22', '2016-11-22 10:37:58', null, '1');
+INSERT INTO `users` VALUES ('3', '15504628304', '$2y$10$.4gJLZhZjvLTJTPqlQ7QYO0F0LaAU9PpFlJbR0c9QkBgpqKo76qJq', 'pqJdqanLwtTCizF5yyJbp84ujamxIBCbrFSbWVMa5lflCiOdqSrqSj8otZnn', '2016-11-17 12:45:22', '2016-11-23 15:10:46', null, '0', '0', '0', '0');
+INSERT INTO `users` VALUES ('4', 'admin', '$2y$10$VoaLknMQoARjvJJ60EqOQOYipXuUlTEutAueMNSGgvuRa7T8Ssco2', 'zw23R881AtiHyyb4wmUj6r5U34ckBldUb56X3PQ5aZsCbkOFzoX8sGOFJWuN', null, '2016-11-23 15:28:21', null, '1', '0', '0', null);

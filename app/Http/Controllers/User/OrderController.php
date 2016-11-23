@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\Models\Cart;
 use App\Models\Cake;
+use App\Models\Address;
 class OrderController extends Controller
 {
 
@@ -23,6 +24,8 @@ class OrderController extends Controller
     }
     public function go_order(){
     	$list = Cart::join('cake as c','c.id','=','cart.cake_id')->select('cart.*','c.img')->where('uid','=',Auth::user()->id)->get();
-    	return view('user.go_order',['list'=>$list]);
+    	$total = Cart::total($list);
+    	$addr = Address::where('uid','=',Auth::user()->id)->get();
+    	return view('user.go_order',['list'=>$list,'addr'=>$addr,'total'=>$total]);
     }
 }

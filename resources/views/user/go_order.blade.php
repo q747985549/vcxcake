@@ -6,6 +6,15 @@
 <link href="{{asset('css/checkout.css')}}" rel="stylesheet" />
 <link href="{{asset('css/dialog.css')}}" rel="stylesheet" />
 <link href="{{asset('css/upgrade_web.css')}}" rel="stylesheet" />
+
+<link href="//cdn.bootcss.com/pickadate.js/3.5.6/themes/default.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/pickadate.js/3.5.6/themes/default.date.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/pickadate.js/3.5.6/compressed/themes/default.time.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/pickadate.js/3.5.6/picker.js"></script>
+<script src="//cdn.bootcss.com/pickadate.js/3.5.6/picker.date.js"></script>
+<script src="//cdn.bootcss.com/pickadate.js/3.5.6/picker.time.js"></script>
+<script src="//cdn.bootcss.com/pickadate.js/3.5.6/translations/zh_CN.js"></script>
 <div id="container" class="page-container clearfix">
     <div class="inner-wrap">
         
@@ -108,12 +117,12 @@
                             <div class="oa-container">
                                 <div class="oa-item oa-item4">
                                     <span class="oa-intro-container" id="leavel_message_container">
-                <img class="vl-m" src="{{asset('img/oa-ico-edit.png')}}"><span class="vl-m">留言说明</span>
+                                        <img class="vl-m" src="{{asset('img/oa-ico-edit.png')}}"><span class="vl-m">留言说明</span>
                                     </span>
                                     <div class="oa-leave-mes-container" style="" id="leave_message_content_container">
                                         <span class="oa-leave-mes">
-                <em class="corner"></em>
-                <span class="con" id="leave_message_content" width="219px" style="padding-top:0;width:219px;"><input value="" style="background-color: #ffefbf;border: none;width:100%" placeholder="请填写留言" /></span>
+                                            <em class="corner"></em>
+                                            <span class="con" id="leave_message_content" width="219px" style="padding-top:0;width:219px;"><input value="" style="background-color: #ffefbf;border: none;width:100%" placeholder="请填写留言" /></span>
                                         </span>
                                         <em class="mes-close-ico" id="leave_message_cancel"></em>
                                     </div>
@@ -128,37 +137,74 @@
                             <h4 class="ca-title">送货信息</h4>
                             <div class="account-mes-area clearfix">
                                 <div class="clearfix account_address_area aaa_has_no_limit" id="address_container">
-                                    <div id="address_item_5679576" class="ama-item address_item">
-                                        <p class="ama-name-area"><b class="fl-l">123</b><span class="fl-r">15545996057</span></p>
+                                @foreach($addr as $a)
+                                    <div class="ama-item address_item @if($loop->first)ama-item-current @endif">
+                                        <p class="ama-name-area"><b class="fl-l">{{$a['name']}}</b><span class="fl-r">{{$a['mobile']}}</span></p>
                                         <p class="address-area">
-                                            <span class="area">上海市黄浦区</span>
-                                            <span class="address">321</span>
+                                            <span class="area">{{$a['address']}}</span>
                                         </p>
                                         <div class="clearfix handle-area">
-                                            <a href="#" class="ama-edit fl-l addr_edit" data-id="5679576" data-info="{&quot;addr_id&quot;:5679576,&quot;area&quot;:23}">修改</a>
-                                            <a href="#" class="ama-delete fl-r addr_del" data-id="5679576" data-info="{&quot;addr_id&quot;:5679576,&quot;area&quot;:23}">删除</a>
+                                            <a href="javascript:void(0);" class="ama-delete fl-r addr_del" data-id="{{$a['id']}}">删除</a>
                                         </div>
                                     </div>
-                                    <div id="address_item_5679574" class="ama-item address_item ama-item-current js_current_address">
-                                        <p class="ama-name-area"><b class="fl-l">123</b><span class="fl-r">15545996058</span></p>
-                                        <p class="address-area">
-                                            <span class="area">上海市卢湾区</span>
-                                            <span class="address">111</span>
-                                        </p>
-                                        <div class="clearfix handle-area">
-                                            <a href="#" class="ama-edit fl-l addr_edit" data-id="5679574">修改</a>
-                                            <a href="#" class="ama-delete fl-r addr_del" data-id="5679574">删除</a>
-                                        </div>
-                                    </div>
+                                @endforeach
                                   
                                 </div>
                                 <div class="addr-list-toggle-wrap clearfix hide" id="addr_show_more">
                                     <span id="J_addrListToggle"><i class=""></i></span>
                                 </div>
                                 <div class="ama-add-address">
-                                    <a href="#" class="btn" id="add_new_address">+ 添加新地址</a>
+                                    <a href="javascript:void(0);" class="btn" id="add_new_address">+ 添加新地址</a>
                                 </div>
-                                
+                                <script>
+                                    $(function(){
+                                      $(".address_item").on('click',function(){
+                                        alert($(".edit-time").val());
+                                          $(".address_item").removeClass("ama-item-current");
+                                          $(this).addClass("ama-item-current");
+                                      });
+                                      $(".addr_del").click(function(){
+                                        var id = $(this).attr('data-id');
+                                        var e = this;
+                                        $.get("{{url('user/del_addr')}}/"+id,function(){
+                                          $(e).parent().parent().remove();
+                                        });
+                                      });
+                                      $("#add_new_address").click(function(){
+                                          $(".vcxdialog").show();
+                                      });
+                                      $(".confirm_button").click(function(){
+                                        $.post("{{url('user/add_address')}}",{
+                                          _token:"{{csrf_token()}}",
+                                          name:$("[name=name]").val(),
+                                          address:$("[name=addr]").val(),
+                                          mobile:$("[name=mobile]").val()
+                                        },function(a){
+                                            layer.msg('添加成功');
+                                            var html = '<div class="ama-item address_item"><p class="ama-name-area"><b class="fl-l">'+$("[name=name]").val()+'</b><span class="fl-r">'+$("[name=mobile]").val()+'</span></p><p class="address-area"><span class="area">'+$("[name=addr]").val()+'</span></p><div class="clearfix handle-area"><a href="javascript:void(0);" data-id="'+a.id+'" class="ama-delete fl-r addr_del">删除</a></div></div>';
+                                            $("#address_container").append(html);
+                                        });
+                                          $(".vcxdialog").hide();
+                                      });
+                                      $(".cancel_button").click(function(){
+                                          $(".vcxdialog").hide();
+                                      });
+                                      $(".close_button").click(function(){
+                                          $(".vcxdialog").hide();
+                                      });
+
+                                      var $input = $('.calendar').pickadate();
+                                      var $input = $('.edit-time').pickatime();
+                                      $("[name=is_tax]").click(function(){
+                                        if($(this).attr('checked')){
+                                          $(".invoice-container").removeClass('hide');
+                                        }else{
+                                          $(".invoice-container").addClass('hide');
+                                        }
+                                      });
+                                    })
+
+                                </script>
                               <div class="vcxdialog" style="display: none;">
                                 <div class="dialog" style="width: 520px; z-index: 99999; top: 300px;" id="addr_edit_dialog">
                                     <div class="dialog-head">
@@ -185,7 +231,7 @@
                                                 </p>
                                                 <div class="ea-input-area">
                                                     <div class="input-container">
-                                                        <input class="x-input input-item name_input" type="text" name="name" id="dom_el_9473b42" vtype="required" placeholder="收货人姓名" data-caution="请填写收货人姓名"> <span class="input-error hide">收货人姓名不能空</span>
+                                                        <input class="x-input input-item name_input" type="text" name="name" id="dom_el_9473b42" vtype="required" placeholder="收货人姓名" data-caution="请填写收货人姓名"> 
                                                     </div>
                                                 </div>
                                             </div>
@@ -215,12 +261,12 @@
                                 <p class="ea-font">送货时间：</p>
                                 <div class="ea-input-area">
                                     <div class="input-container">
-                                        <input class="x-input calendar input-item date-ico" maxlength="10" readonly="readonly" id="curr_ship_date" style="width:120px;" name="ship_date" type="text" size="8" value="2016-11-25" >
-                                       
+                                        <input class="x-input calendar input-item" maxlength="10" readonly="readonly" id="curr_ship_date" style="width:120px;" name="ship_date" type="text" size="8" value="{{date('Y-m-d')}}" >
                                     </div>
                                     <div class="input-container">
-                                        <input type="text" readonly="readonly" class="input-item clock-ico" name="ship_time_scope" placeholder="送货时间" style="width:120px;" id="ship_time_scope">
+                                        <input type="text" readonly="readonly" class="input-item clock-ico edit-time" name="ship_time_scope" placeholder="送货时间" style="width:120px;" id="ship_time_scope">
                                     </div>
+
                                 </div>
                                 <div class="ea-input-area" style="color: #383838; margin-left: 10px;line-height: 30px">配送时间受实时路况影响，会有前后15分钟的误差，请各位谅解。</div>
                             </div>
@@ -229,14 +275,14 @@
                                     开发票：
                                 </p>
                                 <div class="ea-input-area">
-                                    <input type="checkbox" name="payment[is_tax]" value="true" class="vl-m invoice-checkbox" id="invoice_chk">
+                                    <input type="checkbox" name="is_tax" value="true" class="vl-m invoice-checkbox" id="invoice_chk">
                                     <div class="invoice-container hide" id="invoice_container">
                                         <div class="ea-item clearfix">
                                             <div class="ea-input-area">
                                                 <label for="person_invoice" id="person_invoice_label">
                                                     <span class="check-item">
-                            <input type="radio" id="person_invoice" checked="checked" name="tax_content">
-                        </span>个人发票 </label>
+                                                    <input type="radio" id="person_invoice" checked="checked" name="tax_content">
+                                                </span>个人发票 </label>
                                                 <label for="company_invoice" id="company_invoice_label">
                                                     <span class="check-item">
                             <input type="radio" id="company_invoice" name="tax_content">
@@ -268,62 +314,38 @@
                                 <ul>
                                     <li class="payment-item selected">
                                         <span class="check-item J_cpt" cod_pay_type="0" style="width:80px;">
-            支付宝支付            <input style="display:none" class="p_alipay" value="{&quot;pay_app_id&quot;:&quot;alipay&quot;,&quot;payment_name&quot;:&quot;支付宝支付&quot;}" name="payStyle">
-        </span>
+                                            支付宝支付            
+                                        </span>
                                         <i>
-        </i>
+                                        </i>
                                     </li>
                                     <li class="payment-item">
                                         <span class="check-item J_cpt" cod_pay_type="0" style="width:80px;">
-            快钱支付            <input style="display:none" class="p_99bill" value="{&quot;pay_app_id&quot;:&quot;99bill&quot;,&quot;payment_name&quot;:&quot;快钱支付&quot;}" name="payStyle">
-        </span>
+                                            微信支付            
+                                        </span>
                                         <i>
-        </i>
+                                        </i>
                                     </li>
-                                    <!--暂时用16，17，18号-->
-                                    <li class="is_pos payment-item cash" style="display: none;">
-                                        <a href="javascript:void(0)" class="tooltip" title="订单金额超过1000暂不支持货到付款,请见谅.">
-                                            <span class="check-item J_cpt" cod_pay_type="1" style="width:80px;">
-                    货到付现金                    <input style="display:none" value="{&quot;pay_app_id&quot;:&quot;-1&quot;,&quot;payment_name&quot;:&quot;货到付款&quot;}" checked="checked" name="payStyle">
-                </span>
-                                        </a>
+                                    <li class="payment-item">
+                                        <span class="check-item J_cpt" cod_pay_type="0" style="width:80px;">
+                                            货到付款            
+                                        </span>
                                         <i>
-                </i>
+                                        </i>
                                     </li>
-                                    <!--暂时用16，17，18号-->
-                                    <li id="pos_input" class="is_pos payment-item cash" style="display: none;">
-                                        <a href="javascript:void(0)" class="tooltip" title="订单金额超过1000暂不支持货到付款,请见谅.">
-                                            <span class="check-item J_cpt" cod_pay_type="2" style="width:80px;">
-                    货到POS刷卡                    <input style="display:none" value="{&quot;pay_app_id&quot;:&quot;-1&quot;,&quot;payment_name&quot;:&quot;货到付款&quot;}" name="payStyle">
-                </span>
-                                        </a>
-                                        <i>
-                </i>
-                                    </li>
-                                    <li class="payment-more">更多<b></b></li>
                                 </ul>
                             </div>
-                            <input type="hidden" name="payment[pay_app_id]" value="{&quot;pay_app_id&quot;:&quot;alipay&quot;,&quot;payment_name&quot;:&quot;支付宝支付&quot;}" id="payment_hidden">
-                            <input type="hidden" name="payment[payment_name]" value="
-        
-            支付宝支付            
-        
-                
-        
-    " id="payment_name_hidden">
-                            <input type="hidden" name="cod_pay_type" value="0" id="cod_pay_type_hidden">
                         </div>
                     </div>
                     <!--订单优惠 -->
-                    <div class="order-infor">
+               <!--      <div class="order-infor">
                         <div id="order_balance" class="order-balance" style="font-size: 116.66667%;">
                             <h3 style="font-weight: bold;">
-        <a href="javascript:void(0);" data-item="balance" class="action-toggle btn-expand" style="margin-right: 10px;">+</a>现金账户余额        <div class="recharge_pay">充值</div>
-            </h3>
+                              <a href="javascript:void(0);" data-item="balance" class="action-toggle btn-expand" style="margin-right: 10px;">+</a>现金账户余额        <div class="recharge_pay">充值</div>
+                          </h3>
                             <div class="content" style="display:none;padding-left:30px">
                                 <div class="item" style="font-size:12px;margin-bottom:8px">
-                                    您当前有 <span id="advance_total" data-total="0.000">￥0.0</span> 可用余额 <span id="use_balance_amount_box">
-                        </span>
+                                    您当前有 <span id="advance_total" data-total="0.000">￥0.0</span> 可用余额 <span id="use_balance_amount_box"></span>
                                     <div id="balance_ipt_box" style="">
                                         <label for="for_input_balance">支付金额：</label>
                                         <input type="text" name="balance_no" id="for_input_balance" style="border-color:#eee" size="10">
@@ -335,12 +357,9 @@
                         </div>
                         <div id="order_card" class="order-card" style="font-size: 116.66667%;">
                             <h3 style="font-weight: bold;">
-        <a data-item="card" href="javascript:void(0);" class="action-toggle btn-expand" style="margin-right: 10px;">+</a>使用代金卡<span style="font-weight: normal" ;="">（此卡不能与优惠券同时使用）</span>
-    </h3>
+                              <a data-item="card" href="javascript:void(0);" class="action-toggle btn-expand" style="margin-right: 10px;">+</a>使用代金卡<span style="font-weight: normal" ;="">（此卡不能与优惠券同时使用）</span>
+                            </h3>
                             <div class="content" style="display:none;padding-left:30px;font-size:12px;">
-                                <!-- <p>使用说明：</p>
-        <p>1.代金卡可多张同时使用在一个订单上</p>
-        <p>2.代金卡总额超出订单部分的余额作废处理，不会作为余额存放到账户里或者兑换现金</p> -->
                                 <div class="item" style="font-size:12px;margin-bottom:8px">
                                     <label for="">卡号：</label>
                                     <input type="text" name="card_no" id="for_input_card" style="border-color:#eee" size="22">
@@ -356,27 +375,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg-item clearfix" id="order_total_display" data-real-total-amount="1,302.00" data-balance-amount="0">
+                    </div> -->
+                    <div class="bg-item clearfix" id="order_total_display">
                         <div class="total-money fl-r">
-                            <p><em>商品总计：</em><b class="order_total"><span>¥</span><span id="order_total">1302.0</span></b></p>
-                            <p id="shipping_fee_display"><em>配送费：</em><b><span>¥</span><span id="shipping_fee">0.0</span></b></p>
-                            <p class="total-p"><em>您总共需要支付</em><b class="order_total" id="final_total"><span>¥</span><span id="total">1302.0</span></b></p>
-                            <p class="post-explain" id="notice">订单已满￥100元,享免费配送服务</p>
+                            <p><em>商品总计：</em><b class="order_total"><span>¥</span><span id="order_total">{{$total}}</span></b></p>
+                            <p id="shipping_fee_display"><em>配送费：</em><b><span>¥</span><span id="shipping_fee">{{$s['send_fee']}}</span></b></p>
+                            <p class="total-p"><em>您总共需要支付</em><b class="order_total" id="final_total"><span>¥</span><span id="total">
+                            @if($total > 100){{$total}} @else {{$total + $s['send_fee']}} @endif
+                            </span></b></p>
+                            @if($total > 100)<p class="post-explain" id="notice">订单已满￥100元,享免费配送服务</p>@endif
                         </div>
                     </div>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
-                    <span class="message hide">未包含运费</span>
+
                     <div class="tl-r sub-form clearfix">
                         <a href="/cart.html" id="IDgobackcart" class="btn-link btn big-btn fl-l">返回购物车</a>
                         <span class="vl-m">请确认信息无误后下单  </span>
-                        <button type="submit" id="IDsubmitorder" rel="_request" class="btn btn big-btn btn-import action-submit-order"><span><span>提交订单</span></span>
+                        <button type="submit" id="IDsubmitorder" rel="_request" class="btn btn big-btn btn-import action-submit-order"><span style="height:31px;"><span>提交订单</span></span>
                         </button>
                     </div>
                 </form>

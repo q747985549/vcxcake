@@ -47,7 +47,7 @@ class PublicController extends Controller
     }
     public function loginout(Request $request){
     	Auth::logout();
-    	return view('index');
+    	return redirect('/');
     }
     public function register(Request $request){
     	if($request->isMethod('post')){

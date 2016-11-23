@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Banner;
+use App\Models\Cake;
 class HomeController extends Controller
 {
     /**
@@ -26,6 +27,6 @@ class HomeController extends Controller
         return view('us');
     }
     public function index(){
-        return view('index');
+        return view('index',['banner'=>Banner::all(),'hot'=>Cake::where('flag','=',1)->limit(4)->get()]);
     }
 }

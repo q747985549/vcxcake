@@ -62,7 +62,7 @@ input:-ms-input-placeholder{color:#c5b4a8;}
 .bread-line a.current{color: #d5c4ba;}
 
 /* ä¼šå‘˜å®¹å™¨ */
-.member-area{background: #f6f5f3; min-height: 340px; _height:340px; color: #754c24;}
+.member-area{background: #f6f5f3; _height:340px; color: #754c24;}
 .ac_gender{padding: 0px 0px 12px 5px;border-bottom: 1px solid #e6e6e6;width: 300px;margin-left: 26px;margin-top: -18px}
 .ac_gender .ac_sex{width: 14px;height: 14px;margin-right: 10px;display: inline-block;*display:inline;*zoom:1;border: 1px solid #e6e6e6;vertical-align: middle;cursor: pointer}
 .ac_gender:after { display: inline-block; width: 0; height: 100%; vertical-align: middle;*display:inline;*zoom:1; }

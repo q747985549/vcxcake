@@ -22,7 +22,7 @@
 <div class="tuan_content">
 <div class="radius5 tuan_top">
         <div class="tuan_top_t">
-            <div class="left tuan_topser_l">商品添加 </div>
+            <div class="left tuan_topser_l">文章添加 </div>
         </div>
     </div>
     <div class="tabnr_change  show">

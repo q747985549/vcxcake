@@ -1,411 +1,119 @@
 <div id="container" class="page-container clearfix">
-  <div class="inner-wrap mycartpage">
-    <div class="bread-crumbs">
-      
-    </div>
-    <div id="main">
-    <!-- 购物车开始 -->
-    <div class="cart-title">
-        <h1>
-            <i class="icon">&lt;</i>购物车        </h1>
-    </div>
-            <!-- 购物车步骤图 -->
-        <div id="cart_steps" class="steps">
-            <table width="100%">
-                <tbody>
-                <tr>
-                    <td class="step-item step-1 active"><span><q class="icon-1">购物车</q></span></td>
-                    <td class="icon step-arrow">(</td>
-                    <td class="step-item step-2">
-                        <a href="/cart-checkout.html"><q class="icon-2">填写和提交订单信息</q></a></td>
-                    <td class="icon step-arrow">(</td>
-                    <td class="step-item step-3"><span><q class="icon-3">成功提交订单</q></span></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- 购物车主体 -->
-        <div id="cart_container" class="cart-container">
-            <div class="title"><h2>我的购物车</h2></div>
-<form action="/cart-_check_checkout.html" method="post">
-    <!-- 购物车内容 -->
-    <table id="cart_main" class="cart-main" width="100%">
-        <colgroup>
-            <col class="col-1">
-            <col class="col-2">
-            <col class="col-3">
-            <col class="col-4">
-            <col class="col-5">
-            <col class="col-6">
-        </colgroup>
-        <thead>
-        <tr>
-            <th colspan="2">商品</th>
-            <th>属性</th>
-            <th>单价</th>
-            <th>数量</th>
-            <th>小计</th>
-            <th>操作</th>
-        </tr>
-        </thead>
-        <!-- 购物车条目 -->
-<!-- site/cart/item/index.html -->
-          <tbody class="cart-item">
-        <!-- 主商品 -->
-        <tr class="cart-product last">
-            <td>
-                <input type="hidden" name="obj_type" value="goods">
-                <input type="hidden" name="goods_ident" value="goods_297_6122">
-                <input type="hidden" name="goods_id" value="297">
-                <input type="hidden" name="type_id" value="3">
-                <input type="hidden" name="min" value="1">
-                <input type="hidden" name="max" value="999999">
-                <input type="hidden" name="stock" value="999999">
-                <input type="hidden" name="sell_attach" value="">
-
-                <div class="p-pic">
-                    <a href="/product-6122.html" target="_blank"><img src="http://www.21cake.com/public/images/3f/33/2d/c4a85c12fb6a9e7a9ea62b87a1856226.jpg?1478240958#h" alt="21cake生日奶油蛋糕"></a>
-            </div></td>
-            <td class="p-info">
-                <div class="p-title">
-                    <a target="_blank" href="/product-6122.html">21cake生日奶油蛋糕</a>
-                </div>
-				<!--
-                                    <div>免费赠送1套餐具</div>
-                				-->
-                <div class="p-spec">磅数：0.5磅</div>
-                <!-- 赠品 -->
-                                <!-- 商品促销 -->
-                <div class="p-promotion">
-                    <ul>
-                                            </ul>
-                </div>
-            </td>
-            <td>
-                <div>0.5磅</div>
-                                    <div class="zs">
-                                                    <span style="background:#8c6a52; color:#fff; padding:0 4px; margin-right:5px;">标配</span>餐具套装1套                    </div>
-                            </td>
-            <td class="p-price">￥498.0</td>
-            <td>
-                <div class="p-quantity">
-                    <!-- 升磅券 兑换 -->
-                                            <a href="javascript:void(0);" class="btn-decrease">-</a>
-                        <input type="text" name="modify_quantity[goods_297_6122][quantity]" value="1">
-                        <a href="javascript:void(0);" class="btn-increase">+</a>
-                                    </div>
-                            </td>
-            <!--<td class="p-discount">
-                ￥0.0            </td>-->
-            <!--
-            <td class="p-integral">
-                498            </td>
-            -->
-            <td class="p-subtotal">￥498.0</td>
-            <td class="p-action">
-                                    <a href="javascript:void(0);" class="btn-fav" rel="_addfav_" data-gid="297">收藏</a>
-                                <i>|</i>
-
-                                    <a href="javascript:void(0);" productid="6122" class="btn-delete">移除</a>
+        <div class="inner-wrap">
+            <div class="bread-crumbs">
+                            <span>
+                <a href="/" alt="" title="">首页</a>
+            </span>
+            <span>&nbsp;&gt;&nbsp;</span>
+            
+                    <span class="now">我的廿一客</span>
+            <input type="hidden" id="isCakeList" value="我的廿一客">
+                    </div>
+            <div class="member-area">
+   
+<!--个人信息部分-->
+<div class="account-area clearfix">
+     <div class="edit_info">
+        <div class="avator-area">
+          <form id="uploadForm" action="/member-edit_portrait.html" enctype="multipart/form-data" target="uploadIframe" method="post">
+          <div class="avator-img">
+                                  <img class="hide" id="avator_img">
                 
-            </td>
-        </tr>
-        <!-- 配件 -->
-                </tbody>
-    
-<!-- site/cart/item/index.html -->
-  
-<!-- 订单赠品 -->
-<tbody class="order-gift" id="order_gift" style="display:none;">
-<!--
-<tr class="cart-subtitle">
-    <th colspan="8">订单赠品</th>
-</tr>
--->
-</tbody>
+                <input type="hidden" name="avator_member_id" value="12077851">
+                <input type="hidden" name="vkey" id="vkeyInput" value="">
+            <iframe src="about:blank" name="uploadIframe" id="uploadIframe" style="display:none"></iframe>
+            <a id="edit_avator_link" href="javascript:void(0)" class="set-avator-link "><div class="avator-bg"><img class="change_head" style="display: none"></div></a>
+          </div>
 
-        <tfoot>
-        <!--商品清单-->
-        <tr>
-            <td colspan="8">
-                <div class="onsale-area clearfix">
-                    <div class="oa-container">
-                                                <!---->
-                        <!---->
-                        <!---->
-                        <!---->
-                        <!---->
-                                                <div class="oa-item oa-item3 access_chk 2014K2-Y" img_url="http://www.21cake.com/public/images/bf/7e/2f/c66fe7a119fe3bf42c0653ba6e4f4cce.jpg?1463108626#h" spec_info="规格：个" pname="方形蜡烛" price="5.000" goods_id="33" bn="1977" id="access_chk_33" sell_attach="3">
-                                <span class="oa-intro-container" style="float:left;">
-                                <img width="37" class="vl-m" src="http://www.21cake.com/public/images/bf/7e/2f/c66fe7a119fe3bf42c0653ba6e4f4cce.jpg?1463108626#h"><span class="vl-m">添加方形蜡烛</span>
-                                </span>
-                        </div>
-                                                <div class="oa-item oa-item3 access_chk 2014K1" img_url="http://www.21cake.com/public/images/63/6a/71/84ea7dbb64e18846e0bcdf22172671ae.jpg?1463108691#h" spec_info="餐具：一人份" pname="餐具套餐" price="0.500" goods_id="59" bn="1965" id="access_chk_59" sell_attach="3">
-                                <span class="oa-intro-container" style="float:left;">
-                                <img width="37" class="vl-m" src="http://www.21cake.com/public/images/63/6a/71/84ea7dbb64e18846e0bcdf22172671ae.jpg?1463108691#h"><span class="vl-m">添加餐具套餐</span>
-                                </span>
-                        </div>
-                                            </div>
-                </div>
-            </td>
-        </tr>
-        <tr class="hr-bg">
-            <td colspan="3">
-   <!--  设计会展广告 -->
-        <div class="exhi_cont">
-          <a href="http://www.21cake.com/product-6954.html"></a>
+          <span id="upload_file_show_error"></span>
+          <input type="file" style="opacity:0;height:31px;filter:alpha(opacity=0);width:72px;position:relative;top:-35px;" name="headportrait" id="fileField">
+          </form>
         </div>
-            <!-- 订单获得的优惠促销 -->
-        <div class="order-promotion" id="order_promotion" style="display:none;">
-            <h3><a href="javascript:void(0);" class="btn-collapse action-toggle">-</a>促销活动</h3>
-            <ul class="content">
-                            </ul>
+        <div class="account-mes">
+          <div class="ac-name">
+                        <p><span class="acc-name-unset">
+               姓名：未填写
+               </span></p>
+                      </div>
+          <p class="ac-num"><span>15504628304</span>
+            <a id="edit_security" href="/member-security.html">
+              修改密码            </a>
+            <!--<a href="/member-setting.html">[更改]</a>-->
+          </p>
+
+          <a href="/member-setting.html">
+            <div class="ac-editinfo" id="ac-editinfo">
+              <i class="edit_ico"></i>
+              编辑个人资料
+                          </div>
+          </a>
+          <a href="/member-receiver.html">            <div class="ac-editaddress">
+              <i class="edit_address"></i>地址管理
+            </div>
+                     </a>
+          <!--20160706用于个人中心修改
+          <p class="ac-birthday">生日：<span>
+                      未填写
+            <a href="/member-setting.html">[填写]</a>
+                    </span>
+          </p>
+          <p class="ac-adress">地址：<span>
+                      <span class="ac-address-detail" title="">123/15545996057/上海 上海市 黄浦区</span>
+            <span class="ac-address-property">（默认地址）</span>
+                    </span>
+          <a href="/member-receiver.html">[管理地址]</a>
+          </p>
+          <p class="ac-adress">
+          推荐验证码:<span><a href="/member-verification.html">[验证]</a></span>
+          </p>-->
         </div>
-        <!-- 未享受到的优惠促销 -->
-        <div id="unused_promotion" class="unused-promotion" style="display:none;">
-            <h3><a href="javascript:void(0);" class="btn-collapse action-toggle">-</a>您还未享受到的优惠                    <a href="javascript:void(0);" class="action-fororder"><em>凑单»</em></a>
-                            </h3>
-            <ul class="content">
-                            </ul>
-        </div>
-    </td>
-<!-- 订单价格 -->
-<td colspan="4" class="order-price" id="order_price">
-    <ul>
-        <li class="goods">
-            <span class="label">
-                <span style="color:#D1BDAB" class="cart_number">(共 <span class="op-cart-number">1</span> 件)</span>
-                <em>商品金额：</em>
-            </span>
-            <span class="price"><b>￥498.0</b></span>
-        </li>
-                <li class="cost">
-            <span class="label">
-                <em>配送费：</em>
-            </span>
-            <span class="price"><span class="ico">¥ </span><b>0</b></span>
-        </li>
-        <li class="total">
-            <span class="label">
-                <!--屏蔽赠送积分提示-->
-                <!--                    <i>(订单可得积分<span class="subtotal-integral">498</span>)</i>
-                -->
-                <em>总计金额：</em>
-            </span>
-            <span class="price"><span class="ico">¥</span><b>498</b></span>
-        </li>
-        <li class="post-explain">
-                订单已满￥100元,享免费配送服务        </li>
-    </ul>
-</td>        </tr>
-        <tr>
-            <!-- 按钮 -->
-            <td colspan="3" class="cart-left">
-                <button type="button" class="btn btn-flat action-clean" title="清空购物车"><span><span>清空购物车</span></span></button><button type="button" class="btn btn-caution action-fororder"><span><span>凑单商品</span></span></button>            </td>
-            <td colspan="4" class="cart-right">
-                <a href="http://www.21cake.com/index.php/gallery-index---0---1.html" class="btn-link" id="IDcartgobuy">继续购物</a>
-                <button type="submit" id="IDsettle" class="btn btn-import btn-huge action-settle" rel="_request"><span><span>下单结算<q class="f-icon">►</q></span></span></button>            </td>
-        </tr>
-        </tfoot>
-    </table>
-</form>
+     </div>
+      <div class="cash-coupou">
+        <ul>
+          <li class="ac_item">
+            <p>
+              <a href="/member-balance.html">
+                <i class="ac_balance"></i>
+                果实币余额:
+                                ¥0              </a>
+              <br>
+              <em class="recharge new_r">卡券充值</em>
+                <a href="/member-deposit.html" class="new_r">在线购买果实币</a>
+            </p>
+            <em class="corner"></em>
+          </li>
+          <li class="ac_item">
+            <p>
+              <a href="/member-coupon.html">
+                <i class="ac_coupon"></i>
+                优惠券:
+                0张可用
+              </a>
+            </p>
+            <em class="corner"></em>
+          </li>
+          <li class="ac_item">
+            <p>
+              <a href="/member-cardlist.html">
+                <i class="ac_card"></i>
+                代金卡:
+                0                张已用
+              </a>
+            </p>
+            <em class="corner"></em>
 
-    <!-- 浏览过的商品 -->
-      <div id="view_history" class="view-history">
-    <div class="title">浏览过的商品<!--  <a href="javascript:void(0);" id="clear_history">清除</a> --></div>
-    <div class="content">
-      <ul class="history-list"><li class="item"><div class="p-pic">  <a href="/product-2161.html" target="_blank" title="Rum Cheese Cake 朗姆芝士" data-gid="2161"><img src="http://www.21cake.com/public/images/87/50/be/c210379e64ed9bf872c185ec4108c1bc.jpg?1478241128#h" alt="Rum Cheese Cake 朗姆芝士"></a></div><div class="p-info">  <h3><a href="/product-2161.html" target="_blank" title="Rum Cheese Cake 朗姆芝士">Rum Cheese Cake 朗姆芝士</a></h3>  <p class="p-price">￥198.0</p>  <a href="/product-2161.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-6098.html" target="_blank" title="Bricks of Ancient China 汉砖" data-gid="6098"><img src="http://www.21cake.com/public/images/80/e9/d6/8e18a192ee162b54bd232170f9f5e54d.jpg?1479287169#h" alt="Bricks of Ancient China 汉砖"></a></div><div class="p-info">  <h3><a href="/product-6098.html" target="_blank" title="Bricks of Ancient China 汉砖">Bricks of Ancient China 汉砖</a></h3>  <p class="p-price">￥98.0</p>  <a href="/product-6098.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-365.html" target="_blank" title="Bailey's Love Triangle  百利甜情人" data-gid="365"><img src="http://www.21cake.com/public/images/8f/4c/9f/c082a3092e63944b7493f0bf5aca9d3f.jpg?1478485020#h" alt="Bailey's Love Triangle  百利甜情人"></a></div><div class="p-info">  <h3><a href="/product-365.html" target="_blank" title="Bailey's Love Triangle  百利甜情人">Bailey's Love Triangle  百利甜情人</a></h3>  <p class="p-price">￥198.0</p>  <a href="/product-365.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-525.html" target="_blank" title="Black and White Chocolate Mousse 黑白巧克力慕斯" data-gid="525"><img src="http://www.21cake.com/public/images/05/b9/e5/8622fa8a04125dcf21c6a5a82104a61e.jpg?1478241106#h" alt="Black and White Chocolate Mousse 黑白巧克力慕斯"></a></div><div class="p-info">  <h3><a href="/product-525.html" target="_blank" title="Black and White Chocolate Mousse 黑白巧克力慕斯">Black and White Chocolate Mousse 黑白巧克力慕斯</a></h3>  <p class="p-price">￥198.0</p>  <a href="/product-525.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-4652.html" target="_blank" title="小切块-Pine Stone Cowboy 松仁淡奶" data-gid="4652"><img src="http://www.21cake.com/public/images/f6/23/d7/6ab75d3fd44d529680fe2c4829e92741.jpg?1479283178#h" alt="小切块-Pine Stone Cowboy 松仁淡奶"></a></div><div class="p-info">  <h3><a href="/product-4652.html" target="_blank" title="小切块-Pine Stone Cowboy 松仁淡奶">小切块-Pine Stone Cowboy 松仁淡奶</a></h3>  <p class="p-price">￥36.0</p>  <a href="/product-4652.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-4732.html" target="_blank" title="小切块-Cappuccino卡布其诺（无蔗糖添加）" data-gid="4732"><img src="http://www.21cake.com/public/images/83/b3/ce/5eae246520b27c0acfa19492b72ebc1c.jpg?1479283879#h" alt="小切块-Cappuccino卡布其诺（无蔗糖添加）"></a></div><div class="p-info">  <h3><a href="/product-4732.html" target="_blank" title="小切块-Cappuccino卡布其诺（无蔗糖添加）">小切块-Cappuccino卡布其诺（无蔗糖添加）</a></h3>  <p class="p-price">￥36.0</p>  <a href="/product-4732.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-585.html" target="_blank" title="Blue Monday 黑越橘" data-gid="585"><img src="http://www.21cake.com/public/images/6d/11/57/47732863e7bc7db59ddf787e02cd00cb.jpg?1478770496#h" alt="Blue Monday 黑越橘"></a></div><div class="p-info">  <h3><a href="/product-585.html" target="_blank" title="Blue Monday 黑越橘">Blue Monday 黑越橘</a></h3>  <p class="p-price">￥268.0</p>  <a href="/product-585.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li><li class="item"><div class="p-pic">  <a href="/product-771.html" target="_blank" title="Ice Cream Cake with Longan 桂圆冰淇淋蛋糕" data-gid="771"><img src="http://www.21cake.com/public/images/93/44/50/936b518c09f3bcb0c2eab979747502e5.jpg?1479284172#h" alt="Ice Cream Cake with Longan 桂圆冰淇淋蛋糕"></a></div><div class="p-info">  <h3><a href="/product-771.html" target="_blank" title="Ice Cream Cake with Longan 桂圆冰淇淋蛋糕">Ice Cream Cake with Longan 桂圆冰淇淋蛋糕</a></h3>  <p class="p-price">￥198.0</p>  <a href="/product-771.html" target="_blank" class="btn btn-major"><span><span>立即购买</span></span></a></div></li></ul>
-    </div>
-  </div>
-
-</div>
-
-
-<!---->
-      <div class="cart-moregoods" style="display:none">
-          <h2><a href="http://www.21cake.com/index.php/gallery-index---0---1.html" class="go">更多购买</a></h2>
-          <div><div class="hu-cart-more">
-<span class="recommend"></span>
-<ul class="goods-list">
-            <li class="goods-item">
-                        <div class="goods-pic">
-                <a href="/product-1965.html"><img alt="餐具套餐" 　data-img-zoom="true" src="http://www.21cake.com/public/images/63/6a/71/84ea7dbb64e18846e0bcdf22172671ae.jpg?1463108691#h"></a>
-            </div>
-            <div class="goods-explain">
-                <p class="goods-name">
-                    <a href="/product-1965.html" title="餐具套餐">餐具套餐</a>
-                </p>
-                <div class="goods-price">
-                    <p class="price-args">  ￥0.5/餐具：一人份                    
-                    </p>
-                    <div class="goods-addcart"><span data-src="/cart-add-goods-59-1965-1.html">加入购物车</span></div>
-                </div>
-            </div>
-
-            
-        </li>
-            <li class="goods-item">
-                        <div class="goods-pic">
-                <a href="/product-1977.html"><img alt="方形蜡烛" 　data-img-zoom="true" src="http://www.21cake.com/public/images/24/44/4b/759067f84bebf40f09dfca20e472b52a.jpg?1472782157#h"></a>
-            </div>
-            <div class="goods-explain">
-                <p class="goods-name">
-                    <a href="/product-1977.html" title="方形蜡烛">方形蜡烛</a>
-                </p>
-                <div class="goods-price">
-                    <p class="price-args">  ￥5.0/个                    
-                    </p>
-                    <div class="goods-addcart"><span data-src="/cart-add-goods-33-1977-1.html">加入购物车</span></div>
-                </div>
-            </div>
-
-            
-        </li>
-    </ul>
-    
-</div></div>
+          </li>
+        </ul>
       </div>
-  </div>
 </div>
-<div class="hu-cart-more">
-<span class="recommend">热销新品推荐</span>
-<ul class="goods-list">
-            <li class="goods-item">
-                        <div class="goods-pic">
-                <a href="/product-3938.html"><img alt="Milk Gelato 原味牛乳冰淇淋" 　data-img-zoom="true" src="http://www.21cake.com/public/images/30/37/3c/985f61764234dccc70843702cb0e190c.jpg?1479284370#h"></a>
-            </div>
-            <div class="goods-explain">
-                <p class="goods-name">
-                    <a href="/product-3938.html" title="Milk Gelato 原味牛乳冰淇淋">Milk Gelato 原味牛乳冰淇淋</a>
-                </p>
-                <div class="goods-price">
-                    <p class="price-args">￥45.0/盒                    
-                    </p>
-                    <div class="goods-addcart"><span data-src="/cart-add-goods-156-3938-1.html">加入购物车</span></div>
-                </div>
-            </div>
-
-            
-        </li>
-            <li class="goods-item">
-                        <div class="goods-pic">
-                <a href="/product-4732.html"><img alt="小切块-Cappuccino卡布其诺（无蔗糖添加）" 　data-img-zoom="true" src="http://www.21cake.com/public/images/83/b3/ce/5eae246520b27c0acfa19492b72ebc1c.jpg?1479283879#h"></a>
-            </div>
-            <div class="goods-explain">
-                <p class="goods-name">
-                    <a href="/product-4732.html" title="小切块-Cappuccino卡布其诺（无蔗糖添加）">小切块-Cappuccino卡布其诺（无蔗糖添加）</a>
-                </p>
-                <div class="goods-price">
-                    <p class="price-args">￥36.0/份                    
-                    </p>
-                    <div class="goods-addcart"><span data-src="/cart-add-goods-203-4732-1.html">加入购物车</span></div>
-                </div>
-            </div>
-
-            
-        </li>
-            <li class="goods-item">
-                        <div class="goods-pic">
-                <a href="/product-4740.html"><img alt="小切块-Easycake百香果酸乳酪慕斯蛋糕" 　data-img-zoom="true" src="http://www.21cake.com/public/images/45/0f/13/521f7c7881cde7e85188103530a3d7fe.jpg?1479284063#h"></a>
-            </div>
-            <div class="goods-explain">
-                <p class="goods-name">
-                    <a href="/product-4740.html" title="小切块-Easycake百香果酸乳酪慕斯蛋糕">小切块-Easycake百香果酸乳酪慕斯蛋糕</a>
-                </p>
-                <div class="goods-price">
-                    <p class="price-args">￥36.0/份                    
-                    </p>
-                    <div class="goods-addcart"><span data-src="/cart-add-goods-196-4740-1.html">加入购物车</span></div>
-                </div>
-            </div>
-
-            
-        </li>
-            <li class="goods-item">
-                        <div class="goods-pic">
-                <a href="/product-4365.html"><img alt="Yirgacheffe Coffee 耶加雪菲挂耳咖啡" 　data-img-zoom="true" src="http://www.21cake.com/public/images/26/9e/91/19d6c7a9c703e2bdec2ec6399c2dbfae.jpg?1479284576#h"></a>
-            </div>
-            <div class="goods-explain">
-                <p class="goods-name">
-                    <a href="/product-4365.html" title="Yirgacheffe Coffee 耶加雪菲挂耳咖啡">Yirgacheffe Coffee 耶加雪菲挂耳咖啡</a>
-                </p>
-                <div class="goods-price">
-                    <p class="price-args">￥10.0/包                    
-                    </p>
-                    <div class="goods-addcart"><span data-src="/cart-add-goods-183-4365-1.html">加入购物车</span></div>
-                </div>
-            </div>
-
-            
-        </li>
-    </ul>
-    
-</div><div class="footer-area">
-  <div class="footer-inner">
-	  <div class="fl-l foo-mes">
-	    <p>订购专线：<b>400 650 2121</b>（服务时间 08:00–22:00）<br>
-	      客服电话：021-23099721（全国）&nbsp;|&nbsp;<a href="mailto:kefu@21cake.com">kefu@21cake.com（邮箱）</a> 
-	      <a href="http://weibo.com/21cake?topnav=1&amp;wvr=5&amp;topsug=1" class="weibo"><img src="http://www.21cake.com/themes/21cake/images/img/weibo.png"></a>
-	      <a target="_blank" class="weixin"><img src="http://www.21cake.com/themes/21cake/images/img/weixin.png">
-		  <span class="third-enter-dia">
-            <span class="third-enter-dia-inner">
-              <img src="/themes/21cake/images/2wm_wx_2.jpg">
-              <span>扫描21cake方形<br>微信二维码</span>
-            </span>
-          </span>
-		  </a>
-      <span>
-        <span id="cnzz_stat_icon_1255778095"><a href="http://www.cnzz.com/stat/website.php?web_id=1255778095" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a></span>
-      </span>
-      <br>
-      <b>北京/杭州/广州：提前5小时预订；上海：提前6-8小时预订；天津/苏州/无锡/深圳：提前8小时预订</b>（当日22点以后订单，于次日8点开始审核）
-      <br>
-      <b>当日蛋糕配送截止下单时间：北京：16:50；上海：16:30；杭州/广州：13:50；天津/苏州/无锡/深圳：11:00</b>
-	    </p>
-	   <p class="copyright">
-        Copyright© 21Cake蛋糕官网商城 2007-2015, 版权所有 京ICP备14006254号-1 公司: 上海廿一客食品有限公司 地址: 上海市松江区新桥镇新效支路518号
-         </p>      
-	  </div>
-	  <div class="fl-r foo-link clearfix">
-        <!--<a target="_blank" href="/tryeat.html">企业试吃</a><span class="foo-line">&nbsp;|&nbsp;</span>-->
-	      <a target="_blank" href="/article-about-55.html">联系我们</a><span class="foo-line">&nbsp;|&nbsp;</span>
-	      <a target="_blank" href="/article-distribution-40.html">订购帮助</a><span class="foo-line">&nbsp;|&nbsp;</span>
-	      <a target="_blank" href="/article-about-56.html">企业合作</a>
-	  </div>
-	   
 
 
 
+  
 
-<div style="visibility: hidden">
+  
 
-</div>	</div>
- </div>
-<img id="jcps" style="visibility:hidden">
-<div id="upgrade_dialog_outer" style="display:none">
-  <div class="gray-bg" id="upgrade_dialog_bg"></div>
-  <div class="dialog" id="upgrade_dialog_content" style="width:500px; min-height:170px;">
-    <div class="dialog-con pop-attention-main" style="text-align:center">
-      <span style="font-size:18px">升级会员</span><br>
-      <span class="tip16" style="font-size:12px; margin-bottom:10px;">尊敬的老用户您好!</span><br>
-      <span class="tip16" style="font-size:12px; margin-bottom:20px;">现在您将可以升级为21客的会员，并获得升磅券、设计师礼品等众多福利哦！</span>
+</div>
+
+        </div>
     </div>
-    <div class="dialog-foo">
-      <a href="javascript:void(0)" id="upgrade_cancel_web" class="btn big-btn space20">暂不升级</a>
-      <a href="javascript:void(0)" id="upgrade_submit_web" class="space20 btn big-btn btn-import">前往查看</a>
-    </div>
-  </div>
-</div>
-<div id="upgrade_fullscreen" style="display:none;position:absolute; top:0px; z-index:10000; width:100%; background:url(/themes/21cake/images/img/big-member-img-bg.png) center 0 repeat-y;"> 
-  <div style="overflow:hidden; margin:0 auto; width:100%; height:1100px; background:url(/themes/21cake/images/big-member-img2.jpg) center top no-repeat;">
-    <div style="width:1200px; margin:0 auto; overflow:hidden">
-    <span id="upgrade_fullscreen_close" style=" float:right; background:red; display:inline-block; width:35px; height:35px; opacity:0; cursor:pointer; filter:alpha(opacity=0)">关闭</span>
-    </div>
-    <a id="upgrade_fullscreen_submit" href="javascript:void(0)" style="display:block; width:100%; height:800px;">&nbsp;</a>  
-  </div>
-</div>
-<div id="upgrade_url" upgrade_url="/member-get_usertype.html"></div>
-
-
-<link href="/themes/21cake/images/upgrade_web.css?v=2014" rel="stylesheet">
-</div>

@@ -43,8 +43,11 @@
                 <ul class="head-nav fl-l clearfix">
                 @if (Auth::check())
                     <li class="" id="j_header_logout">
-                        <a href="/member.html" style="padding:0;">&nbsp;&nbsp;个人中心</a>
-                        <a href="{{url('/admin')}}" style="padding:0;">&nbsp;&nbsp;后台管理</a><a href="/loginout">[退出]</a>
+                        <a href="{{url('user')}}" style="padding:0;">&nbsp;&nbsp;个人中心</a>
+                        @if(Auth::user()->is_admin == 1)
+                        <a href="{{url('/admin')}}" style="padding:0;">&nbsp;&nbsp;后台管理</a>
+                        @endif
+                        <a href="/loginout">[退出]</a>
                     </li>
                     <li id="j_header_order">
                         <a id="j_header_order_link" href="/member-orders_v2_static.html">订单</a>
@@ -60,10 +63,10 @@
                     </li>
                 @else
                     <li id="j_header_login">
-                        <a href="/login" id="IDheaderlogin">登录</a>
+                        <a href="{{url('/login')}}" id="IDheaderlogin">登录</a>
                     </li>
                     <li class="last">
-                        <a href="/register" id="IDheadersignup">注册</a>
+                        <a href="{{url('/register')}}" id="IDheadersignup">注册</a>
                     </li>
                 @endif
                
