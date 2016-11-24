@@ -19,7 +19,8 @@
             <label for="" class="form-label">
                       <em class="warn">*</em>手机号：</label>
                 <span class="form-act">
-                    <input class="x-input x-input action-mobile-check input-top" type="text" id="sendtomobile" maxlength="11" name="mobile" placeholder="手机号码" vtype="required&amp;&amp;number" data-caution="手机号码" autocomplete="off"><span id="_build_tips_inline_error_16" class="caution error notice-inline"><q class="icon">!</q><span class="caution-content">
+                    <input class="x-input x-input action-mobile-check input-top" type="text" id="sendtomobile" maxlength="11" name="mobile" placeholder="手机号码" vtype="required&amp;&amp;number" data-caution="手机号码" autocomplete="off"><span id="_build_tips_inline_error_16" class="caution error notice-inline"><q class="icon">!</q>
+                    <span class="caution-content">
                    @foreach($errors->all() as $error)
                             {{$error}}
                             @endforeach
@@ -58,7 +59,9 @@
                         if(go){
                             return false;
                         }
-                        $.get('/sendsms',function(){
+                        var mobile = $("[name=mobile]").val();
+                        $.get('{{url("sendsms")}}/'+mobile,function(a){
+                            var b = a;
                             var bk = setInterval(function(){
                                 go = true;
                                 $("#sendButtonValue").html(i--+"秒后可以重新发送");
@@ -81,8 +84,8 @@
             <span class="form-act">
                 <input type="checkbox" name="license" checked="checked" id="xieyi_check" class="x-check" vtype="onerequired" data-caution="">
                 <label for="" id="xieyi" class="form-sub-label">
-                    我已阅读并同意                    <a href="http://www.21cake.com/article-help-36.html" class="lnklike" target="_blank">会员注册协议</a>
-                    和                    <a href="http://www.21cake.com/article-help-35.html" class="lnklike" target="_blank">隐私保护政策</a></label>
+                    我已阅读并同意                    <a href="javascript:void(0);" class="lnklike" target="_blank">会员注册协议</a>
+                    和                    <a href="javascript:void(0);" class="lnklike" target="_blank">隐私保护政策</a></label>
                 <span class="validation-messagebox"></span>
             </span></div>
         </li>

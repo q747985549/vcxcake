@@ -76,6 +76,13 @@ Route::group(['prefix' => 'user','namespace'=>'User',"middleware"=>'auth'], func
 	Route::get('del_addr/{id}',"InfoController@del_addr");
 	Route::get('',"InfoController@index");
 });
+Route::group(['prefix' => 'm','namespace'=>'Mobile'], function() {
+	Route::any('',"PublicController@index");
+	Route::any('login',"PublicController@login");
+	Route::any('register',"PublicController@register");
+	Route::any('login1',"PublicController@login1");
+	Route::any('logout',"PublicController@loginout");
+});
 
 
 Route::get('/', "HomeController@index");
@@ -99,7 +106,7 @@ Route::any('/login',"PublicController@login");
 Route::any('/login1',"PublicController@login1");
 Route::any('/loginout',"PublicController@loginout");
 
-Route::get('/sendsms',"PublicController@sendsms");
+Route::get('/sendsms/{mobile}',"PublicController@sendsms")->where('mobile','^1[34578]\d{9}$');
 Route::get('captcha',function(){
 	return captcha();
 });

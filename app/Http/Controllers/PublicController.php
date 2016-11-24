@@ -9,27 +9,18 @@ use Curl\Curl;
 use Illuminate\Support\Facades\Cache;
 class PublicController extends Controller
 {
-	public function sendsms(Request $request){
-    	$mobile = $request->input('mobile');
-    	if(Cache::get("code".$mobile)){
-    		return "您的发送次数太频繁";
-    	}
+	public function sendsms(Request $request,$mobile){
+    	// if(Cache::get("code".$mobile)){
+    	// 	return "您的发送次数太频繁";
+    	// }
     	$app = app();
     	$code = rand(0,9).rand(0,9).rand(0,9).rand(0,9);
     	Cache::put("code".$mobile,$code,1);
     	session()->set('code'.$mobile,$code);
-    	$curl = new Curl();
-    	// $true = $curl->get('http://www.thgzsms.com/get/sendsms.php',[
-    	// 	'loginname'=>$app['config']['sms.loginname'],
-    	// 	'password'=>$app['config']['sms.password'],
-    	// 	'number'=>$mobile,
-    	// 	'content'=>"【大商圈】您的验证码".$code.",千万不要告诉别人哦！",
-    	// 	]);
-    	// if($true == ''){
-    	// 	return 1;
-    	// }else{
-    	// 	return $true;
-    	// }
+        return $code;
+        
+        $http = "http://utf8.sms.webchinese.cn/?Uid={$app['config']['sms.username']}&Key={$app['config']['sms.key']}&smsMob=$mobile&smsText=您的验证码是$code,千万不要告诉别人哦！";
+        return file_get_contents($http);
     }
 
     public function login(Request $request){
@@ -43,6 +34,19 @@ class PublicController extends Controller
     	return view('login');
     }
     public function login1(Request $request){
+        if($request->isMethod('post')){
+            if(session()->get('code'.$request->input('mobile')) != $request->input('password')){
+                return view('login1',['error'=>'验证码错误']);
+            }else{
+                $user = Users::where('mobile','=',$request->input('mobile'))->first();
+                if($user){
+                    Auth::login($user);
+                    return redirect(url('/'));
+                }else{
+                    return view('login1',['error'=>'请先注册']);
+                }
+            }
+        }
     	return view('login1');
     }
     public function loginout(Request $request){
@@ -58,15 +62,17 @@ class PublicController extends Controller
     		];
     		$this->validate($request,$rules);
 
-    		// if(session()->get('code'.$request->input('mobile')) != $request->input('captcha')){
-    		// 	return view('register',['error'=>'验证码错误']);
-    		// }
+    		if(session()->get('code'.$request->input('mobile')) != $request->input('captcha')){
+    			return view('register',['error'=>'验证码错误']);
+    		}
 
-    		if(Users::create([
+            $user = Users::where('mobile','=',$request->input('mobile'))->first();
+    		if(!$user){
+                Users::create([
                 'mobile'=>$request->input('mobile'),
                 'password'=>bcrypt($request->input('password'))
-                ])){
-    			return redirect('/login');
+                ]);
+    			return redirect(url('login'));
     		}else{
     			return view('register')->withError('当前手机号已被注册');
     		}

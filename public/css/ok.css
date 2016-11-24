@@ -1,0 +1,261 @@
+header{
+    	padding-left: 0.5rem;
+    	background: #fff url(../images/tiao.png) no-repeat top center;
+    	border-bottom: 1px solid #e5e5e5;
+    	margin-top: 0.4rem;
+    }
+	.top{		
+		border-bottom: 1px solid #e5e5e5;
+		background: url(../images/dingwei.png) no-repeat 0.2rem center;
+		background-size: 0.6rem;
+		padding: 0.3rem 0 0.3rem 1.2rem;
+		position: relative;
+	}
+	.top h3{
+		font-size: 0.5rem;
+		color: #2f2f2f;
+		font-weight: normal;
+	}
+	.top h3 span{
+		margin-left: 0.2rem;
+	}
+	.top h3 i{
+		font-style: normal;
+		margin-left: 0.2rem;
+	}
+	.top p{
+		font-size: 0.5rem;
+		color: #2f2f2f;
+		margin-top: 0.2rem;
+	}
+	.top a{
+		position: absolute;
+		width: 0.3rem;
+		right: 0.5rem;
+		top:0.8rem;
+	}
+	.bottom{		
+		height: 1.5rem;	
+		background: url(../images/shijian.png) no-repeat 0.2rem center;
+		background-size: 0.6rem;
+		padding:0 0.5rem 0 1.2rem;
+	}
+	.bottom p{
+		font-size: 0.5rem;
+		line-height: 1.5rem;
+		color: #2f2f2f;
+		float: left;
+	}
+	.bottom a{
+		float: right;
+		line-height: 1.4rem;
+		font-size: 0.4rem;
+		color: #3e91ee;
+	}
+	.bottom a img{
+		width: 0.3rem;
+		float: right;
+		margin: 0.5rem 0 0 0.3rem;
+	}
+	.Payment{
+		background: #fff;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		margin-top: 0.3rem;
+		padding: 0 0.5rem 0 0.5rem;
+		overflow: hidden;
+	}
+	.Payment p{
+		font-size: 0.5rem;
+		line-height: 1.5rem;
+		color: #2f2f2f;
+		float: left;
+	}
+	.Payment a{
+		float: right;
+		line-height: 1.5rem;
+		font-size: 0.4rem;
+		color: #3e91ee;
+	}
+	.Payment a img{
+		width: 0.3rem;
+		float: right;
+		margin: 0.5rem 0 0 0.3rem;
+	}
+	.Order{
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		background: #fff;
+		margin-top: 0.3rem;
+	}
+	.Order h3{
+		line-height: 1.4rem;
+		border-bottom: 1px solid #e5e5e5;
+		font-size: 0.5rem;
+		color: #808080;
+		padding-left: 1.4rem;
+		font-weight: normal;
+		background: url(../images/fang.png) no-repeat 0.5rem center;
+		background-size: 0.6rem;
+	}
+	.Order table{
+		width: 100%;
+		border-collapse:collapse; 
+	}
+	.Order table td{
+		width: 33.33%;
+		line-height: 1.2rem;
+		padding:0 0.5rem 0 0.5rem;
+		font-size: 0.5rem;
+		color: #2f2f2f;	
+	}
+	.Order table td.money{
+		text-align: right;
+	}
+	.Distribution{
+		background: #fff;
+		padding-left: 0.5rem;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.Distribution ul li{
+		border-bottom: 1px solid #e5e5e5;
+		overflow: hidden;
+		padding-right: 0.5rem;
+	}
+	.Distribution ul li:last-child{
+		border:none;
+	}
+	.Distribution ul li h3{
+		line-height: 1.4rem;
+		color: #2f2f2f;
+		float: left;
+		font-size: 0.5rem;
+		font-weight: normal;
+	}
+	.Distribution ul li span{
+		float: right;
+		line-height: 1.4rem;
+		font-size: 0.5rem;
+		color: #2f2f2f;
+	}
+	.Distribution ul li p{
+		line-height: 1.4rem;
+		color: #898989;
+		float: left;
+		font-size: 0.5rem;
+	}
+	.Distribution ul li p i{
+		background: #ff635b;
+		font-size: 0.4rem;
+		color: #fff;
+		padding:0 0.1rem 0 0.1rem;
+		font-style: normal;	
+		border-radius: 0.1rem;
+		margin-right: 0.3rem;
+	}
+	.Distribution ul li h4{
+		float: left;
+		font-size: 0.6rem;
+		color: #898989;
+		line-height: 1.4rem;
+		font-weight: normal;
+		margin-right: 0.3rem;
+	}
+	.Distribution ul li h5{
+		float: right;
+		line-height: 1.5rem;
+		font-weight: normal;
+		color: #2f2f2f;
+		font-size: 0.6rem;
+	}
+	.Distribution ul li h5 i{
+		font-style: normal;
+		color: #fb4e44;
+		margin-left: 0.3rem;
+	}
+	.Remarks{
+		margin-top: 0.3rem;
+		background: #fff;
+		border-top: 1px solid #e5e5e5;
+	}
+	.Remarks ul li{
+		border-bottom: 1px solid #e5e5e5;
+		padding: 0 0.5rem 0 0.5rem;
+		overflow: hidden;
+	}
+	.Remarks ul li h3{
+		float: left;
+		font-weight: normal;
+		line-height: 1.4rem;
+		color: #2f2f2f;
+		font-size: 0.5rem;
+	}
+	.Remarks ul li a{
+		float: right;
+		line-height: 1.4rem;
+		font-size: 0.5rem;
+	}
+	.Remarks ul li a img{
+		width: 0.3rem;
+		margin-left: 0.3rem;
+	}
+	.footer{
+		width: 100%;
+		position: fixed;
+		bottom: 0;	
+		left: 0;
+		background: #fff;
+		border-top: 1px solid #e5e5e5;
+	}
+	.footer div{
+		float: left;
+		width: 65%;
+	}
+	.footer div h3{
+		padding-left: 0.5rem;
+		line-height: 1.6rem;
+		font-size: 0.5rem;
+		font-weight: normal;
+		float: left;
+		color: #2f2f2f;
+	}
+	.footer div p{
+		float: right;
+		line-height: 1.6rem;
+		padding-right: 0.3rem;
+		font-size: 0.5rem;
+		color: #808080;
+	}
+	.footer div p span{
+		font-size: 0.8rem;
+		color: #f53751;
+	}
+	.footer button{
+		width: 35%;
+		height: 1.6rem;
+		background: #f53751;
+		color: #fff;
+		font-size: 0.5rem;
+	}
+	.second{display: none;}
+	.s_top{display: flex; display: -webkit-flex; justify-content:space-between;height: 1.5rem;line-height: 1.5rem;background: #f53751;padding-left: 15px;padding-right: 15px;}
+	.s_top div{color: white;}
+	.s_top div:nth-child(1){font-size: 20px;}
+	.s_search{line-height: 1.5rem;border:1px solid #e5e5e5;}
+	.s_search input{width: 96%;height: 1rem;text-align: center;color: #555;margin-left:2% ;border-radius: 5px;}
+	.s_add>h3{line-height: 1.5rem;padding-left: 10px;font-weight: normal;}
+	.s_add li{padding: 10px;background: white;border-bottom: 1px solid #e5e5e5;}
+	.s_add li p{font-size: 12px;line-height: 20px;color:#a1a1a1;}
+	.remark textarea{width: 100%;height: 1.5rem;border:1px solid #e5e5e5;margin-bottom: 10px;border-radius: 5px;resize:none;font-size: 12px;}
+	.clean{clear: both;}
+	.remark{display: none;}
+	.third{display: none;}
+	.t_con li{line-height: 1.5rem;background: white;border-bottom: 1px solid #e5e5e5;padding: 5px 0px;}
+	.t_con li:after{content: '';display: block;clear: both;zoom:1;height: 0px;}
+	.t_con li span{display: block;float: left;width: 25%;text-align: center;height: 1.5rem;}
+	.t_con li>input{width: 68%;height: 1rem;padding-left: 2%;border-radius:5px;border: 1px solid #e5e5e5; }
+	.t_con li>label{display: block;float: left;position: relative;margin-right: 10px;}
+	.t_con li>label>img{width: 15px;position: absolute;left: 0px;top:0.5rem;}
+	.t_con li>label>input{visibility: hidden;margin-right: 10px;}
+	.t_con li>textarea{width: 68%;padding-left: 2%;height: 2rem;resize:none;border-radius: 5px;border:none;line-height: 25px;}
+	.submit{width: 94%;height: 1.4rem;color:white;border:none;background: #f53751;margin: 10px 3%;}

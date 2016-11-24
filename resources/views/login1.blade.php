@@ -11,7 +11,8 @@
                         <h2>
             手机号快捷登录        </h2>
                     </div>
-                    <form action="http://www.21cake.com/openapi/pam_callback/login/module/pam_passport_basic/type/member/appid/b2c/redirect/L3Bhc3Nwb3J0LXBvc3RfbG9naW4tYUhSMGNEb3ZMM2QzZHk0eU1XTmhhMlV1WTI5dEx3PT0uaHRtbA%3D%3D" autocomplete="off" method="post" style="height:290px;">
+                    <form action="" autocomplete="off" method="post" style="height:290px;">
+                    {{csrf_field()}}
                         <input type="hidden" name="forward" value="">
                         <ul>
                             <li class="form-item3">
@@ -20,9 +21,37 @@
                             </li>
                             <li class="form-item">
                                 <label for="" class="form-label">登录帐号：</label>
-                                <span class="form-act"><input class="x-input input-top" type="text" name="uname" id="" value="" placeholder="用户名/手机号码/邮箱地址" vtype="required" data-caution="请填写登录帐号" autofocus="autofocus" autocomplete="off"><button id="dynamic-code" type="button" class="btn-code">
-                    获取动态码                 </button></span>
+                                <span class="form-act"><input class="x-input input-top" type="text" name="mobile" id="" value="" placeholder="手机号码" vtype="required" data-caution="请填写登录帐号" autofocus="autofocus" autocomplete="off"><button onclick="sendMobileCode();" id="dynamic-code" type="button" class="btn-code">
+                                获取动态码                 
+                                </button>
+                                <span class="caution-content">
+                                   @foreach($errors->all() as $error)
+                                            {{$error}}
+                                            @endforeach
+                                    {{$error or ''}}</span>
+                                </span>
                             </li>
+                            <script>
+                                var i = 60,go = false;
+                                function sendMobileCode(){
+                                    if(go){
+                                        return false;
+                                    }
+                                    var mobile = $("[name=mobile]").val();
+                                    $.get('{{url("sendsms")}}/'+mobile,function(a){
+                                        var b = a;
+                                        var bk = setInterval(function(){
+                                            go = true;
+                                            $(".btn-code").html(i--+"秒后可以重新发送");
+                                            if(i == 0){
+                                                clearInterval(bk);
+                                                $(".btn-code").html("获取动态码");
+                                                go = false;
+                                            }
+                                        },1000);
+                                    });
+                                }
+                            </script>
                             <li class="form-item">
                                 <label for="" class="form-label"> 密码：</label>
                                 <span class="form-act"><input class="x-input input-center" type="password" name="password" id="" placeholder="动态码" autocomplete="off"></span>
