@@ -57,6 +57,25 @@
                     </div>
                   </td>
               </tr>
+
+              <tr>
+                  <td width="120"><p class="tuanfabu_t">会员等级示图：</p></td>
+                  <td>
+                    <div class="tuanfabu_nr user_levelimgclass">
+                      <button type="button" id="user_level" class="btn btn-default" >上传</button>
+                      <span id="percent"></span>
+                      <input type="hidden" name="user_level" value="{{$s['user_level'] or ''}}" />
+                      @if(!empty($s['user_level']))
+                          <span class="user_level" >
+                            <i class="glyphicon glyphicon-remove" onclick="del(this)"></i>
+                            <img style='max-width:200px;'  src='{{url("/files/getimg/".$s["user_level"])}}' />
+                          </span>
+                      @endif
+
+                    </div>
+                  </td>
+              </tr>
+
               <tr>
                   <td width="120"><p class="tuanfabu_t">版权信息：</p></td>
                   <td>
@@ -97,7 +116,45 @@
               </tr>
 
 	            <script>
-              
+                var user_level = new plupload.Uploader({
+                          runtimes : 'html5,silverlight,flash,html4',
+                  browse_button : 'user_level',
+                          chunk_size : '0',
+                  url : '{{url("/files/upload")}}',
+                  multipart : true,
+                  multi_selection : false,
+                          unique_names : true,
+                  //         resize : { width : 320, height : 240, quality : 90 },
+                          filters : {
+                                max_file_size : '10mb',
+                                mime_types: [
+                                    {title : "图片", extensions : "jpg,png"}
+                                ]
+                          },
+
+                  flash_swf_url :  'http://cdn.bootcss.com/plupload/2.1.8/Moxie.swf',
+                          init : {
+                    UploadProgress: function(up, file) {
+
+                      var percent = Math.round(file.loaded * 100 / file.size);
+                      $("#percent").html(percent + "%");    
+                            },
+                    FilesAdded : function(up,file){
+                        user_level.start();
+                    },
+                      FileUploaded: function(up, file, info) {
+                        info = JSON.parse(info.response);
+                          $(".user_levelimgclass").find('.imgss').remove();
+                          $(".user_levelimgclass").append(" <span data-id="+info.id+" class='user_level'><i style='position: absolute;right: 0px;top: -45px;' onclick='del(this)' class='glyphicon glyphicon-remove'></i><img  id='only' style='max-width:200px;' src='"+info.img+"' /></span>");
+                          $('[name=user_level]').val(info.id);
+                       
+                      },
+                    UploadComplete: function(up, files) {
+                    },
+                   }
+                    });
+                user_level.init();
+
             
 	            	var logo = new plupload.Uploader({
                           runtimes : 'html5,silverlight,flash,html4',

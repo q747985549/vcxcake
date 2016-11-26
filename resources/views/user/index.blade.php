@@ -38,16 +38,14 @@
                </span></p>
                         </div>
                         <p class="ac-num"><span>15504628304</span>
-                            <a id="edit_security" href="/member-security.html">
-              修改密码            </a>
-                            <!--<a href="/member-setting.html">[更改]</a>-->
+                            <a id="edit_security" href="{{url('user/password')}}">修改密码</a>
                         </p>
-                        <a href="/member-setting.html">
+                        <a href="{{url('user/info')}}">
                             <div class="ac-editinfo" id="ac-editinfo">
                                 <i class="edit_ico"></i> 编辑个人资料
                             </div>
                         </a>
-                        <a href="/member-receiver.html">
+                        <a href="{{url('user/address')}}">
                             <div class="ac-editaddress">
                                 <i class="edit_address"></i>地址管理
                             </div>
@@ -85,6 +83,20 @@
                     </ul>
                 </div>
             </div>
+            <div class="margin-70 member-center">
+                <p class="ca-title">会员中心</p>
+                <p class="current-identity">您当前的身份是：<span class="normal-user">{{$user['level']}}</span></p>
+                <div class="vip-area tl-l level-info">
+                  <div class="tl-c">
+                    <img class="level-info-img" src="{{url('files/getimg/'.$s['user_level'])}}">
+                  </div>
+                  <p class="fruit-rule-title">果实规则：</p>
+                  <p class="fruit-rule">1、订单实际支付金额每满100元，则将自动获得1颗果实，以此类推。累积果实可升级，并享受各级会员权益。订单中使用优惠券、订单促销等优惠抵扣的金额不参与消费金额的累积。</p>
+                  <p class="fruit-rule">2、每90天内未产生购买，果实减一颗，若果实减少为下一等级数量时，等级相应降低，上一级别的固定权益失效。</p>
+                  <p class="fruit-rule">3、所获得的权益自获得日起，一年内有效。</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

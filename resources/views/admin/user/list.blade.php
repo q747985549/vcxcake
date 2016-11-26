@@ -33,6 +33,7 @@
 			<tr style="background-color:#eee;">
 				<td>姓名</td>
 				<td>手机号</td>
+				<td>等级</td>
 				<td>订单数</td>
 				<td>购买额</td>
 				<td>加入本店时间</td>
@@ -43,6 +44,7 @@
 			<tr>
 				<td>{{$v['nickname'] or '用户没填写'}}</td>
 				<td>{{$v['mobile']}}</td>
+				<td>{{$v['level']}}</td>
 				<td>{{$v['buy_num']}}</td>
 				<td>{{$v['buy_total']}}</td>
 				<td>{{$v['created_at']}}</td>

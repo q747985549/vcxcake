@@ -19,6 +19,40 @@ class InfoController extends Controller
     	Address::where(['uid'=>Auth::user()->id,'id'=>$id])->delete();
     }
     public function index(){
-    	return view('user.index');
+        $user = Auth::user();
+        $user['level'] = get_level($user['level']);
+    	return view('user.index')->withUser($user);
+    }
+
+    public function password(Request $re){
+        if($re->isMethod('post')){
+            $user = Auth::user();
+            if($user['password'] == bcrypt($re->input('old_password'))){
+                $user->password = bcrypt($re->input('password'));
+                $user->save();
+            }else{
+                return view('user.password')->withError('原密码错误');
+            }
+        }
+        return view('user.password');
+    }
+    public function info(Request $re){
+        if($re->isMethod('post')){
+            $rules = [
+                'realname'=>"max:9",
+                'gender'=>"boolean",
+                'mail'=>'max:30',
+            ];
+            $this->validate($re,$rules);
+            $data = $re->except('s','_token');
+            $user = Auth::user();
+            $user->update($data);
+
+            
+        }
+        return view('user.info');
+    }
+    public function address(){
+
     }
 }
