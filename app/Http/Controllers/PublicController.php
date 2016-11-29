@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Cache;
 class PublicController extends Controller
 {
 	public function sendsms(Request $request,$mobile){
-    	// if(Cache::get("code".$mobile)){
-    	// 	return "您的发送次数太频繁";
-    	// }
+    	if(Cache::get("code".$mobile)){
+    		return "您的发送次数太频繁";
+    	}
     	$app = app();
     	$code = rand(0,9).rand(0,9).rand(0,9).rand(0,9);
     	Cache::put("code".$mobile,$code,1);
     	session()->set('code'.$mobile,$code);
-        return $code;
+        // return $code;
         
         $http = "http://utf8.sms.webchinese.cn/?Uid={$app['config']['sms.username']}&Key={$app['config']['sms.key']}&smsMob=$mobile&smsText=您的验证码是$code,千万不要告诉别人哦！";
         return file_get_contents($http);

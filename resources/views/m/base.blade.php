@@ -15,10 +15,10 @@
 </head>
 
 <body class=" hPC">
-    <div class="home-nav daohang fixed" style="display:@yield('top','display')">
+    <div class="home-nav daohang fixed" style="display:@yield('top','block')">
         <a href="{{url('m')}}" class="item bg4 new_list"><i class="iconfont type"></i><p>首页</p></a>
         <a href="{{url('m/list/1')}}" class="item bg1 new_list"><i class="iconfont"></i><p>蛋糕</p></a>
-        <a href="{{url('m/list/1')}}" class="item bg5 new_list">
+        <a href="{{url('m/list/2')}}" class="item bg5 new_list">
             <div class="l_icecream"></div>
             <p>新品</p>
         </a>
@@ -26,7 +26,7 @@
         <a href="{{url('m/cart')}}" class="item bg4 new_list"><i class="iconfont type J_cart">&#xe606;</i><p>购物车</p></a>
     </div> 
 @yield('content')
-    <div id="footer" style="clear: both;">
+    <div id="footer" style="clear: both;display:@yield('footer','block')">
         <div class="full-screen">
             <div class="home-to-top">
                 <div style="float:right;">

@@ -129,12 +129,12 @@ body {
     left: 1px;
     height: 10px;
     width: 10px;
-    background: url('../images/u-icon-sel.png') no-repeat scroll center center transparent;
+    background: url('../../img/u-icon-sel.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
 .m-specs ul.join10 li i {
-    background: url('../images/u-icon-blacksel.png') no-repeat scroll center center transparent;
+    background: url('../../img/u-icon-sel.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -166,7 +166,7 @@ body {
     height: 17px;
     width: 22px;
     margin: 0 4px 0 2px;
-    background: url('../images/size_icecream.png') no-repeat scroll center center transparent;
+    background: url('../../img/size_icecream.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -174,7 +174,7 @@ body {
     height: 16px;
     width: 21px;
     margin: 0 4px 0 0;
-    background: url('../images/persons_icecream.png') no-repeat scroll center center transparent;
+    background: url('../../img/persons_icecream.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -182,7 +182,7 @@ body {
     height: 16px;
     width: 18px;
     margin: 0 5px 0 5px;
-    background: url('../images/plates_icecream.png') no-repeat scroll center center transparent;
+    background: url('../../img/plates_icecream.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -190,7 +190,7 @@ body {
     height: 16px;
     width: 20px;
     margin: 0 4px 0 1px;
-    background: url('../images/timers_icecream.png') no-repeat scroll center center transparent;
+    background: url('../../img/timers_icecream.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -259,12 +259,12 @@ body {
 }
 
 .m-dliace ol .ai-1 {
-    background: url('../images/icon2.png') no-repeat scroll center center transparent;
+    background: url('../../img/icon2.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
 .m-dliace ol .ai-2 {
-    background: url('../images/icon3.png') no-repeat scroll center center transparent;
+    background: url('../../img/icon3.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -356,17 +356,17 @@ body {
 }
 
 .m-stalist ol .ai-1 {
-    background: url('../images/icon4.png') no-repeat scroll center center transparent;
+    background: url('../../img/icon4.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
 .m-stalist ol .ai-2 {
-    background: url('../images/icon5.png') no-repeat scroll center center transparent;
+    background: url('../../img/icon5.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
 .m-stalist ol .ai-3 {
-    background: url('../images/icon6.png') no-repeat scroll center center transparent;
+    background: url('../../img/icon6.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 
@@ -395,7 +395,7 @@ a#J_tel_btn i.ai{
     height: 30px;
     width: 30px;
     margin: 6px 2px 0 0;
-    background: url('../images/white-phone.png') no-repeat scroll center center transparent;
+    background: url('../../img/white-phone.png') no-repeat scroll center center transparent;
     background-size: 100% 100%;
 }
 

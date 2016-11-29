@@ -1,119 +1,439 @@
 <div id="container" class="page-container clearfix">
-        <div class="inner-wrap">
-            <div class="bread-crumbs">
-                            <span>
+    <div class="inner-wrap">
+        <div class="bread-crumbs">
+            <span>
                 <a href="/" alt="" title="">首页</a>
             </span>
             <span>&nbsp;&gt;&nbsp;</span>
-            
-                    <span class="now">我的廿一客</span>
-            <input type="hidden" id="isCakeList" value="我的廿一客">
+            <span>
+                <a href="http://www.21cake.com/member.html" alt="" title="">我的廿一客</a>
+            </span>
+            <span>&nbsp;&gt;&nbsp;</span>
+            <span class="now">个人信息</span>
+            <input type="hidden" id="isCakeList" value="个人信息">
+        </div>
+        <div class="member-area">
+            <!-- 会员中心主内容区 -->
+            <div class="page-article">
+                <!-- 个人信息 -->
+                <div id="member_information" class="member-information">
+                    <div class="member-title">
+                        <h2>个人信息</h2>
+                        <p> | 立即完善个人信息。</p>
                     </div>
-            <div class="member-area">
-   
-<!--个人信息部分-->
-<div class="account-area clearfix">
-     <div class="edit_info">
-        <div class="avator-area">
-          <form id="uploadForm" action="/member-edit_portrait.html" enctype="multipart/form-data" target="uploadIframe" method="post">
-          <div class="avator-img">
-                                  <img class="hide" id="avator_img">
-                
-                <input type="hidden" name="avator_member_id" value="12077851">
-                <input type="hidden" name="vkey" id="vkeyInput" value="">
-            <iframe src="about:blank" name="uploadIframe" id="uploadIframe" style="display:none"></iframe>
-            <a id="edit_avator_link" href="javascript:void(0)" class="set-avator-link "><div class="avator-bg"><img class="change_head" style="display: none"></div></a>
-          </div>
+                    <div class="member-mod" style="position: relative">
+                        <form action="/member-save_setting.html" method="post" class="signupin-content" id="J_signupin-content">
+                            <input type="hidden" name="t" value="682b4d3c39443ea0d64e58d297febd71">
+                            <ul>
+                                <li class="form-item">
+                                    <label for="" class="form-label"><em class="warn">*</em> 姓名：</label>
+                                    <span class="form-act">
+                            <input class="x-input" type="text" name="contact[name]" vtype="required" id="dom_el_2ac6290" placeholder="">                        </span>
+                                </li>
+                                <li class="form-item-normal">
+                                    <label for="" class="form-label"><em class="warn">*</em> 性别：</label>
+                                    <span class="form-act">
+                            <div style="visibility: hidden"><input value="male" type="radio" id="input_gender-m" name="profile[gender]" vtype="required"> <label for="input_gender-m">男</label>&nbsp;<input value="female" type="radio" id="input_gender-fm" name="profile[gender]" vtype="required"> <label for="input_gender-fm">女</label></div>
+                            <div class="ac_gender">
+                                    <div class="ac_sex" name="profile[gender]" data-value="male" data-msg="请选择性别"></div>男
+                                    <div class="ac_sex add-margin" name="profile[gender]" data-value="female" data-msg="请选择性别"></div>女
+                            </div>
+                        </span>
+                                </li>
+                                <li class="form-item-normal">
+                                    <label for="" class="form-label"><em class="warn">*</em> 手机：</label>
+                                    <span class="form-act">
+                            <div class="ac_phone">
+                            <input class="x-input" type="text" name="contact[phone][mobile]" id="sendtomobile" data-origin="15504628304" value="15504628304" vtype="required&amp;&amp;mobile">&nbsp;&nbsp;
+                         
+                                    <em class="changenum">修改号码</em>
+                    </div>
+                    </span>
+                    </li>
+                    <li class="form-item-normal minusmargin">
+                        <label for="" class="form-label">E-mail：</label>
+                        <span class="form-act">
+                            <input class="x-input" type="text" name="contact[email]" id="dom_el_2ac6292">                        </span>
+                    </li>
+                    
+                    <li class="form-item-normal">
+                        <script type="text/javascript" src="/themes/21cake/images/script/WdatePicker/WdatePicker.js?v=20151126"></script>
+                        <label for="" class="form-label"><em class="warn">*</em> 出生日期：</label>
+                        <span class="form-act">
+                                                        <div class="ac_common" style="display: inline">
+                                    <input type="hidden" name="ignore_birthday" value="0">
+                                    <input class="Wdate whyGreendata ipt" type="text" onclick="WdatePicker()" onfocus="WdatePicker({startDate:'1986-01-01',readOnly:true,skin:'twoer',isShowToday:false,isShowOK:false,qsEnabled:false,})" name="profile[birthday]">
 
-          <span id="upload_file_show_error"></span>
-          <input type="file" style="opacity:0;height:31px;filter:alpha(opacity=0);width:72px;position:relative;top:-35px;" name="headportrait" id="fileField">
-          </form>
-        </div>
-        <div class="account-mes">
-          <div class="ac-name">
-                        <p><span class="acc-name-unset">
-               姓名：未填写
-               </span></p>
-                      </div>
-          <p class="ac-num"><span>15504628304</span>
-            <a id="edit_security" href="/member-security.html">
-              修改密码            </a>
-            <!--<a href="/member-setting.html">[更改]</a>-->
-          </p>
-
-          <a href="/member-setting.html">
-            <div class="ac-editinfo" id="ac-editinfo">
-              <i class="edit_ico"></i>
-              编辑个人资料
-                          </div>
-          </a>
-          <a href="/member-receiver.html">            <div class="ac-editaddress">
-              <i class="edit_address"></i>地址管理
+                            </div>
+                                                         <em style="margin-left:8px;display: inline-block;*display:inline;*zoom:1;color: #d6c9bd;font-size:13px">出生日期保存后不能修改</em>
+                        </span>
+                    </li>
+                    <li class="form-item-normal">
+                        <label for="" class="form-label">亲友生日：</label>
+                        <span class="form-act">
+                            <div class="ac_common">
+                                <select name="profile[family_type]" style="height: 32px;padding: 0px 0px 0px 5px">
+                                                                        <option value="" selected="">关系</option>
+                                                                        <option value="1">丈夫</option>
+                                                                        <option value="2">妻子</option>
+                                                                        <option value="3">父亲</option>
+                                                                        <option value="4">母亲</option>
+                                                                        <option value="5">子女</option>
+                                                                        <option value="6">友人</option>
+                                                                    </select>
+                                                                    <input class="Wdate other_bir ipt" type="text" onclick="WdatePicker()" onfocus="WdatePicker({readOnly:true,skin:'twoer',isShowToday:false,isShowOK:false,qsEnabled:true,autoShowQS:false})" name="profile[family_birthday]">
+                                                             </div>
+                        </span>
+                    </li>
+                    <li class="form-item-normal">
+                        <label for="" class="form-label"> 您最爱的产品：</label>
+                        <span class="form-act" style="display: inline-block;margin-left: -38px;*display:inline;*zoom:1">
+                            <div class="ac_interest">
+                                <select name="interest" id="interest">
+                                    <option value="0">请选择</option>
+                                                                            <option value="26">
+                                            平安夜                                        </option>
+                                                                            <option value="341">
+                                            -重组                                        </option>
+                                                                            <option value="297">
+                                            21生日奶油蛋糕                                        </option>
+                                                                            <option value="295">
+                                            汉砖                                        </option>
+                                                                            <option value="294">
+                                            风乍起                                        </option>
+                                                                            <option value="282">
+                                            新卡                                        </option>
+                                                                            <option value="29">
+                                            桂圆冰淇淋蛋糕                                        </option>
+                                                                            <option value="8">
+                                            黑森林                                        </option>
+                                                                            <option value="13">
+                                            卡百利                                        </option>
+                                                                            <option value="16">
+                                            巧克力絲語                                        </option>
+                                                                            <option value="28">
+                                            清境                                        </option>
+                                                                            <option value="27">
+                                            爱尔兰咖啡                                        </option>
+                                                                            <option value="4">
+                                            杏仁克鲁兹                                        </option>
+                                                                            <option value="10">
+                                            卡布其诺                                        </option>
+                                                                            <option value="31">
+                                            冻慕斯与焗芝士                                        </option>
+                                                                            <option value="20">
+                                            杰瑞                                        </option>
+                                                                            <option value="18">
+                                            黑方                                        </option>
+                                                                            <option value="2">
+                                            布萊克                                        </option>
+                                                                            <option value="3">
+                                            核桃斯诺                                        </option>
+                                                                            <option value="7">
+                                            栗蓉暗香                                        </option>
+                                                                            <option value="6">
+                                            松仁淡奶                                        </option>
+                                                                            <option value="11">
+                                            心语心愿                                        </option>
+                                                                            <option value="55">
+                                            东方栗融                                        </option>
+                                                                            <option value="24">
+                                            新马斯卡彭-咖啡软芝士蛋糕                                        </option>
+                                                                            <option value="14">
+                                            花格                                        </option>
+                                                                            <option value="21">
+                                            芒果慕斯                                        </option>
+                                                                            <option value="19">
+                                            黑越橘                                        </option>
+                                                                            <option value="9">
+                                            榴莲飘飘                                        </option>
+                                                                            <option value="1">
+                                            朗姆芝士                                        </option>
+                                                                            <option value="30">
+                                            中秋坚果芝士慕斯                                        </option>
+                                                                            <option value="96">
+                                            百香果酸乳酪慕斯蛋糕                                        </option>
+                                                                            <option value="5">
+                                            布朗尼                                        </option>
+                                                                            <option value="17">
+                                            黑白巧克力慕斯                                        </option>
+                                                                            <option value="12">
+                                            '百利甜情人                                        </option>
+                                                                            <option value="132">
+                                            抹茶和栗                                        </option>
+                                                                    </select>
+                            <div>
+                        
+                    </div></div></span></li>
+                    <li class="form-item-normal">
+                        <span class="form-act">
+                            <button style="height:30px;margin-left: 268px" class="btn btn-caution J_commit" rel="_request">
+                                <span><span>保存</span></span>
+                        </button>
+                        </span>
+                    </li>
+                    </ul>
+                    </form>
+                </div>
             </div>
-                     </a>
-          <!--20160706用于个人中心修改
-          <p class="ac-birthday">生日：<span>
-                      未填写
-            <a href="/member-setting.html">[填写]</a>
-                    </span>
-          </p>
-          <p class="ac-adress">地址：<span>
-                      <span class="ac-address-detail" title="">123/15545996057/上海 上海市 黄浦区</span>
-            <span class="ac-address-property">（默认地址）</span>
-                    </span>
-          <a href="/member-receiver.html">[管理地址]</a>
-          </p>
-          <p class="ac-adress">
-          推荐验证码:<span><a href="/member-verification.html">[验证]</a></span>
-          </p>-->
         </div>
-     </div>
-      <div class="cash-coupou">
-        <ul>
-          <li class="ac_item">
-            <p>
-              <a href="/member-balance.html">
-                <i class="ac_balance"></i>
-                果实币余额:
-                                ¥0              </a>
-              <br>
-              <em class="recharge new_r">卡券充值</em>
-                <a href="/member-deposit.html" class="new_r">在线购买果实币</a>
-            </p>
-            <em class="corner"></em>
-          </li>
-          <li class="ac_item">
-            <p>
-              <a href="/member-coupon.html">
-                <i class="ac_coupon"></i>
-                优惠券:
-                0张可用
-              </a>
-            </p>
-            <em class="corner"></em>
-          </li>
-          <li class="ac_item">
-            <p>
-              <a href="/member-cardlist.html">
-                <i class="ac_card"></i>
-                代金卡:
-                0                张已用
-              </a>
-            </p>
-            <em class="corner"></em>
-
-          </li>
-        </ul>
-      </div>
-</div>
-
-
-
-  
-
-  
-
-</div>
-
+        <div class="personal-dialog-mask" style="display: none"></div>
+        <div class="alert-container changetel-container" style="position: fixed;top:50%;left: 50%;margin-left: -141px;margin-top:-141px;z-index: 100001;display: none">
+            <div class="pop-attention-main changetel-main" id="changetel-dialog">
+                <form id="recharge-dialog-form" method="post">
+                    <div class="figure changetel-figure">
+                        <dfn class="confirm">!</dfn>
+                        <div class="cncancel_btn">
+                            <i class="cncancel_ico"></i>
+                        </div>
+                        <span class="clmain_cg">修改号码</span>
+                        <ul class="changetel_content">
+                            <li class="item r_margin">
+                                <input type="text" class="tel" name="tel_number" vtype="required" placeholder="请输入新手机号码" size="22" data-msg="请输入新手机号码">
+                            </li>
+                            <li class="item2">
+                                <input type="text" class="code" name="tel_code" vtype="required" id="card_password" placeholder="短信验证码" style="vertical-align:middle" size="22" data-msg="请输入短信验证码">
+                                <button type="button" class="getcode" id="doSendMobile">点击获取</button>
+                            </li>
+                            <li class="r_error" style="">您输入的卡号或密码错误,请重试！</li>
+                        </ul>
+                    </div>
+                    <div class="confirmchange">确认修改</div>
+                </form>
+            </div>
         </div>
+        <script>
+        var is_lock = '0';
+        var sint = null;
+        $('J_signupin-content').addEvents({
+            'click:relay(.J_commit)': function(e) {
+                e.stop();
+                if (!validate($('J_signupin-content'))) return;
+                if (is_lock == '1') {
+                    alert('正在提交中,请稍后');
+                    return false;
+                }
+                is_lock = '1';
+                new Request({
+                    url: '/member-save_setting.html',
+                    onSuccess: function(text) {
+                        return_info = jQuery.parseJSON(text);
+                        if (return_info.success_coupon) {
+                            Dialog.confirm(
+                                return_info.success_coupon, {
+                                    width: 300,
+                                    title: '保存成功',
+                                    confirmText: '去购物',
+                                    cancelText: '查看优惠券'
+                                },
+                                function(e) {
+                                    if (e) {
+                                        location.href = "/gallery-index---0---1.html";
+                                    } else {
+                                        location.href = "/member-coupon.html";
+                                    }
+                                }
+                            );
+                        } else {
+                            if (return_info.success) {
+                                $('sendtomobile').setProperty('data-origin', $('sendtomobile').value);
+                                Message.success(return_info.success, 2, function() {
+                                    location.href = return_info.redirect;
+                                });
+                            } else {
+                                Message.error(return_info.error, 2);
+                            }
+                        }
+                        sint = setInterval(reset_is_sub, 1000);
+                    }
+                }).post($('J_signupin-content'));
+            }
+        });
+
+
+        function reset_is_sub() {
+            is_lock = '0';
+            window.clearInterval(sint);
+        }
+        </script>
+        <script type="text/javascript">
+        (function($) {
+            $('.changenum').click(function() {
+                showDialog();
+                return false;
+            });
+
+            var checked_gender = $("input[name='profile[gender]']:checked").val();
+
+            $(".ac_sex").each(function() {
+                if ($(this).data('value') == checked_gender) {
+                    $(this).addClass("selected");
+                }
+            });
+
+            $(".ac_sex").click(function() {
+                if ($(this).hasClass("selected")) {
+                    return;
+                } else {
+                    var gender_sex = $(this).data("value");
+                    var other_sex = gender_sex == "male" ? "female" : "male";
+                    $(this).addClass("selected").siblings().removeClass("selected");
+                    $("input[value=" + gender_sex + "]").attr("checked", "checked");
+                    $("input[value=" + other_sex + "]").removeAttr("checked");
+                }
+            });
+
+            $(".getcode").click(function() {
+                sendMobileCode();
+            });
+
+            $(".cncancel_btn").click(function() {
+                hideDialog();
+            });
+
+            $(".confirmchange").click(function() {
+                var origin_mobile = $('#sendtomobile').attr('data-origin');
+                //var mobile = $('sendtomobile').value;
+                var mobile = $("input[name='tel_number']").val();
+                var t = $("input[name='t']").val();
+                var code = $(".code").val();
+
+                if (origin_mobile == mobile) {
+                    showError('您没有修改手机号，无需获取验证码!');
+                    return;
+                }
+                if (!mobile || mobile == '') {
+                    showError('请填写手机号!');
+                    return;
+                }
+                if (mobile.length != 11) {
+                    showError('手机号错误,请填写正确的手机号码!');
+                    return;
+                }
+                if (!/^1[34578]\d{9}$/.test(mobile)) {
+                    showError('手机号错误,请填写正确的手机号码!');
+                    return;
+                }
+
+                $.post("/member-change_mobile.html", {
+                    mobile: mobile,
+                    check: code
+                }, function(rs) {
+                    var rs = eval("(" + rs + ")");
+                    if (rs.suc) {
+                        jQuery('#sendtomobile').val(mobile);
+                        hideDialog();
+                    } else {
+                        $('.r_error').show().html(rs.msg);
+                    }
+                });
+            });
+
+            function sendMobileCode() {
+                var origin_mobile = $('#sendtomobile').attr('data-origin');
+                //var mobile = $('sendtomobile').value;
+                var mobile = $("input[name='tel_number']").val();
+                var t = $("input[name='t']").val();
+
+                if (origin_mobile == mobile) {
+                    showError('您没有修改手机号，无需获取验证码!');
+                    return;
+                }
+                if (!mobile || mobile == '') {
+                    showError('请填写手机号!');
+                    return;
+                }
+                if (mobile.length != 11) {
+                    showError('手机号错误,请填写正确的手机号码!');
+                    return;
+                }
+                if (!/^1[34578]\d{9}$/.test(mobile)) {
+                    showError('手机号错误,请填写正确的手机号码!');
+                    return;
+                }
+
+                $("doSendMobile").disabled = true;
+
+
+                $.ajax({
+                    type: 'get',
+                    url: '/member-send_edit_mobile.html',
+                    data: {
+                        'mobile': mobile,
+                        't': t
+                    },
+                    cache: false,
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data['error']) {
+                            showError(data['error']);
+                        }
+                        if (data['data'] && data['data']['t']) {
+                            $('input[name="t"]').val(data['data']['t']);
+                        }
+                        var wait = 120;
+                        var time_line = setInterval(function() {
+                            if (wait == 0) {
+                                $("#doSendMobile").removeAttr('disabled');
+                                $('#doSendMobile').addClass("codesend");
+                                $('#doSendMobile').html('重新获取验证码');
+                                return clearInterval(time_line);
+                            }
+                            $('#doSendMobile').addClass("codesend");
+                            $('#doSendMobile').html((wait--) + "秒后重新发送");
+                        }, 1000)
+                    }
+                });
+
+            }
+
+            function showError(msg) {
+                $('.r_error').show().html(msg);
+                throw msg;
+            }
+
+            function hideDialog() {
+                $(".personal-dialog-mask").hide();
+                $(".changetel-container").hide();
+
+            }
+
+            function showDialog() {
+                $(".personal-dialog-mask").show();
+                $(".changetel-container").show();
+            }
+
+
+            $('input[vtype="required"]').blur(function() {
+                if ($.trim(this.value) == '' && this.name != '') {
+                    $('.r_error').show().text($(this).data('msg'));
+                }
+            }).focusin(function() {
+                $('.r_error').hide();
+            });
+
+
+        })(jQuery);
+
+
+
+
+
+        jQuery.noConflict();
+        (function($) {
+            $(function() {
+                $('.J_commit').click(function() {
+                    if (typeof($("#input_gender-m").attr('checked')) == "undefined" && typeof($("#input_gender-fm").attr('checked')) == "undefined") {
+                        $('#input_gender-fm').after(
+                            '<span style="margin-left:45px" id="_build_tips_inline_error_17" class="caution error notice-inline"><q class="icon">!</q><span class="caution-content">本项必填</span></span>'
+                        );
+                    }
+                });
+            });
+            $("input.calendar").css("background-color", "#FFF");
+
+        })(jQuery);
+        </script>
     </div>
+</div>
+</div>

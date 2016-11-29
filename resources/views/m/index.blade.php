@@ -37,7 +37,7 @@
         </div>
     </div>
     <script type="text/javascript" src="{{asset('js/banner.js')}}"></script>
-    <div class="full-screen">
+    <div class="full-screen" style="margin-top:0px;">
         <div class="home-nav index_nav">
             <a href="{{murl('list/1')}}" class="item bg1"><i class="iconfont"></i><p>蛋糕</p></a>
             <a href="{{murl('list/2')}}" class="item bg4">

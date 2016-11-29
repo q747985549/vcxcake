@@ -10,6 +10,11 @@
     <script src="{{asset('js/jquery-1.8.2.min.js')}}"></script>
     <script src="//cdn.bootcss.com/layer/2.4/layer.min.js"></script>
       <script>
+      @if(isset($msg))
+      $(function(){
+        layer.msg("{{$msg}}");
+      });
+      @endif
     var $j = $;
     </script>
 </head>

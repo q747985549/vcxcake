@@ -32,7 +32,18 @@
     background-color: #fff;
     border: 1px solid #ddd;
 }
-
+.pagination>li.active>a,
+.pagination>li.active>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #8e6a55;
+    text-decoration: none;
+    background-color: #ababab;
+    border: 1px solid #ddd;
+}
 .popup-container {
     display: none;
 }

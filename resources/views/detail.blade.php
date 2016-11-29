@@ -1,7 +1,5 @@
 @extends('base')
-
 @section('title',$info['title'])
-
 @section('content')
 <div id="container" class="page-container clearfix">
     <div class="inner-wrap">
@@ -20,7 +18,7 @@
             <div class="page-maincontent">
                 <div id="product_container" class="product-container clearfix">
                     <form action="/cart-add-goods.html" method="post" target="_dialog_minicart">
-                        <input type="hidden" name="cake_id" value="{{$info['id']}}">
+                        <input type="hidden" name="goods_id" value="{{$info['id']}}">
                         <input type="hidden" name="weight" value="{{$info['weight_arr'][0]}}">
                         <div class="product-side" style="width:502px;">
                             <!-- 商品相册 -->
@@ -93,7 +91,7 @@
                                                 <span class="item-content">
                                                 <ul class="clearfix">
                                                 @foreach($info['weight_arr'] as $w)
-                                                    <li class="spec-attr">
+                                                    <li class="spec-attr @if($loop->first)selected @endif">
                                                         <a href="javascript:void(0);" data-weight="{{$w}}" class="weight_button">
                                                             <span>{{$w}}磅</span>
                                                             <i></i>
@@ -183,11 +181,38 @@
                                             </script>
                                             <!--购买按钮-->
                                             <li class="product-buy-action">
-                                                <button type="button" onclick="alert('待开发');" class="btn btn-import btn-huge action-buynow" rel="_request" id="IDproductbuynow"><span><span>立即购买</span></span>
+                                                <button type="button" onclick="buy();" class="btn btn-import btn-huge action-buynow" rel="_request" id="IDproductbuynow"><span><span>立即购买</span></span>
                                                 </button>
-                                                <button type="button" onclick="alert('待开发');" class="btn btn-major btn-huge action-addtocart" rel="_request" id="IDproductaddtocart"><span><span>加入购物车</span></span>
+                                                <button type="button" onclick="add_cart();" class="btn btn-major btn-huge action-addtocart" rel="_request" id="IDproductaddtocart"><span><span>加入购物车</span></span>
                                                 </button>
                                             </li>
+
+                                            <script>
+                                            function buy(){
+                                                add_cart(function(){
+                                                    location.href = "{{url('user/cart')}}";
+                                                });
+                                            }
+                                            function add_cart($f){
+                                                $.post("{{url('addcart')}}",{
+                                                    id:$('[name=goods_id]').val(),
+                                                    weight:$("[name=weight]").val(),
+                                                    num:$("[name=num]").val(),
+                                                    _token:"{{csrf_token()}}"
+                                                },function(a){
+                                                    if(a == 1){
+                                                        layer.msg('添加成功！');
+                                                        $(".layui-layer").css('z-index',9999999999999);
+                                                        if($f){
+                                                            $f();
+                                                        }
+                                                    }else{
+                                                        layer.msg(a);
+                                                        $(".layui-layer").css('z-index',9999999999999);
+                                                    }
+                                                });
+                                            }
+                                            </script>
                                         </ul>
                                     </div>
                                 </div>

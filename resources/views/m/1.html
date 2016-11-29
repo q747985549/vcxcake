@@ -1,0 +1,214 @@
+@extends('m.base')
+@section('title','蛋糕列表')
+@section('content')
+<div class="full-screen">
+    <header>
+        <div class="a-bar">
+            <a href="javascript:history.back()" class="a-back">
+                <img alt="返回" src="/wap_themes/21cake/images/icon/btn_back_icecream.png">
+            </a>
+            <div class="a-name">
+                小切块-布朗尼 </div>
+        </div>
+    </header>
+    <div class="g-doc f-dn" style="display: block;">
+        <div class="g-bd f-cb">
+            <form action="/cart-add-goods.html" method="post" id="buy_form" data-type="ajax">
+                <input type="hidden" name="btype" class="btype">
+                <!-- value="is_fastbuy" 立即购买提交的时候要带上这个值 -->
+                <input type="hidden" name="goods[goods_id]" value="337">
+                <input type="hidden" name="goods[num]" value="1">
+                <input type="hidden" name="goods[product_id]" value="6874">
+                <input type="hidden" name="mini_cart" value="true">
+                <!--<input type="hidden" name="goods[spec_desc]" value="6874"/>-->
+                <input type="hidden" value="join10" name="join10_tag">
+                <div class="m-baer f-oh">
+                    <!-- 商品图片 -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span class="u-img f-db">
+                    <img src="http://m.21cake.com/public/images/ba/d9/d0/27d3ceb436b5fa8518ef83deaf0b12ba.jpg?1479881021#w" alt="小切块-布朗尼" title="小切块-布朗尼">
+                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="/public/21cake-themes/wap_themes/js/swiper.min.js"></script>
+                    <script type="text/javascript">
+                    ;
+                    (function() {
+                        $(window).on('load', function() {
+                            if ($('.swiper-container .swiper-slide').length > 1) {
+                                var poswiper = new Swiper('.swiper-container', {
+                                    autoplay: 2500, //可选选项，自动滑动
+                                    loop: true,
+                                    speed: 800,
+                                    autoHeight: true, //高度随内容变化
+                                    spaceBetween: 0,
+                                    //setWrapperSize :true,
+                                    autoplayDisableOnInteraction: false,
+                                    onInit: function(poswiper) {
+                                        // 初始化
+                                    },
+                                    onSlideChangeEnd: function(poswiper) {
+                                        // 滑块切换结束
+                                    }
+                                });
+                            }
+                        })
+                    })();
+                    </script>
+                </div>
+                <div class="m-prdesc">
+                    <h3 class="tit f-fwn">
+                        <strong class="f-db">Brownie</strong>
+                        <small class="f-db">小切块-布朗尼</small>
+                    </h3>
+                    <ol class="pele f-cb" style="padding-top:12px;">
+                    </ol>
+                </div>
+                <div class="m-specs">
+                    <ul class="f-cb join10">
+                        <li class="f-fl f-pr z-sel" data-id="6874" style="width: 100%;"><i class="f-dib f-pa"></i><a href="javascript:void(0);">份</a></li>
+                    </ul>
+                    <div class="ouit ouit-normal f-oh">
+                        <strong class="f-db f-fwn price">￥36.00</strong>
+                        <span class="u-img u-specpic f-db">
+                            <img src="/public/21cake-themes/wap_themes/images/u-none.png" alt="" style="display: none;">
+                        </span>
+                        <p class="f-cb p p-1">
+                            <span class="f-fl"><i class="f-dib ai ai-1 f-fl"></i> <span class="prosmfo">4.5x4.5cm</span></span>
+                            <span class="f-fr"><i class="f-dib ai ai-2 f-fl"></i> <span class="prosmfo">适合1人分享</span></span>
+                        </p>
+                        <p class="f-cb p p-1">
+                            <span class="f-fl"><i class="f-dib ai ai-3 f-fl"></i> <span class="prosmfo">含1套餐具</span></span>
+                            <span class="f-fr"><i class="f-dib ai ai-4 f-fl"></i> 需提前<span class="prosmfo">5</span>小时预订</span>
+                        </p>
+                    </div>
+                    <div class="ouit ouit-more f-oh f-dn">
+                        <span class="u-img f-db">
+                        <img src="/public/21cake-themes/wap_themes/images/u-none.png" alt="">
+                    </span>
+                        <p class="f-cb f-tac p p-2">订购更多磅数的蛋糕</p>
+                        <p class="f-cb f-tac p p-2">请客服人员联系</p>
+                    </div>
+                </div>
+                <div class="m-dliace">
+                    <ol class="f-oh">
+                        <li>
+                            <!-- 商品配送时间说明区 -->
+                            <span class="f-db f-fl">
+                                <i class="f-dib ai ai-1 f-fl"></i> 配送时间
+                            </span>
+                            <div class="txt f-fl">
+                                <p>现在订购最早<strong class="f-fwn">明天&nbsp;09:30</strong>配送。</p>
+                                <p>每日最晚配送时间<strong class="f-fwn">22:00</strong>。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="f-db f-fl">
+                            <i class="f-dib ai ai-2 f-fl"></i> 保鲜条件
+                        </span>
+                            <div class="txt f-fl">
+                                <p>收到后2-3小时内食用最佳。</p>
+                                <p class="f-oh">
+                                    0-4℃保藏12小时，15℃食用为佳 </p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="m-custxt">
+                    /细细咀嚼，对生活偶尔的怀疑与最终的确信/
+                    <br>
+                    <br> /把坚果细细烘烤、切碎，需要耐心，和手指的温度/
+                    <br> /重油布朗尼坯，三层可可奶油/
+                    <br> /醇苦的黑巧克力衬着些许微醺的朗姆酒/
+                    <br> /细碎的坚果，比起整颗并不算讨喜/
+                    <br> /但夹杂着的葡萄干，有些柔软/
+                    <br>
+                </div>
+                <div class="m-cuspic">
+                    <img style="WIDTH: 100%; DISPLAY: block" src="http://www.21cake.com/public/images/87/56/31/0a6e23f7097bd40ba9feea6968c626d8.jpg?1478697718#w">
+                    <img style="WIDTH: 100%; DISPLAY: block" src="http://www.21cake.com/public/images/e4/9e/ea/47985aa45c796cf7167204922367a5a2.jpg?1478697726#w">
+                    <img style="WIDTH: 100%; DISPLAY: block" src="http://www.21cake.com/public/images/96/26/b0/40f6463af5acf1e508657a401c00b954.jpg?1478697733#h"> </div>
+                <div class="m-stalist">
+                    <ol class="f-oh">
+                        <li>
+                            <span class="f-db">
+                            <i class="f-dib ai ai-1 f-fl"></i> 参考建议
+                        </span>
+                            <div class="txt">
+                                <p class="f-oh">
+                                    甜度：<span class="lets">★★★★☆☆</span>
+                                </p>
+                                <p class="f-oh">
+                                    适合人群：除老人、儿童及对酒精过敏以外的各类人群 </p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="f-db">
+                            <i class="f-dib ai ai-2 f-fl"></i> 注意事项
+                        </span>
+                            <div class="txt">
+                                <p>1. 对本蛋糕食材有过敏经历者，请选择其它款蛋糕。</p>
+                                <p>2. 订购5磅及5磅以上规格的蛋糕，请与客服人员联系，订购电话：<a href="tel:400-650-2121">400-650-2121</a>。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="f-db">
+                            <i class="f-dib ai ai-3 f-fl"></i> 配送说明
+                        </span>
+                            <div class="txt txt-1">
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">北京：</strong>
+                                    <p>六环以内；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">天津：</strong>
+                                    <p>绕城公路以内；天津滨海新区-塘沽部分地区；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">上海：</strong>
+                                    <p>郊环线（A30）以内；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">杭州：</strong>
+                                    <p>杭州绕城高速以内、杭州萧山国际机场、阿里巴巴西溪园区；其它部分地区；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">苏州：</strong>
+                                    <p>苏州绕城高速内；阳澄湖区、木渎区、吴中区部分地区；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">无锡：</strong>
+                                    <p>北塘区、崇安区、南长区、滨湖区；其它部分地区；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">广州：</strong>
+                                    <p>环城高速以内（S81）；广州绕城高速以内部分地区；</p>
+                                </div>
+                                <div class="tiyo f-oh">
+                                    <strong class="f-fwn f-fl">深圳：</strong>
+                                    <p>南山区、福田区、罗湖区；其它部分地区。</p>
+                                </div>
+                                <div class="tiyo tiyo-1 f-oh">
+                                    <strong class="f-fwn f-fl">超出范围暂不配送，请谅解。</strong>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="pt-btn fixed fixed_bottom" style="bottom:0;">
+                    <a href="#" class="btn J_button" request_data="0" id="J_buy_btn"><span class="f-dib">加入购物车<em class="f-fr">（￥36.00）</em></span></a>
+                    <div class="customertel" style="display: none">
+                        <p>订购更多磅数的蛋糕,请与客服人员联系。</p><a class="kefutel" href="tel:400-650-2121"><i></i></a>
+                    </div>
+                    <a href="tel:400-650-2121" class="btn u-telbtn J_button f-tac" id="J_tel_btn" style="display:none;">
+                        <span class="f-dib"><i class="ai ai-1 f-db f-fl"></i>联系客服</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection

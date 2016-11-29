@@ -9,9 +9,9 @@
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
 |
-*/
+*/ 
 use Mews\Captcha\Captcha;
-
+ 
 Route::group(['prefix' => 'admin','namespace'=>'Admin',"middleware"=>'auth.admin'], function() {
     Route::get('',"PublicController@index");
     Route::any('setting',"PublicController@setting");
@@ -65,7 +65,6 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin',"middleware"=>'auth.admin
 		Route::get('title/{id}/{title}',"ArticleController@title");
 		Route::get('add/{title}/{order_id}/{pid}',"ArticleController@add");
 	});
-	
 });
 
 Route::group(['prefix' => 'user','namespace'=>'User',"middleware"=>'auth'], function() {
@@ -74,7 +73,11 @@ Route::group(['prefix' => 'user','namespace'=>'User',"middleware"=>'auth'], func
 	Route::get('go_order',"OrderController@go_order");
 	Route::post('add_address',"InfoController@add_addr");
 	Route::get('del_addr/{id}',"InfoController@del_addr");
+
 	Route::get('',"InfoController@index");
+	Route::any('password',"InfoController@password");
+	Route::any('info',"InfoController@info");
+	Route::post('change_mobile',"InfoController@change_mobile");
 });
 Route::group(['prefix' => 'm','namespace'=>'Mobile'], function() {
 	Route::any('',"PublicController@index");
@@ -82,6 +85,11 @@ Route::group(['prefix' => 'm','namespace'=>'Mobile'], function() {
 	Route::any('register',"PublicController@register");
 	Route::any('login1',"PublicController@login1");
 	Route::any('logout',"PublicController@loginout");
+
+	Route::get('list/{pid}/{cate_id?}',"CakeController@lists");
+	Route::get('detail/{id}',"CakeController@detail");
+
+
 });
 
 
@@ -92,6 +100,7 @@ Route::get('help/{id?}',"HelpController@index");
 
 /*Upload*/
 Route::any('/files/upload',"FileController@upload");
+Route::any('/files/upload_head',"FileController@upload_head");
 Route::get('/files/getimg/{id}',"FileController@getImg"); 
 
 /*Cake*/

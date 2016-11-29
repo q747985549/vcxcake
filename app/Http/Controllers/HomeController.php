@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Cake;
+use Debugbar;
 class HomeController extends Controller
 {
     /**

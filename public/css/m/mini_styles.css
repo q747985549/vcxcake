@@ -119,6 +119,7 @@ a {
     margin: 50px auto 50px;
     width: 100%;
     overflow: hidden;
+    /*margin-top:0px;*/
 }
 .full-padding {
     padding: 0 10px;
