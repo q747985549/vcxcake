@@ -64,4 +64,5 @@ class InfoController extends Controller
    }
    public function address(){
    }
+
 }

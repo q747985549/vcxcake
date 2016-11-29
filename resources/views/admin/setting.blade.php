@@ -58,6 +58,7 @@
                   </td>
               </tr>
                <tr>
+
                   <td width="120"><p class="tuanfabu_t">会员等级示图：</p></td>
                   <td>
                     <div class="tuanfabu_nr user_levelimgclass">
@@ -74,8 +75,6 @@
                     </div>
                   </td>
               </tr>
-
-
               <tr>
                   <td width="120"><p class="tuanfabu_t">版权信息：</p></td>
                   <td>
@@ -154,6 +153,7 @@
                     }
                      });
                  user_level.init();
+
             
 	            	var logo = new plupload.Uploader({
                           runtimes : 'html5,silverlight,flash,html4',

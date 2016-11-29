@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-11-24 17:32:39
+Date: 2016-11-26 16:57:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -685,7 +685,7 @@ CREATE TABLE `files` (
   `file_name` char(60) NOT NULL,
   `path` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=206 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of files
@@ -893,6 +893,8 @@ INSERT INTO `files` VALUES ('200', 'banner.jpg', 'upload/e2835bf39b21bfb9c6f6dd4
 INSERT INTO `files` VALUES ('201', '产品图片-.jpg', 'upload/b93171ab2ea53caf52e2c0cb6664ad97.jpeg');
 INSERT INTO `files` VALUES ('202', '产品图片-.jpg', 'upload/b93171ab2ea53caf52e2c0cb6664ad97.jpeg');
 INSERT INTO `files` VALUES ('203', '产品图片-.jpg', 'upload/b93171ab2ea53caf52e2c0cb6664ad97.jpeg');
+INSERT INTO `files` VALUES ('204', 'new_membership (1).png', 'upload/35201daeeab6d7000835a603f0febb48.png');
+INSERT INTO `files` VALUES ('205', 'new_membership (1).png', 'upload/35201daeeab6d7000835a603f0febb48.png');
 
 -- ----------------------------
 -- Table structure for migrations
@@ -936,19 +938,20 @@ CREATE TABLE `setting` (
   `name` char(10) NOT NULL,
   `value` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of setting
 -- ----------------------------
 INSERT INTO `setting` VALUES ('1', '2', '3');
 INSERT INTO `setting` VALUES ('2', 's', '/admin/setting');
-INSERT INTO `setting` VALUES ('3', '_token', 'r6g8JHVhkg3yhYuQKDc1xFsaX1uYvSiuW6hRTNYv');
+INSERT INTO `setting` VALUES ('3', '_token', '4PMxxVR10FykhfETHXXPrUGG5yeQYsVuJVjYgOxm');
 INSERT INTO `setting` VALUES ('4', 'name', '123');
 INSERT INTO `setting` VALUES ('5', 'logo', '199');
 INSERT INTO `setting` VALUES ('6', 'copy_right', 'Copyright© 21Cake蛋糕官网商城 2007-2015, 版权所有 京ICP备14006254号-1');
 INSERT INTO `setting` VALUES ('7', 'imgs', '63,64,65,66,67,68,69,70,71');
 INSERT INTO `setting` VALUES ('8', 'send_fee', '5');
+INSERT INTO `setting` VALUES ('9', 'user_level', '205');
 
 -- ----------------------------
 -- Table structure for users
@@ -966,6 +969,8 @@ CREATE TABLE `users` (
   `buy_num` int(10) NOT NULL DEFAULT '0',
   `buy_total` int(10) NOT NULL DEFAULT '0',
   `status` tinyint(4) DEFAULT '1',
+  `level` tinyint(4) DEFAULT '0',
+  `gender` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `mobile` (`mobile`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -973,7 +978,7 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('3', '15504628304', '$2y$10$.4gJLZhZjvLTJTPqlQ7QYO0F0LaAU9PpFlJbR0c9QkBgpqKo76qJq', 'e7OG0MWmT6JLUKXsmhkV9xh4qulzmFwrnZsuvmQyNC9pP4tn6HbqOFw9inLb', '2016-11-17 12:45:22', '2016-11-24 07:08:37', null, '0', '0', '0', '0');
-INSERT INTO `users` VALUES ('4', 'admin', '$2y$10$VoaLknMQoARjvJJ60EqOQOYipXuUlTEutAueMNSGgvuRa7T8Ssco2', 'Riypy4GwCjWqxeRpHlxWw0QhKDjgaGFUE1ILDlKWCtVme0bKLom3TlKralTI', null, '2016-11-24 07:08:01', null, '1', '0', '0', null);
-INSERT INTO `users` VALUES ('7', '15555555555', '$2y$10$NLXqR.WvYuKChjCkYeDtTOT1yJJlENMEDgqS/a8jv0A3vKapw9edO', '7Y77fxwIvJ1fk3JpuWYqlRfbKip5wCQApZu8s1xgp8UzDRwxipQ35WyJijOb', '2016-11-24 07:31:36', '2016-11-24 07:38:08', null, '0', '0', '0', '1');
-INSERT INTO `users` VALUES ('8', '15555555554', '$2y$10$TKMx6Kp4iE0L7NHn2a4sLOPkDJ1nyW7nQ4jeIcXtqV654MVLw2UdW', null, '2016-11-24 07:32:21', '2016-11-24 07:32:21', null, '0', '0', '0', '1');
+INSERT INTO `users` VALUES ('3', '15504628304', '$2y$10$.4gJLZhZjvLTJTPqlQ7QYO0F0LaAU9PpFlJbR0c9QkBgpqKo76qJq', 'e7OG0MWmT6JLUKXsmhkV9xh4qulzmFwrnZsuvmQyNC9pP4tn6HbqOFw9inLb', '2016-11-17 12:45:22', '2016-11-24 07:08:37', null, '0', '0', '0', '0', null, null);
+INSERT INTO `users` VALUES ('4', 'admin', '$2y$10$VoaLknMQoARjvJJ60EqOQOYipXuUlTEutAueMNSGgvuRa7T8Ssco2', 'Riypy4GwCjWqxeRpHlxWw0QhKDjgaGFUE1ILDlKWCtVme0bKLom3TlKralTI', null, '2016-11-24 07:08:01', null, '1', '0', '0', null, null, null);
+INSERT INTO `users` VALUES ('7', '15555555555', '$2y$10$NLXqR.WvYuKChjCkYeDtTOT1yJJlENMEDgqS/a8jv0A3vKapw9edO', '7Y77fxwIvJ1fk3JpuWYqlRfbKip5wCQApZu8s1xgp8UzDRwxipQ35WyJijOb', '2016-11-24 07:31:36', '2016-11-24 07:38:08', null, '0', '0', '0', '1', null, null);
+INSERT INTO `users` VALUES ('8', '15555555554', '$2y$10$TKMx6Kp4iE0L7NHn2a4sLOPkDJ1nyW7nQ4jeIcXtqV654MVLw2UdW', null, '2016-11-24 07:32:21', '2016-11-24 07:32:21', null, '0', '0', '0', '1', null, null);

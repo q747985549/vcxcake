@@ -14,8 +14,9 @@ class UserController extends Controller
 		}
 		$list = Users::where($map)->orderBy($order,'desc')->paginate(15);
 		foreach ($list as $key => &$v) {
- 			$v['level'] = get_level($v['level']);
- 		}
+
+			$v['level'] = get_level($v['level']);
+		}
     	return view("admin.user.list",['list'=>$list,'order'=>$order]);
     }
     public function lahei($id){
