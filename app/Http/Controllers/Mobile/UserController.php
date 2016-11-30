@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Mobile;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Address;
 use Auth;
-class InfoController extends Controller
+class UserController extends Controller
 {
-  public function addr(){
-    return view('user/addr')->withList(Address::where('uid','=',Auth::user()->id)->get());
+   public function addr(){
+    return view('m/user/addr')->withList(Address::where('uid','=',Auth::user()->id)->get());
   }
-  public function addr_get($id){
+   public function addr_get($id){
     return Address::where(['uid'=>Auth::user()->id,'id'=>$id])->firstOrFail();
   }
   public function addr_setd($id){
@@ -20,29 +20,33 @@ class InfoController extends Controller
     $info->default = 1;
     $info->save();
   }
-  
-    public function add_addr(Request $re){
-    		$data = $re->except('_token','s','_method');
-    		$data['uid'] = Auth::user()->id;
-        if(isset($data['default'])){
+  public function addr_add(Request $re){
+    if($re->isMethod('post')){
+      $data = $re->except('_token','s','_method');
+      $data['uid'] = Auth::user()->id;
+      if(isset($data['default'])){
           Address::where(['uid'=>Auth::user()->id])->update(['default'=>0]);
-        }
-        if(Address::where(['uid'=>Auth::user()->id])->count() >9){
-          return redirect('user/addr');
-        }
-        if($data['id']){
-          with(new Address())->fillable(with(new Address())->fillable)->where('id','=',$data['id'])->update($data);
-        }else{
-          $info = Address::create($data);
-        }
-      if($re->isMethod('post')){
-    		return $info;
-    	}else{
-        return redirect('user/addr');
       }
+      with(new Address())->create($data);
+      return redirect(url('m/user/addr'));
     }
+    return view('m.user.addr_edit');
+    
+  }
+  public function addr_edit($id,Request $re){
+    if($re->isMethod('post')){
+      $data = $re->except('_token','s','_method');
+      $data['uid'] = Auth::user()->id;
+      if(isset($data['default'])){
+          Address::where(['uid'=>Auth::user()->id])->update(['default'=>0]);
+      }
+      with(new Address())->where(['id'=>$data['id'],'uid'=>$data['uid']])->update($data);
+      return redirect(url('m/user/addr'));
+    }
+    return view('m.user.addr_edit')->withInfo(Address::where(['uid'=>Auth::user()->id,'id'=>$id])->firstOrFail());
+  }
     public function addr_del($id){
-    	$s = Address::where(['uid'=>Auth::user()->id,'id'=>$id])->delete();
+      $s = Address::where(['uid'=>Auth::user()->id,'id'=>$id])->delete();
       if($s){
         return '1';
       }else{
@@ -50,9 +54,9 @@ class InfoController extends Controller
       }
     }
     public function index(){
-    	 $user = Auth::user();
-       $user['level'] = get_level($user['level']);
-     return view('user.index')->withUser($user);
+    	$user = Auth::user();
+        $user['level'] = get_level($user['level']);
+        return view('m.user.index')->withUser($user);
    }
  
    public function password(Request $re){
@@ -79,8 +83,9 @@ class InfoController extends Controller
            $data = $re->except('s','_token');
            $user = Auth::user();
            $user->fillable(["realname","gender","email","birthday","family_type","family_birthday","interest"])->update($data);
+           return view('m.user.info')->withUser(Auth::user())->withMsg('修改成功');
        }
-       return view('user.info')->withUser(Auth::user());
+       return view('m.user.info')->withUser(Auth::user());
    }
    public function change_mobile(){
     $d = request()->all();
@@ -95,5 +100,4 @@ class InfoController extends Controller
    }
    public function address(){
    }
-
 }

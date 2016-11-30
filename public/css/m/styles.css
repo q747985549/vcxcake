@@ -3,11 +3,11 @@
 /* icon font */
 @font-face {
     font-family: 'iconfont';
-    src: url('/wap_themes/21cake/images/iconfont/iconfont.eot'); /* IE9*/
-    src: url('/wap_themes/21cake/images/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    src: url('../../imgfont/iconfont.eot'); /* IE9*/
+    src: url('../../imgfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('../../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
     url('../../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('/wap_themes/21cake/images/iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    url('../../imgfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont{font-family:"iconfont" !important;font-size:36px; line-height:24px; font-style:normal;-webkit-font-smoothing: antialiased;
@@ -171,7 +171,7 @@ background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJVi
 
 /*首页地址选择*/
 #head .local {border-left: 1px solid #dfdfdf;float: left;height: 16px;line-height: 16px;margin: 15px 0 0 8px;padding-left: 8px;}
-#head .local  .show_city_a {background: url("/wap_themes/21cake/images/icon/ico_local.png") no-repeat scroll 0 0; background-size:11px 14px;  color: #a77746;cursor: pointer;display: inline-block;font-size: 12px;line-height: 14px;padding-left: 15px;float: left;}
+#head .local  .show_city_a {background: url("../../img/ico_local.png") no-repeat scroll 0 0; background-size:11px 14px;  color: #a77746;cursor: pointer;display: inline-block;font-size: 12px;line-height: 14px;padding-left: 15px;float: left;}
 #head .local  .base-city .sendTo{float: left;color: #a77746;cursor: pointer;font-size: 12px;line-height: 14px;}
 .mask{  background: none repeat scroll 0 0 #000;display: block;height: 9999px;left: 0;opacity: 0.8;position: fixed;top: 0;width: 100%;z-index: 1000;}
 .city_panel{position: fixed;top:30%;left: 0; z-index: 1001;width: 100%;color:white;}
@@ -213,7 +213,7 @@ background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJVi
 .size {margin-top: 7px;width: 100%;margin-bottom: 60px;}
 .size li {float: left;margin-bottom: 13px;width: 33.333333%;}
 .size li a {border: 1px solid #eee;color: #8e6a55;display: block;font-size: 11px;height: 35px;line-height: 35px;margin: 0 10px;text-align: center;}
-.size li a.active {background: url("/wap_themes/21cake/images/icon/ico_select.gif") no-repeat scroll right bottom; background-size:19px 19px; border-color: #482e1e;}
+.size li a.active {background: url("../../img/ico_select.gif") no-repeat scroll right bottom; background-size:19px 19px; border-color: #482e1e;}
 .pt-btn {background-color: #f3f3f3;border-bottom: 1px solid #d2d2d2;border-top: 1px solid #d2d2d2;width: 100%;z-index: 1000;clear: both}
 .pt-btn .btn {background-color: #684029;color: #fff;display: block;font-size: 15px;height: 39px;line-height: 39px;width: 60%;text-align: center;margin:10px auto;}
 .pt-btn .btn.red{margin-left: 9%;}
@@ -232,9 +232,9 @@ background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJVi
 
 /*商品列表页*/
 .clist li {border-bottom: 1px solid #eee;}
-.clist li a {background: url("/wap_themes/21cake/images/icon/ico_next.png") no-repeat scroll right center; background-size:19px 13px; color: #8e6a55;display: block;font-size: 12px;height: 44px;line-height: 44px;padding: 0 30px 0 10px;}
-.clist li a:hover {background:#f9f9f9 url("/wap_themes/21cake/images/icon/ico_next.png") no-repeat scroll right center; background-size:19px 13px;}
-.clist li a em {background: url("/wap_themes/21cake/images/icon/ico_line.png") no-repeat scroll 0 center; background-size:9px auto; font-size: 13px;padding-left: 12px;}
+.clist li a {background: url("../../img/ico_next.png") no-repeat scroll right center; background-size:19px 13px; color: #8e6a55;display: block;font-size: 12px;height: 44px;line-height: 44px;padding: 0 30px 0 10px;}
+.clist li a:hover {background:#f9f9f9 url("../../img/ico_next.png") no-repeat scroll right center; background-size:19px 13px;}
+.clist li a em {background: url("../../img/ico_line.png") no-repeat scroll 0 center; background-size:9px auto; font-size: 13px;padding-left: 12px;}
 #footerlogin{color: #dfdfdf;font-size: 12px;}
 #footerlogin .lnk{color: #74a7c6;font-size: 12px;margin:0 5px;}
 .pt-list .pt-h-item {border-bottom: 1px solid #eee;}
@@ -293,8 +293,8 @@ background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJVi
     margin: 16px 0;
 }*/
 .form .c-l{float: left;width: 63px;padding-right: 5px;text-align: right;}
-.form .c-l.user{background: url("/wap_themes/21cake/images/icon/ico_username.jpg") no-repeat scroll 0 0; background-size:38px 44px;border-right: 1px solid #eee}
-.form .c-l.pwd1{background: url("/wap_themes/21cake/images/icon/ico_password.jpg") no-repeat scroll 0 0; background-size:38px 44px;border-right: 1px solid #eee}
+.form .c-l.user{background: url("../../img/ico_username.jpg") no-repeat scroll 0 0; background-size:38px 44px;border-right: 1px solid #eee}
+.form .c-l.pwd1{background: url("../../img/ico_password.jpg") no-repeat scroll 0 0; background-size:38px 44px;border-right: 1px solid #eee}
 .form .c {margin-left:73px;position: relative; }
 .form .c.signup_c{margin-left: 20px}
 .form .c-g.code{margin-right: 71px;position: relative;}
@@ -313,12 +313,12 @@ background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJVi
 .form .c-g-c {height: 28px;line-height: 28px;padding: 6px 0 0 0;}
 .form .notice {text-align: right;color: #999;}
 
-label.bound_weixin {background: url("/wap_themes/21cake/images/icon/ico_checkon.png") no-repeat scroll 0 0; background-size:20px 20px;  color: #8e6a55;display: inline-block;font-size: 12px;height: 20px;line-height: 20px;margin: 0 0 5px 10px;overflow: hidden;padding-left: 25px;position: relative;cursor: pointer;}
-label.bound_weixin.ck {background: url("/wap_themes/21cake/images/icon/ico_checkoff.png") no-repeat scroll 0 0; background-size:20px 20px;}
+label.bound_weixin {background: url("../../img/ico_checkon.png") no-repeat scroll 0 0; background-size:20px 20px;  color: #8e6a55;display: inline-block;font-size: 12px;height: 20px;line-height: 20px;margin: 0 0 5px 10px;overflow: hidden;padding-left: 25px;position: relative;cursor: pointer;}
+label.bound_weixin.ck {background: url("../../img/ico_checkoff.png") no-repeat scroll 0 0; background-size:20px 20px;}
 
 label.agreement{color: #684029;cursor: pointer;display: inline-block;font-size: 12px;height: 20px;line-height: 20px;margin: 0 0 5px 10px;overflow: hidden;position: relative;}
-label.jizhu {background: url("/wap_themes/21cake/images/icon/ico_checkoff.jpg") no-repeat scroll 0 0; background-size:20px 20px;  color: #8e6a55;display: inline-block;font-size: 12px;height: 20px;line-height: 20px;margin: 0 0 5px 10px;overflow: hidden;padding-left: 25px;position: relative;cursor: pointer;}
-label.jizhu.ck {background: url("/wap_themes/21cake/images/icon/ico_checkon.jpg") no-repeat scroll 0 0; background-size:20px 20px;}
+label.jizhu {background: url("../../img/ico_checkoff.jpg") no-repeat scroll 0 0; background-size:20px 20px;  color: #8e6a55;display: inline-block;font-size: 12px;height: 20px;line-height: 20px;margin: 0 0 5px 10px;overflow: hidden;padding-left: 25px;position: relative;cursor: pointer;}
+label.jizhu.ck {background: url("../../img/ico_checkon.jpg") no-repeat scroll 0 0; background-size:20px 20px;}
 input#remember_me {left: -9999px;position: absolute;}
 /*新增扫码活动的按钮*/
 .btn.login{background: none repeat scroll 0 0 #684029;border: 1px solid #684029;color: #fff;display: block;font-size: 18px;height: 48px;line-height: 48px;text-align: center;cursor: pointer;margin-top: 10px}
@@ -341,7 +341,7 @@ input#remember_me {left: -9999px;position: absolute;}
 .fix-f strong{ display: block;font-size: 14px;font-weight: normal;line-height: 26px;margin-top: 16px;}
 .menu-list {border-bottom: 1px solid #eee;}
 .menu-list li a {display: block;height: 47px;margin-left: 44px;border-bottom: 1px solid #eee;margin-bottom:-1px;}
-.menu-list li a div {background: url("/wap_themes/21cake/images/icon/go_next.png") no-repeat  right center; background-size:10px; height: 47px;overflow: hidden;margin-right: 12px;}
+.menu-list li a div {background: url("../../img/go_next.png") no-repeat  right center; background-size:10px; height: 47px;overflow: hidden;margin-right: 12px;}
 .menu-list li a div strong {color: #8e6a55;float: left;font-size: 14px;font-weight: normal;line-height: 48px;}
 .menu-list li a div span {color: #ff6600;float: right;font-size: 12px;line-height: 47px;margin-right: 7px;}
 .btnbox02 {margin: 0 10px;padding-bottom: 48px;}
@@ -355,7 +355,7 @@ input#remember_me {left: -9999px;position: absolute;}
 .person_info .my_info .mem_logo{margin-top: 23px;}
 .person_info .my_info .mem_logo img{width: 70px;height: 70px}
 .person_info .my_info .mem_info li{height:25px}
-.person_info .my_info .mem_info .phone{line-height:25px;background: url("/wap_themes/21cake/images/icon/Phone.png") 0px center no-repeat; background-size:10px 14px;font-size: 12px;color: #8e6a55;width: 110px;margin: -6px auto 8px;line-height: 28px}
+.person_info .my_info .mem_info .phone{line-height:25px;background: url("../../img/Phone.png") 0px center no-repeat; background-size:10px 14px;font-size: 12px;color: #8e6a55;width: 110px;margin: -6px auto 8px;line-height: 28px}
 .person_info .my_info .mem_info .phone .phone_ico{ background-size:10px 14px;width: 10px;height: 14px;display: inline-block;margin-right:4px}
 .person_info .my_info .mem_info .complete_info{position:relative;line-height:24px;max-width:250px;background: #684029;color:#fff;border: 1px solid #684029;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;margin:0 auto;padding: 2px}
 .person_info .my_info .mem_info .complete_info a{color:#fff}
@@ -395,8 +395,8 @@ input#remember_me {left: -9999px;position: absolute;}
 .coupon-list {margin: 14px 10px 0;}
 .coupon-list li {background-size:auto 100%; margin-bottom: 10px;position: relative;}
 .coupon-list li a.ok {display: block;position: relative;}
-.coupon-list li a.ok .ck {background: url("/wap_themes/21cake/images/icon/ico_sel_off.jpg") no-repeat scroll 0 0; background-size:29px 29px; height: 29px;position: absolute;right: 14px;top: 23px;width: 29px;}
-.coupon-list li a.ok.active .ck {background: url("/wap_themes/21cake/images/icon/ico_sel_on.jpg") no-repeat scroll 0 0; background-size:29px 29px;}
+.coupon-list li a.ok .ck {background: url("../../img/ico_sel_off.jpg") no-repeat scroll 0 0; background-size:29px 29px; height: 29px;position: absolute;right: 14px;top: 23px;width: 29px;}
+.coupon-list li a.ok.active .ck {background: url("../../img/ico_sel_on.jpg") no-repeat scroll 0 0; background-size:29px 29px;}
 .coupon-list li .name {background: url("/wap_themes/21cake/images/bg_coupon_left.jpg") no-repeat scroll 0 0; background-size:85px 74px;  height: 74px;position: absolute;width: 85px;}
 .coupon-list li .name.sbq {background: url("/wap_themes/21cake/images/bg_coupon_left01.jpg") no-repeat scroll 0 0; background-size:85px 74px; }
 .coupon-list li .name.yrf {background: url("/wap_themes/21cake/images/bg_coupon_left02.jpg") no-repeat scroll 0 0; background-size:85px 74px;}
@@ -416,7 +416,7 @@ input#remember_me {left: -9999px;position: absolute;}
 
 /*绑定优惠券页面*/
 .bind_coupon{height: 44px;background-color: #EDEDED;padding: 5px 15px}
-.bind_coupon .coupon_span{display: block;color: #8e6a55;line-height: 44px;font-size: 14px;padding-right: 18px;background:url("/wap_themes/21cake/images/icon/go_link.png") no-repeat center right;background-size: 12px}
+.bind_coupon .coupon_span{display: block;color: #8e6a55;line-height: 44px;font-size: 14px;padding-right: 18px;background:url("../../img/go_link.png") no-repeat center right;background-size: 12px}
 .form-item1{padding:10px;}
 .form-item1 .form-label{color: #8e6a55;line-height: 40px;}
 .form-item1 .form-act{border: none}
@@ -432,12 +432,12 @@ input#remember_me {left: -9999px;position: absolute;}
 .orders .o-section dt {font-size: 12px;line-height: 32px;border-bottom: 1px solid #eee;padding-left: 10px;overflow: hidden;}
 .orders .o-section dt.order-title {font-size: 14px;  }
 .orders .o-section dd {border-bottom: 1px solid #eee}
-.orders .o-section dd .link-style {background: url("/wap_themes/21cake/images/icon/go_next.png") no-repeat scroll right center; background-size:12px auto; color: #cfbaaf;display: block;font-size: 12px;height: 43px;line-height: 43px;padding-left: 10px;position: relative;margin-right: 10px}
+.orders .o-section dd .link-style {background: url("../../img/go_next.png") no-repeat scroll right center; background-size:12px auto; color: #cfbaaf;display: block;font-size: 12px;height: 43px;line-height: 43px;padding-left: 10px;position: relative;margin-right: 10px}
 .orders .o-section dd .link-style.getdb {height: auto;line-height: 20px;padding: 10px;}
 .orders .o-section dd .link-style.bgnone {background: none repeat scroll 0 0 rgba(0, 0, 0, 0);}
 .orders .o-section dd .link-style.gift {color: #8e6a55;margin-bottom: 10px;}
-.orders .o-section dd .link-style.selectPay {background: url("/wap_themes/21cake/images/icon/ico_link_down.gif") no-repeat scroll right center; background-size:22px auto;  cursor: pointer;}
-.orders .o-section dd .link-style.selectPay.down {background: url("/wap_themes/21cake/images/icon/ico_link_up.gif") no-repeat scroll right center; background-size:22px auto; cursor: pointer;}
+.orders .o-section dd .link-style.selectPay {background: url("../../img/ico_link_down.gif") no-repeat scroll right center; background-size:22px auto;  cursor: pointer;}
+.orders .o-section dd .link-style.selectPay.down {background: url("../../img/ico_link_up.gif") no-repeat scroll right center; background-size:22px auto; cursor: pointer;}
 .orders .o-section dd .selectPay_div p {border: 1px solid #eee;cursor: pointer;font-size: 12px;height: 43px;line-height: 43px;margin-top: -1px;padding-left: 10px;}
 .orders .o-section dd .date-time {overflow: hidden;width: 100%;}
 .orders .o-section dd .date-time li {float: left;position: relative;width: 50%;}
@@ -448,17 +448,17 @@ input#remember_me {left: -9999px;position: absolute;}
 .orders .o-section dd .date-time li:last-child strong {left: 10px;}
 .orders .o-section dd .date-time li label input {background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: 0 none;color: #cfbaaf;cursor: pointer;font-size: 12px;height: 44px;line-height: 41px;margin: 0;padding: 0 0 0 10px;width: 100%;}
 .orders .o-section dd .date-time li label .select_date{height: 44px;line-height: 44px;padding-left: 10px;color: #8e6a55;display: block;position: relative}
-.orders .o-section dd .date-time li label .select_date i{background: url("/wap_themes/21cake/images/icon/ico_date.gif") no-repeat scroll right center; background-size:33px auto; color: #8e6a55;position: absolute;width: 33px;height: 44px;
+.orders .o-section dd .date-time li label .select_date i{background: url("../../img/ico_date.gif") no-repeat scroll right center; background-size:33px auto; color: #8e6a55;position: absolute;width: 33px;height: 44px;
     right:-11px;}
-.orders .o-section dd .date-time li label input#date {background: url("/wap_themes/21cake/images/icon/ico_date.gif") no-repeat scroll right center; background-size:33px auto; color: #8e6a55;}
+.orders .o-section dd .date-time li label input#date {background: url("../../img/ico_date.gif") no-repeat scroll right center; background-size:33px auto; color: #8e6a55;}
 .orders .o-section dd .float_left{color:#8e6a55;font-size: 14px}
 .orders .o-section dd .float_right{float: right;margin-right: 30px;}
 .get-time{display: block;height: 44px;line-height: 44px;margin: 10px;border: 1px solid #eee;padding-left:10px;color: #cfbaaf;width: 94%}
-.orders select#time {background: url("/wap_themes/21cake/images/icon/ico_time02.gif") no-repeat scroll right center; background-size:30px auto; text-indent: 5px;}
+.orders select#time {background: url("../../img/ico_time02.gif") no-repeat scroll right center; background-size:30px auto; text-indent: 5px;}
 .btn-onoff{width: 41px;height: 20px;display: block; line-height: 20px;border-radius: 10px;position: absolute;right: 10px;top: 12px;cursor: pointer;}
 .btn-onoff em{width: 50%;height: 100%;color: #fff;display: inline-block;text-align: center;border-radius: 10px;float: left;}
 .zhegai{position: absolute;left: 0;top: 0;width: 50%;height: 100%;background-color: #fff;border-radius: 10px;}
-.orders select.select01 {-webkit-appearance:none; appearance:none; -moz-appearance: none;background: url("/wap_themes/21cake/images/icon/ico_link_down.gif") no-repeat scroll right center; background-size:22px auto;  border: 1px solid #eee;border-radius: 0;color: #8e6a55;font-size: 12px;height: 43px;line-height: 18px;padding: 12px 20px 12px 0;text-indent: 10px;width: 100%;}
+.orders select.select01 {-webkit-appearance:none; appearance:none; -moz-appearance: none;background: url("../../img/ico_link_down.gif") no-repeat scroll right center; background-size:22px auto;  border: 1px solid #eee;border-radius: 0;color: #8e6a55;font-size: 12px;height: 43px;line-height: 18px;padding: 12px 20px 12px 0;text-indent: 10px;width: 100%;}
 .hidden {display: none;}
 .product-info {border-top: 1px solid #eee;}
 .product-info li {border-right: 1px solid #eee;border-style: none solid solid;border-width: medium 1px 1px;color: #96724a;font-size: 12px;line-height: 20px;position: relative;}
@@ -482,9 +482,9 @@ input#remember_me {left: -9999px;position: absolute;}
 .birthday .link-style {margin-top: 10px;}
 .orders .o-section dd .birthday span.link-style {color: #8e6a55;}
 .birthday .b-select {display: none;}
-.birthday .b-select li {background: url("/wap_themes/21cake/images/icon/ico_b_ck_off.gif") no-repeat scroll 10px 12px; background-size:20px 20px;  border: 1px solid #eee;border-style: none solid solid;cursor: pointer;font-size: 12px;line-height: 44px;min-height: 44px;}
+.birthday .b-select li {background: url("../../img/ico_b_ck_off.gif") no-repeat scroll 10px 12px; background-size:20px 20px;  border: 1px solid #eee;border-style: none solid solid;cursor: pointer;font-size: 12px;line-height: 44px;min-height: 44px;}
 .birthday .b-select li a {color: #8e6a55;display: block;height: 44px;padding-left: 41px;}
-.birthday .b-select li.active {background: url("/wap_themes/21cake/images/icon/ico_b_ck_on.gif") no-repeat scroll 10px 12px; background-size:20px 20px;  }
+.birthday .b-select li.active {background: url("../../img/ico_b_ck_on.gif") no-repeat scroll 10px 12px; background-size:20px 20px;  }
 .birthday .b-select li div {border-top: 1px solid #eee;display: none;padding-right: 40px;}
 .birthday .b-select li div input {border: 0 none;color: #8e6a55;height: 44px;margin: 0;padding: 0 0 0 40px;width: 100%;}
 .clearfix:after {clear: both;content: ".";display: block;height: 0;visibility: hidden;}
@@ -493,12 +493,12 @@ input#remember_me {left: -9999px;position: absolute;}
 /*赠品多选一*/
 .product-info .gift-new{}
 .product-info .gift-sele{background:#fbfbfb;}
-.product-info .gift-new .little-ico{position:absolute; display:inline-block; width:40px; height:40px; top:10px; right:10px; background: url("/wap_themes/21cake/images/icon/gift_sele_off.png") no-repeat 10px 10px;}
-.product-info .gift-sele .little-ico{position:absolute; display:inline-block; width:40px; height:40px; top:10px; right:10px; background: url("/wap_themes/21cake/images/icon/gift_sele_on.png") no-repeat 10px 10px;}
+.product-info .gift-new .little-ico{position:absolute; display:inline-block; width:40px; height:40px; top:10px; right:10px; background: url("../../img/gift_sele_off.png") no-repeat 10px 10px;}
+.product-info .gift-sele .little-ico{position:absolute; display:inline-block; width:40px; height:40px; top:10px; right:10px; background: url("../../img/gift_sele_on.png") no-repeat 10px 10px;}
 
 .total ul {overflow: hidden;width: 100%;}
 .total ul li.checkout_total_li {float: left;line-height: 27px;width: 50%;margin-top:15px;}
-.total ul li.checkout_total_li:first-child {background: url("/wap_themes/21cake/images/icon/bg_total.gif") repeat-y scroll right 5px;}
+.total ul li.checkout_total_li:first-child {background: url("../../img/bg_total.gif") repeat-y scroll right 5px;}
 .total ul li.checkout_total_li:first-child em {display: inline-block;padding-left: 10px;width: 84px;}
 .total ul li.checkout_total_li:last-child {line-height: 23px;padding-top: 20px;text-align: center;}
 .total ul li.checkout_total_li:last-child span {font-size: 20px;line-height: 30px;}
@@ -510,7 +510,7 @@ a.contiune-buy{background:#F8F6F7; border:1px solid #d5c2b9; color:#886754; disp
 input:invalid { border:0 none; outline: 0 none; -webkit-box-shadow:none; -moz-box-shadow:none; -ms-box-shadow:none; -o-box-shadow:none; box-shadow: none;}
 .coupon-use {width: 100%;}
 .coupon-use .tab{overflow: hidden;}
-.coupon-use .panel select.coupon_select {-webkit-appearance:none;appearance:none; width: 100%;display:block;border: 1px solid #eee;float: left;height: 43px;line-height: 43px;background: url("/wap_themes/21cake/images/icon/ico_link_down.gif") no-repeat scroll right center / 22px auto;padding-left: 8px;border-radius: 0}
+.coupon-use .panel select.coupon_select {-webkit-appearance:none;appearance:none; width: 100%;display:block;border: 1px solid #eee;float: left;height: 43px;line-height: 43px;background: url("../../img/ico_link_down.gif") no-repeat scroll right center / 22px auto;padding-left: 8px;border-radius: 0}
 .coupon-use .panel .btn{display: inline-block; background:#684029; color:#fff; width: 15%;vertical-align: middle;height: 42px;line-height:42px;font-size: 12px;float: right;cursor: pointer;border: 1px solid #eee;}
 .coupon-use .panel select.coupon_select >option{height: 43px;line-height: 43px;margin-top: -1px;padding-left: 10px;}
 .coupon-use .used {padding: 5px 10px 0;}
@@ -522,10 +522,10 @@ input:invalid { border:0 none; outline: 0 none; -webkit-box-shadow:none; -moz-bo
 /*确认订单end*/
 
 /*我的订单页面*/
-.myorder-list {background: url("/wap_themes/21cake/images/icon/bg_myorder_dot.jpg") repeat-y scroll 28px 0; background-size:1px 1px;  margin-top: 15px;}
+.myorder-list {background: url("../../img/bg_myorder_dot.jpg") repeat-y scroll 28px 0; background-size:1px 1px;  margin-top: 15px;}
 .myorder-list > li {color: #8e6a55;margin-bottom: 15px;position: relative;}
 .myorder-list li .style-date {left: 10px;position: absolute;top: 23px;z-index: 100;}
-.myorder-list li .style-date .icon {background: url("/wap_themes/21cake/images/icon/bg_myorder_icon.jpg") no-repeat scroll 0 0; background-size:31px 13px; display: block;height: 13px;margin-left: 13px;width: 31px;}
+.myorder-list li .style-date .icon {background: url("../../img/bg_myorder_icon.jpg") no-repeat scroll 0 0; background-size:31px 13px; display: block;height: 13px;margin-left: 13px;width: 31px;}
 .myorder-list li .style-date .date {background: none repeat scroll 0 0 #fff;display: block;font-size: 12px;height: 19px;line-height: 19px;margin-top: 3px;text-align: center;width: 37px;}
 .myorder-list li .order-info {border: 1px solid #eee;border-radius: 4px;margin: 2px 10px 0 53px;padding: 12px;position: relative;overflow: hidden;}
 .myorder-list li .order-info .ordernum {font-size: 12px;line-height: 24px;position: relative;width: 100%;}
@@ -584,7 +584,7 @@ input:invalid { border:0 none; outline: 0 none; -webkit-box-shadow:none; -moz-bo
 .print-box .b-top dd span em {font-size: 20px;}
 .print-box .info {border-bottom: 1px solid #eee;border-top: 1px solid #eee;font-size: 12px;line-height: 28px;padding: 10px 0;}
 .print-box .type {font-size: 12px;line-height: 41px;}
-.print-box .noti {background: url("/wap_themes/21cake/images/icon/ico_ok.jpg") no-repeat scroll 1px center; background-size:24px 24px; font-size: 15px;line-height: 50px;margin-top: 11px;padding-left: 34px;}
+.print-box .noti {background: url("../../img/ico_ok.jpg") no-repeat scroll 1px center; background-size:24px 24px; font-size: 15px;line-height: 50px;margin-top: 11px;padding-left: 34px;}
 button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;display: block;font-size: 16px;height: 40px;line-height: 40px;margin-top: 8px;text-align: center;width: 100%;border: none;cursor: pointer;}
 /*订单支付end*/
 
@@ -600,7 +600,7 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 .cart_table tr{height: 44px;border-bottom: 1px solid #eee;}
 .cart_table tr td{text-align: center;}
 .cart_table tr td a img{width: 16px;}
-.cart .cart_total .cart_li4 .del_good{width:30px;height: 30px; background: url("/wap_themes/21cake/images/icon/cart_del.png") no-repeat 0 0;background-size: 30px;cursor: pointer;margin:0 auto;}
+.cart .cart_total .cart_li4 .del_good{width:30px;height: 30px; background: url("../../img/cart_del.png") no-repeat 0 0;background-size: 30px;cursor: pointer;margin:0 auto;}
 .go_pay{height: 50px;background-color: #F3F3F3;border-top: 1px solid #D5D5D5;position: fixed;bottom: 0;left: 0;width: 100%;padding:10px 0;color:#8e6a55; }
 .go_pay .total_price{margin-left: 35%;float: left;}
 .go_pay .total_price em{font-size: 18px;color: #F65E53}
@@ -613,7 +613,7 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 .cart_product_info{overflow: hidden;position: relative;}
 .pt-list .pt-h-info.goods_name{float: left;width: 45%;margin-left:0px;}
 .pt-list .goods_name .pt-h-name{height: auto}
-.goods_del{width: 23px;height: 23px;background: url("/wap_themes/21cake/images/icon/cart_del.png") no-repeat 0 0;background-size: 100%;display: block;text-indent: -9999px;position: absolute;right: 4px;bottom:10px}
+.goods_del{width: 23px;height: 23px;background: url("../../img/cart_del.png") no-repeat 0 0;background-size: 100%;display: block;text-indent: -9999px;position: absolute;right: 4px;bottom:10px}
 .pt-num .num.goods_num{padding:0;float: left;}
 .pt-num .plus.goods_change, .pt-num .minus.goods_change{color: #8e6a55;border:1px solid #eee;float: left;display: block;}
 .pt-num .num .num-ipt.goods_quantity{border:1px solid #eee;border-left: none;border-right: none;display: inline-block;}
@@ -626,14 +626,14 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 #J_total .total-inner{overflow: hidden;position: static;padding: 0px}
 .total .fixed-bar.cart_total{height:56px;background-color: #F3F3F3;box-shadow: none;border: 1px solid #eee;color: #8e6a55;margin-top: -1px}
 .total .cart_total .pay_now{display: block; background-color: #683F29;text-align: center;color: #fff;font-size: 18px;width: 100px;height: 56px;line-height: 56px;float: right;}
-.total .cart_total .clear_all{height:36px;width:36px;background: url("/wap_themes/21cake/images/deleteall.png") no-repeat; background-size:36px 36px;margin:6px 15px;float:left}
+.total .cart_total .clear_all{height:36px;width:36px;background: url("../../img/deleteall.png") no-repeat; background-size:36px 36px;margin:6px 15px;float:left}
 .total .cart_total .cart_total_txt{text-align: right;float: right;line-height: 15px;padding-top:5px;margin-right: 10px;width: 130px;}
 .total .cart_total .cart_total_txt .free_service{font-size:10px;color: #b59e90;display: block;margin-top: 4px}
 .total .cart_total span{font-size: 18px;color: #F35B50;}
 .use_shengbang{height: 44px;color: #8e6a55;line-height: 44px;padding-left: 10px;position: relative;}
 .shengbang{overflow: hidden;color: #8e6a55;padding:12px 15px; box-sizing:border-box;}
-.shengbang p.sele{height:25px; line-height:25px; padding-left:28px; overflow:hidden; font-size:12px; background: url("/wap_themes/21cake/images/icon/ico_b_ck_off.gif") no-repeat scroll 0 0; background-size:20px 20px;}
-.shengbang p.active{background: url("/wap_themes/21cake/images/icon/ico_b_ck_on.gif") no-repeat; background-size:20px 20px; }
+.shengbang p.sele{height:25px; line-height:25px; padding-left:28px; overflow:hidden; font-size:12px; background: url("../../img/ico_b_ck_off.gif") no-repeat scroll 0 0; background-size:20px 20px;}
+.shengbang p.active{background: url("../../img/ico_b_ck_on.gif") no-repeat; background-size:20px 20px; }
 .shengbang button{background:#684029; color:#fff; border:0; width:100%; height:40px; -webkit-box-sizing:border-box; box-sizing:border-box; line-height:40px; }
 .shengbang p.sele:first-child{margin-top: 10px}
 .shengbang p.line{width: 100%;height: 10px;}
@@ -657,11 +657,11 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 .birth_cart_ul{color: #8e6a55;}
 .birth_cart_ul li{border-top: 1px dashed #eee;list-style: none;height: 44px;line-height: 44px;padding:0 20px;}
 .birth_cart_ul li:last-child{border-bottom: 1px solid #eee}
-.birth_cart_ul .birth_cart_add span{float: right;display: inline-block; padding-right:23px; height: 100%;line-height:44px; background: url("/wap_themes/21cake/images/icon/ico_link_next.gif") no-repeat right 0;background-size: auto 44px;}
+.birth_cart_ul .birth_cart_add span{float: right;display: inline-block; padding-right:23px; height: 100%;line-height:44px; background: url("../../img/ico_link_next.gif") no-repeat right 0;background-size: auto 44px;}
 .birth_cart_ul .go_order span{width: 100px;margin:0 auto;display: block;background-color:#684029;height: 34px;color: #fff;text-align: center;margin-top: 5px;line-height: 34px;cursor: pointer;}
 .alert_birth{background-color:#F3F3F3;border: 1px solid #E8E8E8;color:#8e6a55;float: left; width: 100%;margin-top: -1px;}
-.alert_birth ul li{line-height: 43px;border-bottom: 1px dashed #eee;padding: 0 0 0 35px;background: url("/wap_themes/21cake/images/icon/birth_off.png") no-repeat 10px 13px; background-size:20px 20px;}
-.alert_birth ul li.active{background: url("/wap_themes/21cake/images/icon/birth_on.png") no-repeat 10px 13px; background-size:20px 20px; }
+.alert_birth ul li{line-height: 43px;border-bottom: 1px dashed #eee;padding: 0 0 0 35px;background: url("../../img/birth_off.png") no-repeat 10px 13px; background-size:20px 20px;}
+.alert_birth ul li.active{background: url("../../img/birth_on.png") no-repeat 10px 13px; background-size:20px 20px; }
 .alert_birth .other_txt{border-top: 1px dashed #eee;}
 .alert_birth .other_txt input{line-height: 35px;text-indent: 13px; border: none;width: 80%; float: left;}
 .alert_birth .other_txt .card_ok{text-align: center;background-color: #684029;color: #fff;width: 20%;height: 35px;line-height: 35px;cursor: pointer;display: inline-block;vertical-align: middle;float: left;}
@@ -683,8 +683,8 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 /*找回密码end*/
 
 /*购物车选择地址*/
-.adr-list li .area span.ico {background: url("/wap_themes/21cake/images/icon/ico_b_ck_off.gif") no-repeat scroll 0 0;background-size:20px 20px; display: block;height: 20px;left: 10px;margin-top: -10px;position: absolute;top: 50%;width: 20px;}
-.adr-list li .area .active span.ico {background: url("/wap_themes/21cake/images/icon/ico_b_ck_on.gif") no-repeat scroll 0 0 ;background-size:20px 20px;}
+.adr-list li .area span.ico {background: url("../../img/ico_b_ck_off.gif") no-repeat scroll 0 0;background-size:20px 20px; display: block;height: 20px;left: 10px;margin-top: -10px;position: absolute;top: 50%;width: 20px;}
+.adr-list li .area .active span.ico {background: url("../../img/ico_b_ck_on.gif") no-repeat scroll 0 0 ;background-size:20px 20px;}
 .adr-list li .area .txt-cont {color: #8e6a55;font-size: 12px;line-height: 20px;padding: 10px 40px;}
 .adr-list li .area .txt-cont p.name em {color: #ff6600;}
 .adr-list li .cont {display: block; height: 36px; margin-top: -24px; padding-top: 12px; position: absolute;text-align: center;top: 50%;width: 42px;z-index: 60;background: none repeat scroll 0 0 #fff;border: 0px solid #ddd;}
@@ -700,8 +700,8 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 .pt-list .pt-h-item .custom_word .txt{vertical-align:top; color:#995e3c;}
 .pt-list .pt-h-item .custom_word .buttons{float:right;  width:50px;}
 .pt-list .pt-h-item .custom_word .mt10{margin-top:20px;width: 100% }
-.pt-list .pt-h-item .custom_ul li{width: 100%;padding:10px 0;color:#8e6a55;border-bottom: 1px dashed #eee;background: url("/wap_themes/21cake/images/icon/no_chosen.png") right center no-repeat;background-size: 20px }
-.pt-list .pt-h-item .custom_ul li.active span{display: block;width: 100%;background: url("/wap_themes/21cake/images/icon/be_chosen.png") right center no-repeat;background-size: 20px}
+.pt-list .pt-h-item .custom_ul li{width: 100%;padding:10px 0;color:#8e6a55;border-bottom: 1px dashed #eee;background: url("../../img/no_chosen.png") right center no-repeat;background-size: 20px }
+.pt-list .pt-h-item .custom_ul li.active span{display: block;width: 100%;background: url("../../img/be_chosen.png") right center no-repeat;background-size: 20px}
 
 .pt-list .pt-h-item button{border:0; float:right; background:#fff; color:#995e3c; display:inline-block; padding:5px;}
 .pt-list .pt-h-item textarea{width:100%; height:100px; box-sizing:border-box;}
@@ -755,17 +755,17 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 
 /*选择支付方式*/
 .pay-method{padding: 20px 10px;color:#8e6a55;border-bottom: 1px solid #F9F9F9 }
-.pay-method.be_chosen{background: url("/wap_themes/21cake/images/icon/custom_chose.png") 91% center no-repeat;background-size: 21px}
+.pay-method.be_chosen{background: url("../../img/custom_chose.png") 91% center no-repeat;background-size: 21px}
 /*选择支付方式end*/
 
 /*发票信息*/
 .invoice {position: relative;}
 .orders .o-section .invoice .link-style {color: #8e6a55;}
 .invoice .link-style {margin-top: 10px;}
-.invoice .b-select li {background: url("/wap_themes/21cake/images/icon/no_chosen.png") no-repeat scroll 10px 10px; background-size:20px 20px; border: 1px solid #eee;border-style: none solid solid;cursor: pointer;font-size: 12px;line-height: 44px;min-height: 44px;}
+.invoice .b-select li {background: url("../../img/no_chosen.png") no-repeat scroll 10px 10px; background-size:20px 20px; border: 1px solid #eee;border-style: none solid solid;cursor: pointer;font-size: 12px;line-height: 44px;min-height: 44px;}
 .invoice .b-select li.title {background: none repeat scroll 0 0 #fff;font-size: 11px;line-height: 32px;min-height: 32px;padding-left: 10px;font-size: 14px;color: #8e6a55}
 .invoice .b-select li a {color: #8e6a55;display: block;height: 44px;padding-left: 41px;}
-.invoice .b-select li.active {background: url("/wap_themes/21cake/images/icon/be_chosen.png") no-repeat scroll 10px 12px; background-size:20px 20px; }
+.invoice .b-select li.active {background: url("../../img/be_chosen.png") no-repeat scroll 10px 12px; background-size:20px 20px; }
 .invoice .b-select li div {border-top: 1px solid #eee;display: none;padding-right: 40px;}
 .invoice .b-select li .content{padding-left: 20px}
 .invoice .b-select li a span input {border: 0 none;color: #8e6a55;height: 42px;width: 80%;margin-top: -2px;}
@@ -774,12 +774,12 @@ button.btn-style03 {background: none repeat scroll 0 0 #684029;color: #fff;displ
 
 /*优惠券*/
 .coupon_style{padding: 20px 10px;color:#8e6a55;border-bottom: 1px solid #F9F9F9 }
-.coupon_style.active{background: url("/wap_themes/21cake/images/icon/custom_chose.png") 91% center no-repeat;background-size: 21px}
+.coupon_style.active{background: url("../../img/custom_chose.png") 91% center no-repeat;background-size: 21px}
 .zhezhao_content{background-color: #fff;overflow: hidden;position:fixed;z-index: 10001;bottom: 0;width: 100%;}
 .coupon_alert{width: 100%;color: #8e6a55;}
 .coupon_close{display: inline-block;width: 21px;height: 21px;float: right;padding:9px 9px 0;}
-.coupon_sele{padding-left: 40px;background: url("/wap_themes/21cake/images/icon/cycle_no_check_icon.png") 15px center no-repeat; background-size: 20px;line-height: 50px}
-.coupon_sele.active{background: url("/wap_themes/21cake/images/icon/cycle_check_icon.png") 15px center no-repeat; background-size: 18px;}
+.coupon_sele{padding-left: 40px;background: url("../../img/cycle_no_check_icon.png") 15px center no-repeat; background-size: 20px;line-height: 50px}
+.coupon_sele.active{background: url("../../img/cycle_check_icon.png") 15px center no-repeat; background-size: 18px;}
 .coupon_ok{text-align:center; height:50px; overflow:hidden;background-color: #68432B;color:#fff;line-height: 50px;display: block;border: none;width: 100%;font-size: 17px}
 /*优惠券end*/
 .cancel_css{color: #8e6a55;font-size: 14px}
@@ -797,7 +797,7 @@ span #unbound{float: right;font-size: 12px;height: 24px;line-height: 24px; margi
 .banner .cakebtn {float: right;height: 36px;text-align: center;width: 50%;}
 .link {border-bottom: 2px solid #674029;color: #674029;}
 .tips {color: #828383;font-size: 1.1em;height: 48px;line-height: 48px;margin: 4px 12px;}
-.tips .warnning {background: rgba(0, 0, 0, 0) url("/wap_themes/21cake/images/icon/ico_warnning.png") no-repeat scroll 0 0 / 18px 18px;float: left;height: 18px;margin-top: 15px;width: 18px;}
+.tips .warnning {background: rgba(0, 0, 0, 0) url("../../img/ico_warnning.png") no-repeat scroll 0 0 / 18px 18px;float: left;height: 18px;margin-top: 15px;width: 18px;}
 .tips p {float: left;margin-left: 10px}
 .telexplain {color: #858585;font-size: 1.2em;line-height: 24px;margin: 25px 12px;}
 .telexplain span {color: #895b45;font-size: 1em;font-weight: normal;}
@@ -868,7 +868,7 @@ div.l_icecream{background: url("../../img/new_List.png") no-repeat;background-si
 .customertel{margin: auto 10px;overflow: hidden}
 .customertel p{color: #8e6a55;;float: left;margin: 19.5px auto;font-size: 13px}
 .kefutel{background-color: #684029; color: #fff; display: inline-block; height: 38px; line-height: 38px; width: 38px; text-align: center; margin: 10px auto;float: right}
-.customertel i{background: url("/wap_themes/21cake/images/icon/white-phone.png") no-repeat;background-size: 40px 40px; width:40px;height: 40px;display:block;margin:0 auto}
+.customertel i{background: url("../../img/white-phone.png") no-repeat;background-size: 40px 40px; width:40px;height: 40px;display:block;margin:0 auto}
 
 /*挂件修改*/
 #cart_tab_more_hu{max-width: 640px;margin: 0 auto}
@@ -883,15 +883,15 @@ div.l_icecream{background: url("../../img/new_List.png") no-repeat;background-si
 /*.goods-name .ellipsis{position:absolute; right:0; bottom:0; z-index:10; background-color:#FFFFFF;}*/
 .goods-price{color: #cab3a7;font-size: 12px;height: 31px;overflow: hidden;line-height: 48px}
 .goods-addcart{width:29px;height:29px;border:1px solid #d5c2b9;float: right;background: #F8F6F7}
-.goods-addcart a{background: url("/wap_themes/21cake/images/icon/icon_add2cart.png") no-repeat;background-size: 29px 29px; width:29px;height: 29px;display: block}
-.goods_tip{background: url("/wap_themes/21cake/images/icon/addone.png") no-repeat;background-size: 21px 21px;width: 21px;height: 21px;display: block;position: absolute;z-index: 2000;top: -48px;left: 63px;display: none}
+.goods-addcart a{background: url("../../img/icon_add2cart.png") no-repeat;background-size: 29px 29px; width:29px;height: 29px;display: block}
+.goods_tip{background: url("../../img/addone.png") no-repeat;background-size: 21px 21px;width: 21px;height: 21px;display: block;position: absolute;z-index: 2000;top: -48px;left: 63px;display: none}
 @-webkit-keyframes fadeOut{
     from {opacity: 1;}
     to {opacity: 0;}
 }
  .box {-webkit-animation-name: fadeOut; /*动画名称*/  -webkit-animation-duration: 3s; /*动画持续时间*/  -webkit-animation-iteration-count: 1; /*动画次数*/  -webkit-animation-delay: 0s; /*延迟时间*/}
 /*添加成功*/
-.confirm .msg .sucessed {  background: url("/wap_themes/21cake/images/icon/check_cake.png") no-repeat left 50%;padding-left: 25px;background-size: 20px}
+.confirm .msg .sucessed {  background: url("../../img/check_cake.png") no-repeat left 50%;padding-left: 25px;background-size: 20px}
 .dialog-content .cart-dialog{padding: 0px}
 
 
@@ -902,7 +902,7 @@ div.l_icecream{background: url("../../img/new_List.png") no-repeat;background-si
 #personal_info .personal_list .item label{width: 50px;display: inline-block}
 #personal_info .personal_list .item .item_detail{width: 200px}
 #personal_info .personal_list .item .check_sex{width: 16px;height: 16px;border: 1px solid #684029}
-#personal_info .personal_list .item .arrow_right{background: url("/wap_themes/21cake/images/icon/arrow-right.png") no-repeat;width:18px;height:28px;background-size: 8px 14px;display: block;position: absolute;right: 0px;top:14px}
+#personal_info .personal_list .item .arrow_right{background: url("../../img/arrow-right.png") no-repeat;width:18px;height:28px;background-size: 8px 14px;display: block;position: absolute;right: 0px;top:14px}
 #personal_info .bg{background: #f9f9f9;height: 200px;padding-top: 10px}
 #personal_info .bg .save{height: 44px;margin:0px 10px;line-height: 44px;text-align: center;font-size: 16px;background: #684029;display: block;color: #fff}
 #personal_info .bg .save:hover{background:#684029;color: #fff }
@@ -920,7 +920,7 @@ div.l_icecream{background: url("../../img/new_List.png") no-repeat;background-si
 .login_metro_wifi img{width: 100%;height: 100%}
 .index_has_coupon{width: 275px;height: 250px;color:#683f29;position: fixed;z-index: 1001;background: #fff;left: 50%;margin-left:-135px;top:50%;margin-top: -105px;text-align: center}
 .index_complete_info .cancel{height: 38px}
-.index_complete_info .cancel .cancel_btn{  background: url("/wap_themes/21cake/images/icon/cancel_commplete.png") no-repeat right 50%;margin-left: 222px;background-size: 16px;width: 32px;height: 32px;cursor: pointer}
+.index_complete_info .cancel .cancel_btn{  background: url("../../img/cancel_commplete.png") no-repeat right 50%;margin-left: 222px;background-size: 16px;width: 32px;height: 32px;cursor: pointer}
 .index_complete_info .name{font-size: 20px;line-height: 48px;margin: 0 auto 7px; width: 200px; border-bottom: 1px solid;}
 .index_complete_info .reward{font-size: 15px;line-height: 40px}
 .index_has_coupon .reward_f{font-size: 14px;line-height: 30px;margin-left: 42px;margin-right: 42px;margin-top:16px;text-align: justify;}
@@ -935,12 +935,12 @@ div.l_icecream{background: url("../../img/new_List.png") no-repeat;background-si
 /*配送评价*/
 .judgment {padding: 0 25px;}
 .judgment .header {overflow: hidden; padding: 30px 0; border-bottom: 1px solid #EEEEEE; text-align: center;}
-.judgment .header .info {display: inline-block; padding: 5px 0 5px 60px; background: url('/wap_themes/21cake/images/icon/ico_dly_man.png') 0 center no-repeat; background-size: 45px 45px; text-align:left;}
+.judgment .header .info {display: inline-block; padding: 5px 0 5px 60px; background: url('../../img/ico_dly_man.png') 0 center no-repeat; background-size: 45px 45px; text-align:left;}
 .judgment .header .info .name {font-size: 16px;color: #644d35; line-height: 25px;}
 .judgment .header .info .company {font-size: 11px; color: #806251;}
 .judgment .dly_star {position: relative; height: 38px; margin: 30px 0; text-align: center;}
-.judgment .dly_star .dly_hollow {width: 36px; height: 35px; display: inline-block; background: url("/wap_themes/21cake/images/icon/rating_hollow.png") center center no-repeat; background-size: 100% 100%; margin: 0 4px;}
-.judgment .dly_star .dly_solid {width: 36px; height: 35px; display: inline-block; background: url("/wap_themes/21cake/images/icon/rating_solid.png") center center no-repeat; background-size: 100% 100%; margin: 0 4px;}
+.judgment .dly_star .dly_hollow {width: 36px; height: 35px; display: inline-block; background: url("../../img/rating_hollow.png") center center no-repeat; background-size: 100% 100%; margin: 0 4px;}
+.judgment .dly_star .dly_solid {width: 36px; height: 35px; display: inline-block; background: url("../../img/rating_solid.png") center center no-repeat; background-size: 100% 100%; margin: 0 4px;}
 .judgment .dly_star_text {width: 78px; height: 16px; color: #B3B3B3; line-height:16px; text-align: center; display: inline-block; position: absolute; top: -38px; left: 50%; margin-left: -45px;background-color: #FFFFFF;padding: 0 6px;}
 .judgment .tags {padding: 0px 0 10px 0;}
 .judgment .tags .tag {padding: 5px 10px; margin: 5px 10px 10px 0; border: 1px solid #EEEEEE; border-radius: 5px;display: inline-block; color: #B3B3B3;font-size: 13px}

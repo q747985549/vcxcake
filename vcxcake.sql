@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-29 23:49:47
+Date: 2016-12-01 02:56:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,14 +25,16 @@ CREATE TABLE `address` (
   `address` varchar(255) DEFAULT NULL,
   `name` char(20) DEFAULT NULL,
   `mobile` char(13) DEFAULT NULL,
+  `default` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of address
 -- ----------------------------
-INSERT INTO `address` VALUES ('1', '3', '送货地址', '张宁', '15504628304');
-INSERT INTO `address` VALUES ('2', '3', '123123', '张宁', '15545996059');
+INSERT INTO `address` VALUES ('8', '4', '详细地址', '姓名', '15504628304', '1');
+INSERT INTO `address` VALUES ('5', '4', '星系地址', '呵呵', '123123', '0');
+INSERT INTO `address` VALUES ('7', '4', '123123', '321', '321', '0');
 
 -- ----------------------------
 -- Table structure for article
@@ -620,13 +622,13 @@ INSERT INTO `cake` VALUES ('498', '2', '10', '', '0', '小切块-Pine Stone Cowb
 INSERT INTO `cake` VALUES ('499', '1', '1', '乳脂奶油蛋糕', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '/离地二十多米的红松树尖，摇晃中取下的松塔/<br>\r\n                            /秋天的风与阳光，让松塔果实金黄、饱满，泛出莹润的光泽。/<br>\r\n                            /柔软的戚风白坯，和着松子慕斯夹心/<br>\r\n                            /来自伊春的新鲜松仁覆满表面，咀嚼时除了松子独有的香气外还有一丝丝甜/<br>\r\n                            /细筛过后的微苦可可粉，让这丝甜变得更加明显/<br>', '56', 'a:3:{i:0;s:3:\"0.5\";i:1;s:3:\"1.5\";i:2;s:3:\"2.5\";}', '100.5', '10cm*10cm', '适合3人吃', '赠送一双叉子', '10', '203', '1,2,3,4,5', '提拉米苏', '口味偏淡', '小提拉米苏', '适合小孩子吃', '过生日吃吧', '2', '冷藏', '上好得小麦粉', '<p>Bailey’s Love Triangel／百利甜情人（含酒） Just Bailey‘s, light cream and you. The flavours may be velvetty subtle, but the chemistry is as electric as a first kiss.</p><p>/爱尔兰百利甜酒/新西兰奶油/云南玫瑰甘露/</p><p>*本款产品为时令鲜果蛋糕，21cake依据季节，调整食材搭配，您会有体会。</p><p style=\"MARGIN-TOP: 30px\">百利甜的发祥地在英国。那里有一位著名的调酒师，调酒师的太太是一名出色的女性，他们彼此深爱着对方。有一天，很不幸，调酒师的太太死于一次意外。调酒师 从此悲伤，过着孤单的生活。直到一次出行的飞机上，调酒师遇到了一位像极了他前妻的空姐。他仿佛重获新生，一切生命的希望再一次点燃。那以后，调酒师疯狂 的追求着那位空姐。但是空姐并不能接受调酒师的爱，空姐对调酒师说，有时候人的心会被蒙住，你对你前妻的思念和对我的爱完全是不同的情感，就像是奶和威士 忌永远无法混在一起。调酒师听完空姐的话，默默的走开。他用了一年的时间，终于将奶和威士忌相溶，而且加了蜂密使味道也混为一体，并起了一个好听的名字 (Baileys Rock)，以此证明他对空姐的爱。当他知道空姐终于肯品尝这第一杯Baileys Rock时，忍不住在杯里加上了一滴眼泪。后来百利甜被空姐带上飞机，传播到世界各地，她对每一个喜欢喝百利甜的人说，“这杯酒，我等了一年”。 人们对百利甜的喜爱不只因为它纯美的爱情故事，它独特的芳香带给蛋糕无可比拟的甜蜜诱惑。</p><p>小提示:</p><ol class=\" list-paddingleft-2\"><li><p>1、蛋糕规格及免费配送餐具 ：</p><table style=\"WIDTH: 40%; MARGIN-LEFT: 19px\"><colgroup><col style=\"WIDTH: 35%\"/><col style=\"WIDTH: 35%\"/><col style=\"WIDTH: 30%\"/></colgroup><tbody><tr><td>1.0磅：约13×13(cm)</td><td>适合3-4人食用</td><td>免费配送5套餐具</td></tr><tr><td>2.0磅：约17×17(cm)</td><td>适合7-8人食用</td><td>免费配送10套餐具</td></tr><tr><td>3.0磅：约23×23(cm)</td><td>适合11-12人食用</td><td>免费配送15套餐具</td></tr><tr><td>5.0磅：约30×30(cm)</td><td>适合15-20人食用</td><td>免费配送20套餐具</td></tr></tbody></table><p style=\"MARGIN-LEFT: 19px\">订购5磅及5磅以上规格的蛋糕，请与客服人员联系，订购电话：400 650 2121</p></li><li><p>2、蛋糕在收到后2-3小时内食用为佳。</p></li><li><p>3、如对上述食材有过敏经历者，请选择其它款蛋糕。</p></li><li><p>4、玫瑰花瓣经过消毒处理，仅用作装饰，不建议食用。夹层玫瑰酱中少量块状物为可食玫瑰花瓣。</p></li></ol>', '1', '0', '2016-11-21 06:57:28', null);
 INSERT INTO `cake` VALUES ('500', '2', '3', '', '0', '小切块-Pine Stone Cowboy 松仁淡奶', '/离地二十多米的红松树尖，摇晃中取下的松塔/<br>\n                            /秋天的风与阳光，让松塔果实金黄、饱满，泛出莹润的光泽。/<br>\n                            /柔软的戚风白坯，和着松子慕斯夹心/<br>\n                            /来自伊春的新鲜松仁覆满表面，咀嚼时除了松子独有的香气外还有一丝丝甜/<br>\n                            /细筛过后的微苦可可粉，让这丝甜变得更加明显/<br>', '60', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '100.5', '10cm*10cm', '适合3人吃', '赠送一双叉子', '10', '1', '1,2,3,4,5', '提拉米苏', '口味偏淡', '小提拉米苏', '适合小孩子吃', '过生日吃吧', '2', '冷藏', '上好得小麦粉', '\n                    <p>Bailey’s Love Triangel／百利甜情人（含酒） Just Bailey‘s, light cream and you. The flavours may be velvetty subtle, but the chemistry is as electric as a first kiss.</p>\n<p>/爱尔兰百利甜酒/新西兰奶油/云南玫瑰甘露/ </p>\n<p>*本款产品为时令鲜果蛋糕，21cake依据季节，调整食材搭配，您会有体会。 </p>\n<p style=\"MARGIN-TOP: 30px\">百利甜的发祥地在英国。那里有一位著名的调酒师，调酒师的太太是一名出色的女性，他们彼此深爱着对方。有一天，很不幸，调酒师的太太死于一次意外。调酒师 从此悲伤，过着孤单的生活。直到一次出行的飞机上，调酒师遇到了一位像极了他前妻的空姐。他仿佛重获新生，一切生命的希望再一次点燃。那以后，调酒师疯狂 的追求着那位空姐。但是空姐并不能接受调酒师的爱，空姐对调酒师说，有时候人的心会被蒙住，你对你前妻的思念和对我的爱完全是不同的情感，就像是奶和威士 忌永远无法混在一起。调酒师听完空姐的话，默默的走开。他用了一年的时间，终于将奶和威士忌相溶，而且加了蜂密使味道也混为一体，并起了一个好听的名字 (Baileys Rock)，以此证明他对空姐的爱。当他知道空姐终于肯品尝这第一杯Baileys Rock时，忍不住在杯里加上了一滴眼泪。后来百利甜被空姐带上飞机，传播到世界各地，她对每一个喜欢喝百利甜的人说，“这杯酒，我等了一年”。 人们对百利甜的喜爱不只因为它纯美的爱情故事，它独特的芳香带给蛋糕无可比拟的甜蜜诱惑。</p>\n<div style=\"BORDER-BOTTOM: #eee 1px solid; WIDTH: 100%; HEIGHT: 10px\"></div>\n<div style=\"MARGIN-TOP: 10px; WIDTH: 100%\">小提示: \n<ol>\n<li>1、蛋糕规格及免费配送餐具 ： \n<table style=\"WIDTH: 40%; MARGIN-LEFT: 19px\">\n<colgroup>\n<col style=\"WIDTH: 35%\">\n<col style=\"WIDTH: 35%\">\n<col style=\"WIDTH: 30%\"></colgroup>\n<tbody>\n<tr>\n<td>1.0磅：约13×13(cm)</td>\n<td>适合3-4人食用</td>\n<td>免费配送5套餐具</td></tr>\n<tr>\n<td>2.0磅：约17×17(cm)</td>\n<td>适合7-8人食用</td>\n<td>免费配送10套餐具</td></tr>\n<tr>\n<td>3.0磅：约23×23(cm)</td>\n<td>适合11-12人食用</td>\n<td>免费配送15套餐具</td></tr>\n<tr>\n<td>5.0磅：约30×30(cm)</td>\n<td>适合15-20人食用</td>\n<td>免费配送20套餐具</td></tr></tbody></table>\n<p style=\"MARGIN-LEFT: 19px\">订购5磅及5磅以上规格的蛋糕，请与客服人员联系，订购电话：400 650 2121</p>\n</li>\n    <li>2、蛋糕在收到后2-3小时内食用为佳。 \n</li>\n    <li>3、如对上述食材有过敏经历者，请选择其它款蛋糕。 \n</li>\n    <li>4、玫瑰花瓣经过消毒处理，仅用作装饰，不建议食用。夹层玫瑰酱中少量块状物为可食玫瑰花瓣。</li>\n    \n</ol>\n</div>                ', '1', '0', '2016-11-21 06:58:47', null);
 INSERT INTO `cake` VALUES ('501', '1', '6', '', '0', '小切块-Pine Stone Cowboy 松仁淡奶', '/离地二十多米的红松树尖，摇晃中取下的松塔/<br>\n                            /秋天的风与阳光，让松塔果实金黄、饱满，泛出莹润的光泽。/<br>\n                            /柔软的戚风白坯，和着松子慕斯夹心/<br>\n                            /来自伊春的新鲜松仁覆满表面，咀嚼时除了松子独有的香气外还有一丝丝甜/<br>\n                            /细筛过后的微苦可可粉，让这丝甜变得更加明显/<br>', '68', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '100.5', '10cm*10cm', '适合3人吃', '赠送一双叉子', '10', '1', '1,2,3,4,5', '提拉米苏', '口味偏淡', '小提拉米苏', '适合小孩子吃', '过生日吃吧', '5', '冷藏', '上好得小麦粉', '\n                    <p>Bailey’s Love Triangel／百利甜情人（含酒） Just Bailey‘s, light cream and you. The flavours may be velvetty subtle, but the chemistry is as electric as a first kiss.</p>\n<p>/爱尔兰百利甜酒/新西兰奶油/云南玫瑰甘露/ </p>\n<p>*本款产品为时令鲜果蛋糕，21cake依据季节，调整食材搭配，您会有体会。 </p>\n<p style=\"MARGIN-TOP: 30px\">百利甜的发祥地在英国。那里有一位著名的调酒师，调酒师的太太是一名出色的女性，他们彼此深爱着对方。有一天，很不幸，调酒师的太太死于一次意外。调酒师 从此悲伤，过着孤单的生活。直到一次出行的飞机上，调酒师遇到了一位像极了他前妻的空姐。他仿佛重获新生，一切生命的希望再一次点燃。那以后，调酒师疯狂 的追求着那位空姐。但是空姐并不能接受调酒师的爱，空姐对调酒师说，有时候人的心会被蒙住，你对你前妻的思念和对我的爱完全是不同的情感，就像是奶和威士 忌永远无法混在一起。调酒师听完空姐的话，默默的走开。他用了一年的时间，终于将奶和威士忌相溶，而且加了蜂密使味道也混为一体，并起了一个好听的名字 (Baileys Rock)，以此证明他对空姐的爱。当他知道空姐终于肯品尝这第一杯Baileys Rock时，忍不住在杯里加上了一滴眼泪。后来百利甜被空姐带上飞机，传播到世界各地，她对每一个喜欢喝百利甜的人说，“这杯酒，我等了一年”。 人们对百利甜的喜爱不只因为它纯美的爱情故事，它独特的芳香带给蛋糕无可比拟的甜蜜诱惑。</p>\n<div style=\"BORDER-BOTTOM: #eee 1px solid; WIDTH: 100%; HEIGHT: 10px\"></div>\n<div style=\"MARGIN-TOP: 10px; WIDTH: 100%\">小提示: \n<ol>\n<li>1、蛋糕规格及免费配送餐具 ： \n<table style=\"WIDTH: 40%; MARGIN-LEFT: 19px\">\n<colgroup>\n<col style=\"WIDTH: 35%\">\n<col style=\"WIDTH: 35%\">\n<col style=\"WIDTH: 30%\"></colgroup>\n<tbody>\n<tr>\n<td>1.0磅：约13×13(cm)</td>\n<td>适合3-4人食用</td>\n<td>免费配送5套餐具</td></tr>\n<tr>\n<td>2.0磅：约17×17(cm)</td>\n<td>适合7-8人食用</td>\n<td>免费配送10套餐具</td></tr>\n<tr>\n<td>3.0磅：约23×23(cm)</td>\n<td>适合11-12人食用</td>\n<td>免费配送15套餐具</td></tr>\n<tr>\n<td>5.0磅：约30×30(cm)</td>\n<td>适合15-20人食用</td>\n<td>免费配送20套餐具</td></tr></tbody></table>\n<p style=\"MARGIN-LEFT: 19px\">订购5磅及5磅以上规格的蛋糕，请与客服人员联系，订购电话：400 650 2121</p>\n</li>\n    <li>2、蛋糕在收到后2-3小时内食用为佳。 \n</li>\n    <li>3、如对上述食材有过敏经历者，请选择其它款蛋糕。 \n</li>\n    <li>4、玫瑰花瓣经过消毒处理，仅用作装饰，不建议食用。夹层玫瑰酱中少量块状物为可食玫瑰花瓣。</li>\n    \n</ol>\n</div>                ', '-1', '1', '2016-11-21 06:57:54', null);
-INSERT INTO `cake` VALUES ('502', '1', '2', '', '1', '标题', '这里是描述', '9', '', '150.0', '13x12cm', '3人', '赠品', '3', '125', '', '', '', '', '', '', '1', '', '', null, '-1', '2', '2016-11-22 07:05:50', '2016-11-21 08:50:08');
-INSERT INTO `cake` VALUES ('503', '1', '3', '奶酪蛋糕', '1', '标题1', '这里是描述', '94', '', '100.0', '尺寸', '无人', '赠品', '1', '132', '133,134,135,136,137,138', '品牌', '口味', '蛋糕种类', '人群', '春节', '1', '保鲜', '材料', null, '-1', '3', '2016-11-22 07:05:42', '2016-11-21 09:20:08');
-INSERT INTO `cake` VALUES ('504', '1', '2', '慕斯蛋糕', '1', '标题1', '这里是描述这里是描述这里是描述这里是描述1', '51', 'a:5:{i:0;s:3:\"0.5\";i:1;s:3:\"1.0\";i:2;s:3:\"1.5\";i:3;s:3:\"2.0\";i:4;s:3:\"2.5\";}', '100.0', '13x151', '1人1', '几套1', '21', '202', '162,163,164,165,166,167', '品牌1', '口味1', '蛋糕1', '人群1', '节1日', '5', '保险1', '材料1', '<p>131313<br/></p>', '1', '1', '2016-11-22 07:28:54', '2016-11-21 12:59:03');
-INSERT INTO `cake` VALUES ('505', '2', '8', '咖啡', '1', '这是一个新品', '这里是描述这里是描述这里是描述', '78', '', '120.0', '13x15', '3人', '这里是赠品', '3', '189', '190,191,192,193,194,195,196,197', '品牌', '口味', '带高', '人群', '节日', '5', '保险方法', '材料', null, '1', '4', '2016-11-22 07:20:04', '2016-11-22 07:19:25');
-INSERT INTO `cake` VALUES ('506', '2', '7', '冰激淋', '0', '标题', '', '27', '', '0.0', '', '', '', '0', '0', '', '', '', '', '', '', '0', '', '', null, '1', '5', '2016-11-22 07:29:15', '2016-11-22 07:28:46');
-INSERT INTO `cake` VALUES ('507', '2', '7', '冰激淋', '0', '标题2', '', '38', 'a:3:{i:0;s:3:\"0.5\";i:1;s:3:\"1.0\";i:2;s:3:\"1.5\";}', '0.0', '', '', '', '0', '0', '', '', '', '', '', '', '0', '', '', null, '1', '6', '2016-11-22 07:31:20', '2016-11-22 07:31:06');
-INSERT INTO `cake` VALUES ('508', '2', '7', '冰激淋', '0', '', '', '59', 'a:2:{i:0;s:3:\"0.5\";i:1;s:3:\"3.5\";}', '0.0', '', '', '', '0', '0', '', '', '', '', '', '', '0', '', '', '', '1', '7', '2016-11-22 07:36:48', '2016-11-22 07:35:46');
+INSERT INTO `cake` VALUES ('502', '1', '2', '', '1', '标题', '这里是描述', '9', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '150.0', '13x12cm', '3人', '赠品', '3', '125', '', '', '', '', '', '', '1', '', '', null, '-1', '2', '2016-11-22 07:05:50', '2016-11-21 08:50:08');
+INSERT INTO `cake` VALUES ('503', '1', '3', '奶酪蛋糕', '1', '标题1', '这里是描述', '94', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '100.0', '尺寸', '无人', '赠品', '1', '132', '133,134,135,136,137,138', '品牌', '口味', '蛋糕种类', '人群', '春节', '1', '保鲜', '材料', null, '-1', '3', '2016-11-22 07:05:42', '2016-11-21 09:20:08');
+INSERT INTO `cake` VALUES ('504', '1', '2', '慕斯蛋糕', '1', '标题1', '这里是描述这里是描述这里是描述这里是描述1', '51', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '100.0', '13x151', '1人1', '几套1', '21', '202', '162,163,164,165,166,167', '品牌1', '口味1', '蛋糕1', '人群1', '节1日', '5', '保险1', '材料1', '<p>131313<br/></p>', '1', '1', '2016-11-22 07:28:54', '2016-11-21 12:59:03');
+INSERT INTO `cake` VALUES ('505', '2', '8', '咖啡', '1', '这是一个新品', '这里是描述这里是描述这里是描述', '78', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '120.0', '13x15', '3人', '这里是赠品', '3', '189', '190,191,192,193,194,195,196,197', '品牌', '口味', '带高', '人群', '节日', '5', '保险方法', '材料', null, '1', '4', '2016-11-22 07:20:04', '2016-11-22 07:19:25');
+INSERT INTO `cake` VALUES ('506', '2', '7', '冰激淋', '0', '标题', '', '27', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '0.0', '', '', '', '0', '0', '', '', '', '', '', '', '0', '', '', null, '1', '5', '2016-11-22 07:29:15', '2016-11-22 07:28:46');
+INSERT INTO `cake` VALUES ('507', '2', '7', '冰激淋', '0', '标题2', '', '38', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '0.0', '', '', '', '0', '0', '', '', '', '', '', '', '0', '', '', null, '1', '6', '2016-11-22 07:31:20', '2016-11-22 07:31:06');
+INSERT INTO `cake` VALUES ('508', '2', '7', '冰激淋', '0', '', '', '59', 'a:6:{i:0;d:0.5;i:1;i:1;i:2;d:1.5;i:3;i:2;i:4;d:2.5;i:5;i:3;}', '0.0', '', '', '', '0', '0', '', '', '', '', '', '', '0', '', '', '', '1', '7', '2016-11-22 07:36:48', '2016-11-22 07:35:46');
 
 -- ----------------------------
 -- Table structure for cart
@@ -641,20 +643,22 @@ CREATE TABLE `cart` (
   `price` decimal(6,1) NOT NULL,
   `num` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cart
 -- ----------------------------
 INSERT INTO `cart` VALUES ('7', '3', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '1.0', '200.0', '3');
 INSERT INTO `cart` VALUES ('6', '3', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
-INSERT INTO `cart` VALUES ('8', '4', '504', '标题1', '0.5', '100.0', '1');
 INSERT INTO `cart` VALUES ('9', '4', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
 INSERT INTO `cart` VALUES ('10', '4', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
 INSERT INTO `cart` VALUES ('11', '4', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
 INSERT INTO `cart` VALUES ('12', '4', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
 INSERT INTO `cart` VALUES ('13', '4', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
 INSERT INTO `cart` VALUES ('14', '4', '1', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
+INSERT INTO `cart` VALUES ('15', '4', '508', '', '0.5', '0.0', '1');
+INSERT INTO `cart` VALUES ('16', '4', '477', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
+INSERT INTO `cart` VALUES ('17', '4', '255', '小切块-Pine Stone Cowboy 松仁淡奶', '0.5', '100.5', '1');
 
 -- ----------------------------
 -- Table structure for cate
@@ -950,20 +954,21 @@ CREATE TABLE `setting` (
   `name` char(10) NOT NULL,
   `value` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of setting
 -- ----------------------------
 INSERT INTO `setting` VALUES ('1', '2', '3');
 INSERT INTO `setting` VALUES ('2', 's', '/admin/setting');
-INSERT INTO `setting` VALUES ('3', '_token', 'i2QAyElzHoeuWsCybqXvaGi6WbDgH4slIi47c8Et');
+INSERT INTO `setting` VALUES ('3', '_token', 'fSbGhBfPkVoUbQCCLUIhL8vqZUoEb9u2dWB2hn8v');
 INSERT INTO `setting` VALUES ('4', 'name', '123');
 INSERT INTO `setting` VALUES ('5', 'logo', '205');
 INSERT INTO `setting` VALUES ('6', 'copy_right', 'Copyright© 21Cake蛋糕官网商城 2007-2015, 版权所有 京ICP备14006254号-1');
 INSERT INTO `setting` VALUES ('7', 'imgs', '63,64,65,66,67,68,69,70,71');
 INSERT INTO `setting` VALUES ('8', 'send_fee', '5');
 INSERT INTO `setting` VALUES ('9', 'user_level', '206');
+INSERT INTO `setting` VALUES ('10', 'taobao', 'http://www.baidu.com');
 
 -- ----------------------------
 -- Table structure for users
@@ -995,7 +1000,7 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('3', '15504628304', '$2y$10$.4gJLZhZjvLTJTPqlQ7QYO0F0LaAU9PpFlJbR0c9QkBgpqKo76qJq', 'e7OG0MWmT6JLUKXsmhkV9xh4qulzmFwrnZsuvmQyNC9pP4tn6HbqOFw9inLb', '2016-11-17 12:45:22', '2016-11-24 07:08:37', null, '0', '0', '0', '0', null, '', '', null, null, null, '0');
-INSERT INTO `users` VALUES ('4', 'admin', '$2y$10$VoaLknMQoARjvJJ60EqOQOYipXuUlTEutAueMNSGgvuRa7T8Ssco2', 'Riypy4GwCjWqxeRpHlxWw0QhKDjgaGFUE1ILDlKWCtVme0bKLom3TlKralTI', null, '2016-11-29 15:44:39', '张宁', '1', '0', '0', null, '1', '1992-10-23', '565713111@qq.com', '丈夫', '1992-10-23', '这是我最爱的产品', '210');
+INSERT INTO `users` VALUES ('3', '15504628304', '$2y$10$.4gJLZhZjvLTJTPqlQ7QYO0F0LaAU9PpFlJbR0c9QkBgpqKo76qJq', 'zGpoHmg6npVvLpisQFayUmBBVzEVUKwQBiaHhTmmcACZQH4OzTiV1nHAJIVG', '2016-11-17 12:45:22', '2016-11-30 15:25:27', null, '0', '0', '0', '0', null, '', '', null, null, null, '0');
+INSERT INTO `users` VALUES ('4', 'admin', '$2y$10$VoaLknMQoARjvJJ60EqOQOYipXuUlTEutAueMNSGgvuRa7T8Ssco2', 'YtdT4Kivqkc1EompDV1hJFTpSryekVFXOrRXIKSBx90TfkAUdIIR2AMD7eX1', null, '2016-11-30 15:40:32', '张宁12', '1', '0', '0', null, '0', '1992-10-17', '565713111@qq.com', '丈夫', '1992-10-23', '这是我最爱的产品', '210');
 INSERT INTO `users` VALUES ('7', '15555555555', '$2y$10$NLXqR.WvYuKChjCkYeDtTOT1yJJlENMEDgqS/a8jv0A3vKapw9edO', '7Y77fxwIvJ1fk3JpuWYqlRfbKip5wCQApZu8s1xgp8UzDRwxipQ35WyJijOb', '2016-11-24 07:31:36', '2016-11-24 07:38:08', null, '0', '0', '0', '1', null, '', '', null, null, null, '0');
 INSERT INTO `users` VALUES ('8', '15555555554', '$2y$10$TKMx6Kp4iE0L7NHn2a4sLOPkDJ1nyW7nQ4jeIcXtqV654MVLw2UdW', null, '2016-11-24 07:32:21', '2016-11-24 07:32:21', null, '0', '0', '0', '1', null, '', '', null, null, null, '0');

@@ -40,6 +40,16 @@
 		                </div>
 	                </td>
 	            </tr>
+              <tr>
+                  <td width="120"><p class="tuanfabu_t">官方淘宝店连接</p></td>
+                  <td>
+                    <div class="tuanfabu_nr">
+              
+                      <input type="text" name="taobao" value="{{$s['taobao'] or ''}}" class="tuanfabu_int tuanfabu_intw2 " />
+                     
+                    </div>
+                  </td>
+              </tr>
 	             <tr>
                   <td width="120"><p class="tuanfabu_t">LOGO：</p></td>
                   <td>

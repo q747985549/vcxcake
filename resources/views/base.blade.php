@@ -55,10 +55,11 @@
                         <a href="/loginout">[退出]</a>
                     </li>
                     <li id="j_header_order">
-                        <a id="j_header_order_link" href="/member-orders_v2_static.html">订单</a>
+                        <a id="j_header_order_link" href="javascript:alert('等待支付接口');">订单</a>
                     </li>
                     <li class="last">
-                        <a href="{{url('/user/cart')}}" class="shop-car" id="j_header_cart_number"><?php 
+                        <a href="{{url('/user/cart')}}" class="shop-car" id="j_header_cart_number">
+                        <?php 
                         if(Auth::check()){
                             echo \App\Models\Cart::where("uid",'=',Auth::user()->id)->count();
                         }else{

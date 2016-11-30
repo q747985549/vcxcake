@@ -12,6 +12,15 @@
     <script src="{{asset('js/jquery-1.8.2.min.js')}}"></script>
     <script src="//cdn.bootcss.com/layer/2.4/layer.min.js"></script>
     <title>@yield('title')|{{$s['name']}}</title>
+     <script src="//cdn.bootcss.com/layer/2.4/layer.min.js"></script>
+      <script>
+      @if(isset($msg))
+      $(function(){
+        layer.msg("{{$msg}}");
+      });
+      @endif
+    var $j = $;
+    </script>
 </head>
 
 <body class=" hPC">
@@ -23,7 +32,12 @@
             <p>新品</p>
         </a>
         <a href="{{url('m/user')}}" class="item bg5 new_list red_icon_l"><i class="iconfont">&#xe605;</i><p>个人中心</p></a>
-        <a href="{{url('m/cart')}}" class="item bg4 new_list"><i class="iconfont type J_cart">&#xe606;</i><p>购物车</p></a>
+        <a href="{{url('m/user/cart')}}" class="item bg4 new_list"><i class="iconfont type J_cart">&#xe606;<?php 
+                        if(Auth::check()){
+                            echo '<em class="mini_goods_num fixed_num">'.\App\Models\Cart::where("uid",'=',Auth::user()->id)->count().'</em>';
+                        }
+                        ?>
+        </i><p>购物车</p></a>
     </div> 
 @yield('content')
     <div id="footer" style="clear: both;display:@yield('footer','block')">

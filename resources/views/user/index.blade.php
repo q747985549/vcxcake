@@ -60,7 +60,7 @@
                                  <i class="edit_ico"></i> 编辑个人资料
                              </div>
                          </a>
-                         <a href="{{url('user/address')}}">
+                         <a href="{{url('user/addr')}}">
                             <div class="ac-editaddress">
                                 <i class="edit_address"></i>地址管理
                             </div>
@@ -71,26 +71,24 @@
                     <ul>
                         <li class="ac_item">
                             <p>
-                                <a href="/member-balance.html">
-                                    <i class="ac_balance"></i> 果实币余额: ¥0 </a>
+                                <a href="javascript:void(0);">
+                                    <i class="ac_balance"></i> 购买总额: ¥{{$user['buy_total']}} </a>
                                 <br>
-                                <em class="recharge new_r">卡券充值</em>
-                                <a href="/member-deposit.html" class="new_r">在线购买果实币</a>
                             </p>
                             <em class="corner"></em>
                         </li>
                         <li class="ac_item">
                             <p>
-                                <a href="/member-coupon.html">
-                                    <i class="ac_coupon"></i> 优惠券: 0张可用
+                                <a href="javascript:void(0);">
+                                    <i class="ac_coupon"></i> 购买次数: {{$user['buy_num']}}次
                                 </a>
                             </p>
                             <em class="corner"></em>
                         </li>
                         <li class="ac_item">
                             <p>
-                                <a href="/member-cardlist.html">
-                                    <i class="ac_card"></i> 代金卡: 0 张已用
+                                <a href="{{$s['taobao']}}">
+                                    <i class="ac_card"></i> 官方淘宝店
                                 </a>
                             </p>
                             <em class="corner"></em>

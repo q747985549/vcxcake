@@ -159,7 +159,6 @@
                                 <script>
                                     $(function(){
                                       $(".address_item").on('click',function(){
-                                        alert($(".edit-time").val());
                                           $(".address_item").removeClass("ama-item-current");
                                           $(this).addClass("ama-item-current");
                                       });

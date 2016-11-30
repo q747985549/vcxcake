@@ -8,5 +8,5 @@ class Address extends Model
 {
     public $table = "address";
     public $timestamps = false;
-    public $fillable = ['uid','address','name','mobile'];
+    public $fillable = ['uid','address','name','mobile','default'];
 }

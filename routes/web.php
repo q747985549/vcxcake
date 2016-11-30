@@ -71,7 +71,13 @@ Route::group(['prefix' => 'user','namespace'=>'User',"middleware"=>'auth'], func
 	Route::get('cart',"OrderController@cart");
 	Route::get('del_cart/{id}',"OrderController@del_cart");
 	Route::get('go_order',"OrderController@go_order");
-	Route::post('add_address',"InfoController@add_addr");
+
+	Route::any('add_address',"InfoController@add_addr");
+	Route::any('addr',"InfoController@addr");
+	Route::get('addr_get/{id}',"InfoController@addr_get");
+	Route::get('addr_setd/{id}',"InfoController@addr_setd");
+	Route::get('addr_del/{id}',"InfoController@addr_del");
+
 	Route::get('del_addr/{id}',"InfoController@del_addr");
 
 	Route::get('',"InfoController@index");
@@ -89,6 +95,19 @@ Route::group(['prefix' => 'm','namespace'=>'Mobile'], function() {
 	Route::get('list/{pid}/{cate_id?}',"CakeController@lists");
 	Route::get('detail/{id}',"CakeController@detail");
 
+	Route::group(['prefix'=>'user'],function(){
+		Route::get('','UserController@index');
+		Route::any('info',"UserController@info");
+		Route::any('addr',"UserController@addr");
+		Route::any('addr_edit/{id}',"UserController@addr_edit");
+		Route::any('addr_add',"UserController@addr_add");
+
+		Route::any('cart',"OrderController@cart");
+		Route::any('change_cart_num/{id}/{num}',"OrderController@change_cart_num");
+		Route::any('del_cart/{id}',"OrderController@del_cart");
+		Route::any('del_cart_all',"OrderController@del_cart_all");
+	});
+	Route::any('addcart',"OrderController@addcart");
 
 });
 

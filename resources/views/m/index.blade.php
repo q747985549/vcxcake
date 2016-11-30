@@ -5,7 +5,7 @@
     <div class="page">
     <header id="head" style="border:1px solid #ccc">
         <h1>
-            <a href="{{murl('/')}}" class="logo" title="21Cake蛋糕官网_24小时蛋糕网上订购_5小时新鲜送达！">
+            <a href="{{murl('/')}}" class="logo">
                 <img alt="" src="{{url('files/getimg/'.$s['logo'])}}">
             </a>
         </h1>
