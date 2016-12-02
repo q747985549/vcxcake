@@ -41,6 +41,36 @@
 		                </div>
 	                </td>
 	            </tr>
+
+	            <tr>
+	                <td width="120"><p class="tuanfabu_t">位置：</p></td>
+	                <td>
+		                <div class="tuanfabu_nr">
+		                	<select name="type">
+		                		<option value="1" @if(isset($info['type']) and $info['type'] == 1)selected @endif>首页顶部</option>
+		                		<option value="2" @if(isset($info['type']) and $info['type'] == 2)selected @endif>首页中部</option>
+		                		<option value="3" @if(isset($info['type']) and $info['type'] == 3)selected @endif>首页底部</option>
+		                	</select>
+		                </div>
+	                </td>
+	            </tr>
+
+	            <tr>
+	                <td width="120"><p class="tuanfabu_t">子位置：</p></td>
+	                <td>
+		                <div class="tuanfabu_nr">
+		                <select name="type_con">
+		                		<option value="1" @if(isset($info['type_con']) and $info['type_con'] == 1)selected @endif>一号</option>
+		                		<option value="2" @if(isset($info['type_con']) and $info['type_con'] == 2)selected @endif>二号</option>
+		                		<option value="3" @if(isset($info['type_con']) and $info['type_con'] == 3)selected @endif>三号</option>
+		                		<option value="4" @if(isset($info['type_con']) and $info['type_con'] == 4)selected @endif>四号</option>
+		                		<option value="5" @if(isset($info['type_con']) and $info['type_con'] == 5)selected @endif>五号</option>
+		                	</select>
+		                	<span> * 位置在首页中部的时候需要选择这条</span>
+		                </div>
+	                </td>
+	            </tr>
+
 	         	<tr>
 	                <td width="120"><p class="tuanfabu_t">排序：</p></td>
 	                <td>

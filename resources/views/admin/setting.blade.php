@@ -50,6 +50,17 @@
                     </div>
                   </td>
               </tr>
+               <tr>
+                  <td width="120"><p class="tuanfabu_t">客服电话</p></td>
+                  <td>
+                    <div class="tuanfabu_nr">
+              
+                      <input type="text" name="telephone" value="{{$s['telephone'] or ''}}" class="tuanfabu_int tuanfabu_intw2 " />
+                     
+                    </div>
+                  </td>
+              </tr>
+              
 	             <tr>
                   <td width="120"><p class="tuanfabu_t">LOGO：</p></td>
                   <td>
@@ -137,7 +148,7 @@
                            filters : {
                                  max_file_size : '10mb',
                                  mime_types: [
-                                     {title : "图片", extensions : "jpg,png"}
+                                     {title : "图片", extensions : "jpg,png,gif"}
                                  ]
                            },
  
@@ -177,7 +188,7 @@
                           filters : {
                                 max_file_size : '10mb',
                                 mime_types: [
-                                    {title : "图片", extensions : "jpg,png"}
+                                    {title : "图片", extensions : "jpg,png,gif"}
                                 ]
                           },
 
@@ -232,7 +243,7 @@
                           filters : {
                                 max_file_size : '10mb',
                                 mime_types: [
-                                    {title : "图片", extensions : "jpg,png"}
+                                    {title : "图片", extensions : "jpg,png,gif"}
                                 ]
                           },
 

@@ -2,6 +2,20 @@
 @section('content')
 <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <div class="tuan_content">
+<div class="tuanfabu_tab">
+		<ul>
+			<li class="tuanfabu_tabli @if(($type == 1)) on @endif">
+				<a href="{{url('/admin/banner/1')}}">首页顶部</a>
+			</li>
+			<li class="tuanfabu_tabli @if(($type == 2)) on @endif">
+				<a href="{{url('/admin/banner/2')}}">首页中部</a>
+			</li>
+			<li class="tuanfabu_tabli @if(($type == 3)) on @endif">
+				<a href="{{url('/admin/banner/3')}}">首页底部</a>
+			</li>
+		</ul>
+	</div>
+
 <div class="radius5 tuan_top">
         <div class="tuan_top_t">
             <div class="left tuan_topser_l">幻灯片列表 </div>
@@ -30,7 +44,6 @@
 				<td>{{$v['updated_at']}}</td>
 				<td>
 					<a href="{{url('/admin/banner/edit',[$v['id']])}}">编辑</a>
-					<a href="{{url('/admin/banner/del',[$v['id']])}}">删除</a>
 				</td>
 			</tr>
 			@endforeach

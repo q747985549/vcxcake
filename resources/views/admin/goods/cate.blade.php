@@ -10,10 +10,16 @@
 <div class="tuanfabu_tab">
 		<ul>
 			<li class="tuanfabu_tabli  @if($pid == 1)on @endif ">
-				<a href="http://localhost/admin/cates/list/1">蛋糕</a>
+				<a href="{{url('admin/cates/list/1')}}">蛋糕</a>
 			</li>
 			<li class="tuanfabu_tabli @if($pid == 2)on @endif">
-				<a href="http://localhost/admin/cates/list/2">新品</a>
+				<a href="{{url('admin/cates/list/2')}}">面包</a>
+			</li>
+			<li class="tuanfabu_tabli @if($pid == 3)on @endif">
+				<a href="{{url('admin/cates/list/3')}}">咖啡</a>
+			</li>
+			<li class="tuanfabu_tabli @if($pid == 4)on @endif">
+				<a href="{{url('admin/cates/list/4')}}">伴手礼</a>
 			</li>
 		</ul>
 	</div>

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Banner extends Model
 {
-    public $fillable = ['href','order_id','view','img'];
+    public $fillable = ['href','order_id','view','img','type','type_con'];
 }

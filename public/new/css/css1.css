@@ -1,0 +1,103 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+}
+td {
+	font-size: 12px;
+	line-height: 18px;
+	word-break:break-all;
+}
+.list_bk {
+	border: 1px solid #E1E1E1;
+}
+.left {
+	padding-left:20px;
+	line-height: 20px;
+}
+.left1 {
+	padding-left:10px;
+	padding-top:2px;
+	line-height: 20px;
+}
+a:link {
+	font-size: 12px;
+	color:#000000;
+	text-decoration: none;
+}
+a:visited {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+a.xz12xlansa:link {
+	font-size: 12px;
+	color:#1D4CB2;
+	text-decoration: none;
+}
+a.xz12xlansa:visited {
+	font-size: 12px;
+	color: #1D4CB2;
+	text-decoration: none;
+}
+a.xz12xlansa:hover {
+	font-size: 12px;
+	color: #1D4CB2;
+	text-decoration: underline;
+}
+.xz12xlans {
+	font-size: 12px;
+	color: #1D4CB2;
+}
+a.xz12xhuisa:link {
+	font-size: 12px;
+	color:#666666;
+	text-decoration: none;
+}
+a.xz12xhuisa:visited {
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+a.xz12xhuisa:hover {
+	font-size: 12px;
+	color: #666666;
+	text-decoration: underline;
+}
+.xz12xhuis {
+	font-size: 12px;
+	color: #666666;
+}
+
+.bj_1 {
+	background-color: #FFFFFF;
+}
+.listbk01 {
+	border-top-width: 1px;
+	padding-top:2px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+.listbk02 {
+	padding-top:2px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E4E4E4;
+}
+.huisehsz {
+	color: #000000;
+	background-color: #EEEEEE;
+	cursor:hand;
+}
+.lansebsz {
+	color: #FFFFFF;
+	background-color: #3333CC;
+	cursor:hand;
+}

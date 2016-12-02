@@ -51,7 +51,9 @@
             	<div class="leftNav2">
                     <ul>
                         <li><a target="main_frm" href="{{url('/admin/goods/add/1')}}"><em>&nbsp;</em>发布蛋糕</a></li>
-                        <li><a target="main_frm" href="{{url('/admin/goods/add/2')}}"><em>&nbsp;</em>发布新品</a></li>
+                        <li><a target="main_frm" href="{{url('/admin/goods/add/2')}}"><em>&nbsp;</em>发布面包</a></li>
+                        <li><a target="main_frm" href="{{url('/admin/goods/add/3')}}"><em>&nbsp;</em>发布咖啡</a></li>
+                        <li><a target="main_frm" href="{{url('/admin/goods/add/4')}}"><em>&nbsp;</em>发布伴手礼</a></li>
                         <li><a target="main_frm" href="{{url('/admin/cates/list/1')}}"><em>&nbsp;</em>分类</a></li>
                     </ul>
                 </div>
@@ -80,11 +82,6 @@
                 </div>
             </li>
             <li class="leftMenu_li"><a class="leftMenu_a leftMenu_a3" target="main_frm" href="{{url('/admin/banner')}}"><em style="background: url({{asset('img/picture.png')}}) no-repeat center 4px scroll;">&nbsp;</em>Banner</a>
-                <div class="leftNav2">
-                    <ul>
-                        <li><a target="main_frm" href="{{url('/admin/banner/add')}}"><em>&nbsp;</em>发布</a></li>
-                    </ul>
-                </div>
             </li>
         </ul>
     </div>

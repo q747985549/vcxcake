@@ -19,7 +19,13 @@
 				<a href="{{url('/admin/goods/list/1')}}">蛋糕</a>
 			</li>
 			<li class="tuanfabu_tabli @if(($pid == 2)) on @endif">
-				<a href="{{url('/admin/goods/list/2')}}">新品</a>
+				<a href="{{url('/admin/goods/list/2')}}">面包</a>
+			</li>
+			<li class="tuanfabu_tabli @if(($pid == 3)) on @endif">
+				<a href="{{url('/admin/goods/list/3')}}">咖啡</a>
+			</li>
+			<li class="tuanfabu_tabli @if(($pid == 4)) on @endif">
+				<a href="{{url('/admin/goods/list/4')}}">伴手礼</a>
 			</li>
 		</ul>
 	</div>

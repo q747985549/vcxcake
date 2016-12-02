@@ -23,7 +23,7 @@
     <div class="head-area">
         <div class="head-inner">
             <div class="nav-area fl-l clearfix">
-                <a href="/" class="global-logo fl-l"><img src="{{url('files/getimg/'.$s['logo'])}}"></a>
+                <a href="/" class="global-logo fl-l"><img style="max-width:165px;" src="{{url('files/getimg/'.$s['logo'])}}"></a>
                 <ul class="head-nav fl-l clearfix">
                     <li class="nav-item ">
                         <a href="{{url('/')}}">首页</a>
@@ -32,11 +32,17 @@
                         <a href="{{url('/list/1')}}">蛋糕</a>
                     </li>
                     <li class="nav-item ">
-                        <a href="{{url('/list/2')}}">新品</a>
+                        <a href="{{url('/list/2')}}">面包</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{url('/list/3')}}">咖啡</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{{url('/list/4')}}">伴手礼</a>
                     </li>
                     
                     <li class="nav-item ">
-                        <a href="{{url('/us')}}">品牌故事</a>
+                        <a href="{{url('/us')}}">关于我们</a>
                     </li>
                     
                     <li class="nav-item  last">
@@ -52,7 +58,7 @@
                         @if(Auth::user()->is_admin == 1)
                         <a href="{{url('/admin')}}" style="padding:0;">&nbsp;&nbsp;后台管理</a>
                         @endif
-                        <a href="/loginout">[退出]</a>
+                        <a href="{{url('loginout')}}">[退出]</a>
                     </li>
                     <li id="j_header_order">
                         <a id="j_header_order_link" href="javascript:alert('等待支付接口');">订单</a>

@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Banner;
 class BannerController extends Controller
 {
-    public function lists(){
-    	$list = Banner::all();
-    	return view('admin.banner.list',['list'=>$list]);
+    public function lists($type = 1){
+    	$list = Banner::where('type','=',$type)->get();
+    	return view('admin.banner.list',['list'=>$list,'type'=>$type]);
     }
     public function add(){
     	if(request()->isMethod('post')){

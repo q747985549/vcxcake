@@ -17,7 +17,7 @@ class GoodsController extends Controller
 			$map['title'] = $request->only('keyword');
             unset($map['pid']);
 		}
-		$list = Cake::where($map)->orderBy('id','desc')->paginate(13);
+		$list = Cake::where($map)->orderBy('id','desc')->paginate(30);
 		return view('admin.goods.list',['list'=>$list,'pid'=>$pid]);
     }
     /*更改排序*/

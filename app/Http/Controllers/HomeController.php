@@ -28,6 +28,11 @@ class HomeController extends Controller
         return view('us');
     }
     public function index(){
-        return view('index',['banner'=>Banner::all(),'hot'=>Cake::where('flag','=',1)->limit(4)->get()]);
+        $banner1 = Banner::where('type','=',1)->take(5)->get();
+        $banner3 = Banner::where('type','=',3)->take(5)->get();
+        for ($i=1; $i < 6; $i++) { 
+            $banner2[] = Banner::where(['type'=>2,'type_con'=>$i])->take(3)->get();
+        }
+        return view('index',['b1'=>$banner1,'b2'=>$banner2,'b3'=>$banner3]);
     }
 }

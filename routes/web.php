@@ -9,7 +9,7 @@
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
 |
-*/ 
+*/  
 use Mews\Captcha\Captcha;
  
 Route::group(['prefix' => 'admin','namespace'=>'Admin',"middleware"=>'auth.admin'], function() {
@@ -19,7 +19,7 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin',"middleware"=>'auth.admin
 
     /*banner管理*/
     Route::group(['prefix'=>'banner'],function(){
-    	Route::get('','BannerController@lists');
+    	Route::get('/{type?}','BannerController@lists')->where(['type'=>"1|2|3"]);
     	Route::any('add','BannerController@add');
     	Route::get('order/{id}/{order_id}',"BannerController@order");
 		Route::any('edit/{id}',"BannerController@edit");
